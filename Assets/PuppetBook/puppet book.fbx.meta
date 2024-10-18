@@ -59,7 +59,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -101,7 +101,7 @@ ModelImporter:
       takeName: Armature|page_2
       internalID: -3279864068279255812
       firstFrame: 0
-      lastFrame: 237
+      lastFrame: 194
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -126,11 +126,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Armature|1_closed
-      takeName: Armature|1_closed
+      name: Armature|1_Book
+      takeName: Armature|1_Book
       internalID: -3039808557964553812
       firstFrame: 0
-      lastFrame: 239
+      lastFrame: 1
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -215,7 +215,7 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 1
+    hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
