@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Psx_PBR_Buddha 6
+  m_Name: Floor3
   m_Shader: {fileID: -6465566751694194690, guid: 2b3b7d0b179748b449e12721ea4fcfa6, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -24,7 +24,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_4450AB74:
-        m_Texture: {fileID: 2800000, guid: c710ce247b1efb14994582b326ea6f17, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8fbd9e31e640b2b4a859d60382de2f71, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_9E9BBF1C:
@@ -76,11 +76,11 @@ Material:
     - Boolean_193028D2: 1
     - Boolean_3F1A8DAB: 1
     - Boolean_43476D73: 1
-    - Boolean_7165A49C: 0
+    - Boolean_7165A49C: 1
     - Boolean_85059BBE: 1
     - Boolean_8BBF99CD: 1
     - Boolean_D258FF8E: 0
-    - Vector1_21C41D02: 115
+    - Vector1_21C41D02: 256
     - Vector1_2CDA09C2: 0.5
     - Vector1_6F288C5B: 0.5
     - Vector1_B2CC132F: 12
