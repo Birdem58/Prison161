@@ -13,13 +13,15 @@ public class DoorInteraction : MonoBehaviour
     public CinemachineVirtualCamera virtualCamera; 
     public Transform playerCameraPos;
     public GameObject player;
+    public Canvas roomCanvas;
 
     private bool isNearDoor = false; 
     private bool isLookingThroughDoor = false; 
 
     void Start()
     {
-        pressButUI.SetActive(false); 
+        pressButUI.SetActive(false);
+        roomCanvas.gameObject.SetActive(false);
     }
 
     void OnTriggerEnter(Collider other)
@@ -46,41 +48,47 @@ public class DoorInteraction : MonoBehaviour
         {
             if (isLookingThroughDoor)
             {
-                ExitKeyholeView(); // Kapý deliðinden çýk
+                ExitKeyholeView(); 
             }
             else
             {
-                LookThroughKeyhole(); // Kapý deliðinden bak
+                LookThroughKeyhole(); 
             }
         }
     }
 
     void LookThroughKeyhole()
     {
-        pressButUI.SetActive(false); // UI'ý kapat
-        player.GetComponent<CharacterController>().enabled = false; // Oyuncu hareketini devre dýþý býrak
+        pressButUI.SetActive(false);
+        roomCanvas.gameObject.SetActive(true);
+        player.GetComponent<CharacterController>().enabled = false; 
 
        
         virtualCamera.Follow = doorViewPos;
         virtualCamera.LookAt = doorViewPos;
 
-        isLookingThroughDoor = true; // Kapý deliðine baktýðýný iþaretle
+        isLookingThroughDoor = true;
+        Cursor.lockState = CursorLockMode.None; 
+        Cursor.visible = true;
     }
 
     void ExitKeyholeView()
     {
-        // Cinemachine kameranýn takip edeceði pozisyonu tekrar oyuncunun pozisyonuna döndür
+       
         virtualCamera.Follow = playerCameraPos;
         virtualCamera.LookAt = playerCameraPos;
-
-        player.GetComponent<CharacterController>().enabled = true; // Oyuncu hareketini tekrar aktif et
-        isLookingThroughDoor = false; // Kapý deliðinden çýktýðýný iþaretle
+        roomCanvas.gameObject.SetActive(false);
+        player.GetComponent<CharacterController>().enabled = true;
+        isLookingThroughDoor = false;
+        Cursor.lockState = CursorLockMode.Locked; 
+        Cursor.visible = false; 
 
         if (isNearDoor)
         {
-            pressButUI.SetActive(true); // Hala kapýya yakýnsa UI'ý göster
+            pressButUI.SetActive(true); 
         }
     }
+
 }
 
 
