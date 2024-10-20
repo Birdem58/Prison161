@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: af004e228fb8c01409bb29c2b7445aa1
+guid: d642f49d4a30b3a43b0a538db63904f6
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,13 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material.001
-    second: {fileID: 2100000, guid: 973bef356d6afbe419c13cb34123db49, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: P1_01_mobile
-    second: {fileID: 2100000, guid: f3eaf52e2366bfb478f1dd46406f26a2, type: 2}
+      name: SalaControl_Props_Mobile
+    second: {fileID: 2100000, guid: 8d57b953bdce155429ff9f5a9f1cea5b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -81,7 +76,7 @@ ModelImporter:
     strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
-    normalImportMode: 1
+    normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
