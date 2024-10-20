@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2aa1a2bf0e119134ebc17862eb7abf32
+guid: b3df5e06ad63a844da3ce2b966cbb585
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,8 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: IS8_TXT_Office_Props_Mobile
-    second: {fileID: 2100000, guid: ec3039d87242cdc41bf2fdd0bf0ff070, type: 2}
+      name: Material.001
+    second: {fileID: 2100000, guid: 973bef356d6afbe419c13cb34123db49, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: P1_01_mobile
+    second: {fileID: 2100000, guid: f3eaf52e2366bfb478f1dd46406f26a2, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
