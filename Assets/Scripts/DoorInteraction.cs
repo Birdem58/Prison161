@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Cinemachine;
-
+using StarterAssets;
 
 public class DoorInteraction : MonoBehaviour
 {
@@ -12,14 +12,21 @@ public class DoorInteraction : MonoBehaviour
     public Transform doorViewPos; 
     public CinemachineVirtualCamera virtualCamera; 
     public Transform playerCameraPos;
-    public GameObject player;
+    public FirstPersonController playerFpsController;
     public Canvas roomCanvas;
-
+    public VIDEUIManager4 dialogueManager;
+    private float moveSpeed;
+    private float sprintSpeed;
     private bool isNearDoor = false; 
     private bool isLookingThroughDoor = false; 
 
     void Start()
     {
+        moveSpeed = playerFpsController.GetComponent<FirstPersonController>().MoveSpeed  ;
+        sprintSpeed = playerFpsController.GetComponent<FirstPersonController>().SprintSpeed  ;
+        
+
+
         pressButUI.SetActive(false);
         roomCanvas.gameObject.SetActive(false);
     }
@@ -48,12 +55,25 @@ public class DoorInteraction : MonoBehaviour
         {
             if (isLookingThroughDoor)
             {
-                ExitKeyholeView(); 
+                ExitKeyholeView();
+                dialogueManager.EndCurrentDialogue();
             }
             else
             {
                 LookThroughKeyhole(); 
             }
+        }
+
+
+        if(isLookingThroughDoor)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
     }
 
@@ -61,15 +81,17 @@ public class DoorInteraction : MonoBehaviour
     {
         pressButUI.SetActive(false);
         roomCanvas.gameObject.SetActive(true);
-        player.GetComponent<CharacterController>().enabled = false; 
+        
+
+       playerFpsController.GetComponent<FirstPersonController>().MoveSpeed = 0; 
+        playerFpsController.GetComponent<FirstPersonController>().SprintSpeed= 0; 
 
        
         virtualCamera.Follow = doorViewPos;
         virtualCamera.LookAt = doorViewPos;
 
         isLookingThroughDoor = true;
-        Cursor.lockState = CursorLockMode.None; 
-        Cursor.visible = true;
+       
     }
 
     void ExitKeyholeView()
@@ -78,10 +100,11 @@ public class DoorInteraction : MonoBehaviour
         virtualCamera.Follow = playerCameraPos;
         virtualCamera.LookAt = playerCameraPos;
         roomCanvas.gameObject.SetActive(false);
-        player.GetComponent<CharacterController>().enabled = true;
+
+        playerFpsController.GetComponent<FirstPersonController>().MoveSpeed = moveSpeed;
+        playerFpsController.GetComponent<FirstPersonController>().SprintSpeed = sprintSpeed;
         isLookingThroughDoor = false;
-        Cursor.lockState = CursorLockMode.Locked; 
-        Cursor.visible = false; 
+        
 
         if (isNearDoor)
         {
