@@ -22,6 +22,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Page2_Wall
+    second: {fileID: 2100000, guid: c5a981e1e95e08e4a9ec2c319c0ccb31, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Page2_Wall2
     second: {fileID: 2100000, guid: 90122f116a0b8e34abf4f4ee44b79554, type: 2}
   - first:
@@ -32,8 +37,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Page_3
+    second: {fileID: 2100000, guid: 9ee615f143d98bf4ea274cfe121b4459, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Page_4_Floor
     second: {fileID: 2100000, guid: 2a047ca44b6be99429a5766a2473e08d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pdoor
+    second: {fileID: 2100000, guid: f5149ba1d1aeaa44eb8cf871c6593fea, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -68,40 +83,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Armature|page_1
-      takeName: Armature|page_1
-      internalID: 4781951162920444690
-      firstFrame: 0
-      lastFrame: 239
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
       name: Armature|page_2
       takeName: Armature|page_2
       internalID: -3279864068279255812
-      firstFrame: 0
-      lastFrame: 237
+      firstFrame: 151
+      lastFrame: 456
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -130,7 +116,7 @@ ModelImporter:
       takeName: Armature|1_closed
       internalID: -3039808557964553812
       firstFrame: 0
-      lastFrame: 239
+      lastFrame: 456
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
