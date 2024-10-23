@@ -1,0 +1,26 @@
+{
+"skeleton": { "hash": "g9n/EH7hz5g", "spine": "4.2.36", "x": -626.5, "y": -53.5, "width": 1240, "height": 1754 },
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "Anna Morozova", "bone": "root", "attachment": "Anna Morozova" },
+	{ "name": "Anna MorozovaSmile", "bone": "root", "attachment": "Anna MorozovaSmile" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"Anna Morozova": {
+				"Anna Morozova": { "x": -6.5, "y": 823.5, "width": 1240, "height": 1754 }
+			},
+			"Anna MorozovaSmile": {
+				"Anna MorozovaSmile": { "x": -6.5, "y": 823.5, "width": 1240, "height": 1754 }
+			}
+		}
+	}
+],
+"animations": {
+	"animation": {}
+}
+}
