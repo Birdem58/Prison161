@@ -2628,7 +2628,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1617599194}
-  "canvasU\xFD": {fileID: 0}
+  "canvasU\u0131": {fileID: 495771405}
   creditsCanvas: {fileID: 1310523340}
   controlsCanvas: {fileID: 400317833}
 --- !u!1 &1802331485
