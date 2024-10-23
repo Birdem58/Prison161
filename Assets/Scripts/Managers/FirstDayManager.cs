@@ -13,6 +13,7 @@ public class FirstDayManager : MonoBehaviour
     public GameObject calebOpRoom;
     public bool isAcsessOpRoom;
     public int talkedPeople = 0 ;
+    public GameObject blockToOpRoom;
     
     
     
@@ -40,14 +41,15 @@ public class FirstDayManager : MonoBehaviour
         if(talkedPeople == 3) 
         {
           isAcsessOpRoom = true;
-            Debug.Log("Accses granterd");
+          blockToOpRoom.SetActive(false);
+          Debug.Log("Accses granterd");
         }
     }
 
-    public void IncrementTalkedPeople()
+    public void IncrementTalkedPeople(int howmuch)
     {
         if(talkedPeople<3)
-        { talkedPeople++; }
+        { talkedPeople+= howmuch; }
         
     }
    

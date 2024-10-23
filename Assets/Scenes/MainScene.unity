@@ -546,8 +546,8 @@ MonoBehaviour:
     - text: "Hey there. Name\u2019s Caleb."
       extraData: ExtraData
       inputSetIndex: 0
-      outputNodeIndex: 1
-      outActionIndex: -1
+      outputNodeIndex: -1
+      outActionIndex: 0
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
@@ -765,14 +765,14 @@ MonoBehaviour:
   - pauseHere: 0
     gameObjectName: FirstDayManager
     methodName: IncrementTalkedPeople
-    paramType: 0
+    paramType: 3
     gotoNode: -1
     param_bool: 0
     param_string: 
-    param_int: 0
+    param_int: 1
     param_float: 0
     ID: 5
-    outPlayerIndex: 0
+    outPlayerIndex: 1
     outActionIndex: -1
     ovrStartNode: -1
     renameDialogue: 
@@ -17270,6 +17270,59 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4901881832707331537, guid: 0e0a34466eabbf54a8bcffa0c4c877b3, type: 3}
+--- !u!1 &1449896897
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1449896899}
+  - component: {fileID: 1449896898}
+  m_Layer: 0
+  m_Name: BlocktoOpRoom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1449896898
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449896897}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 4.323936, z: 6.1442566}
+  m_Center: {x: 0, y: -1.661968, z: 0.81628513}
+--- !u!4 &1449896899
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449896897}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.966029, y: 0.28038275, z: -4.1614933}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2126541579}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1455653430
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19653,8 +19706,8 @@ MonoBehaviour:
     - text: Mm-hmm
       extraData: ExtraData
       inputSetIndex: 0
-      outputNodeIndex: 1
-      outActionIndex: -1
+      outputNodeIndex: -1
+      outActionIndex: 0
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
@@ -19932,14 +19985,14 @@ MonoBehaviour:
   - pauseHere: 0
     gameObjectName: FirstDayManager
     methodName: IncrementTalkedPeople
-    paramType: 0
+    paramType: 3
     gotoNode: -1
     param_bool: 0
     param_string: 
-    param_int: 0
+    param_int: 1
     param_float: 0
     ID: 8
-    outPlayerIndex: 0
+    outPlayerIndex: 1
     outActionIndex: -1
     ovrStartNode: -1
     renameDialogue: 
@@ -22409,11 +22462,11 @@ MonoBehaviour:
   - pauseHere: 0
     gameObjectName: FirstDayManager
     methodName: IncrementTalkedPeople
-    paramType: 0
+    paramType: 3
     gotoNode: -1
     param_bool: 0
     param_string: 
-    param_int: 0
+    param_int: 1
     param_float: 0
     ID: 8
     outPlayerIndex: 1
@@ -24002,6 +24055,7 @@ MonoBehaviour:
   raycasters:
   - {fileID: 266081324}
   eventSystem: {fileID: 671475340}
+  firstDayManager: {fileID: 0}
   diagUI: {fileID: 412488691}
   videAssign: {fileID: 0}
   demo_Items: []
@@ -26486,6 +26540,7 @@ MonoBehaviour:
   calebOpRoom: {fileID: 0}
   isAcsessOpRoom: 0
   talkedPeople: 0
+  blockToOpRoom: {fileID: 1449896897}
 --- !u!4 &2126541579
 Transform:
   m_ObjectHideFlags: 0
@@ -26498,7 +26553,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1449896899}
   m_Father: {fileID: 801292983}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2135470224 stripped

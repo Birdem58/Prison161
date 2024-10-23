@@ -12,6 +12,7 @@ public class VıdePlayer : MonoBehaviour
     public string playerName = "VIDE User";
     public List<GraphicRaycaster> raycasters;
     public EventSystem eventSystem;
+    public FirstDayManager firstDayManager;
 
     //Reference to our diagUI script for quick access
     public VIDEUIManager4 diagUI;
@@ -99,6 +100,7 @@ public class VıdePlayer : MonoBehaviour
         {
             
             diagUI.Interact(videAssign);
+            //firstDayManager.IncrementTalkedPeople();
           
             return;
         }
