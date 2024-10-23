@@ -17,8 +17,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: IS8_TXT_Office_Props_Mobile
+    second: {fileID: 2100000, guid: ec3039d87242cdc41bf2fdd0bf0ff070, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Light.001
+    second: {fileID: 2100000, guid: dd6caba1b9e215647b676efecb50d2f2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Material
     second: {fileID: 2100000, guid: 327aceac704b04b4691080d4d3436d9b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: c5a981e1e95e08e4a9ec2c319c0ccb31, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -43,7 +58,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Page_4_Floor
-    second: {fileID: 2100000, guid: 2a047ca44b6be99429a5766a2473e08d, type: 2}
+    second: {fileID: 2100000, guid: 35c6b74af6a540043911971931e4d6bc, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
