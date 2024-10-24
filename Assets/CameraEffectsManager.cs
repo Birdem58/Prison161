@@ -7,6 +7,8 @@ public class CameraEffectsManager : MonoBehaviour
     //singleton
     public static CameraEffectsManager instance;
 
+    public DarkessEvents darkessEvents;
+    [SerializeField] Animator DarkPanelAnimator;
     void Awake()
     {
         if (instance == null)
@@ -18,5 +20,9 @@ public class CameraEffectsManager : MonoBehaviour
             Destroy(this);
         }
     }
-    
+    public void ToggleDarkScreen(bool isDark)
+    {
+        DarkPanelAnimator.SetBool("IsDark", isDark);
+    }
+
 }

@@ -58,6 +58,8 @@ public class FaxInteraction : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         animator.SetInteger("doorPos",1);
+
+        GameManager.Instance.UpdateGameState(GameManager.GameState.FirstNight); 
         
     }
 

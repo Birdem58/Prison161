@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Naz scene/Artscene.unity
     guid: ae6bdf69a5dcc024baba6f2460c00f57
   - enabled: 1
-    path: Assets/Scenes/FirstDay.unity
+    path: Assets/Scenes/Days/FirstDay.unity
     guid: 2ef8dee3dd19f6241958657e66c0f66d
+  - enabled: 1
+    path: Assets/Scenes/Days/FirstNight.unity
+    guid: 5f899a230ce3e4a41a23f105a385ec03
   m_configObjects: {}

@@ -13,55 +13,61 @@ public class GameManager : MonoBehaviour
     
 
     public GameState State;
-    //public GameObject canvasWin;
-    //public GameObject canvasLose;
+
 
     public static event Action<GameState> OnGameStateChange;
     private void Awake()
     {
-        Instance = this;
-        //canvasLose.SetActive(false);
-        //canvasWin.SetActive(false);
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else if (Instance != this)
+        {
+            Destroy(this);
+        }
     }
     private void Start()
     {
         UpdateGameState(GameState.FirstDay);
-
-
     }
 
 
     public void UpdateGameState(GameState newState)
     {
+        CameraEffectsManager.instance.darkessEvents.ondarknessBegin += () =>
+        {
+            OnUpdateGameState(newState);
+        };
+
+        CameraEffectsManager.instance.ToggleDarkScreen(true);
+    }
+
+
+    public void OnUpdateGameState(GameState newState)
+    {
+
+        //Check if scene is looaded unload it if it is
+        if (SceneManager.GetSceneByName(State.ToString()).isLoaded)
+        {
+            SceneManager.UnloadSceneAsync(State.ToString());
+        }
+
         State = newState;
 
-
-        switch (newState)
+        SceneManager.LoadSceneAsync(State.ToString(), LoadSceneMode.Additive).completed += (AsyncOperation obj) =>
         {
-            case GameState.FirstDay:
-                SceneManager.LoadScene("FirstDay", LoadSceneMode.Additive);
-                break;
-            case GameState.Firstnight:
-                HandleSecondDaySecim();
-                break;
-            default:
-                throw new ArgumentOutOfRangeException(nameof(newState), newState, null);
+            CameraEffectsManager.instance.ToggleDarkScreen(false);
+        };
 
 
-        }
-        OnGameStateChange?.Invoke(newState);
+        OnGameStateChange?.Invoke(State);
     }
-
-    private void HandleSecondDaySecim()
-    {
-        
-    }
-
 
     public enum GameState
     {
         FirstDay,
-        Firstnight,
+        FirstNight,
         SecondDay,
         ThirdDay,
         GriKovaliyor,
