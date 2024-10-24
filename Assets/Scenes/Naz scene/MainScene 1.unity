@@ -96,7 +96,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: f7acd01143d890d4cbcfb4efe0c3dfa2, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: ba71997ed04c644499275bed1f448dbf, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 7c07c74c72a2f1b4c99db89cc3bed353, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -12981,8 +12981,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Press E to interact
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 09027dfdf572ef14eb54365e863d766c, type: 2}
+  m_sharedMaterial: {fileID: -628742056578292636, guid: 09027dfdf572ef14eb54365e863d766c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -21254,14 +21254,14 @@ RectTransform:
   m_GameObject: {fileID: 1733812069}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.73483, y: 0.73483, z: 0.73483}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1132855170}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 485}
+  m_AnchoredPosition: {x: 0, y: 405}
   m_SizeDelta: {x: 778, y: 1235.9}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1733812071
@@ -21284,7 +21284,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c84f23ee41031504da481c360a9f82e9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6a6abbd5c359d49498d9a54b3657d9e5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -24402,8 +24402,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Press E to interact
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 09027dfdf572ef14eb54365e863d766c, type: 2}
+  m_sharedMaterial: {fileID: -628742056578292636, guid: 09027dfdf572ef14eb54365e863d766c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
