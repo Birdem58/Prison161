@@ -15,12 +15,12 @@ MonoBehaviour:
   active: 1
   type:
     m_OverrideState: 1
-    m_Value: 4
+    m_Value: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.57
+    m_Value: 0.14
   response:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 0.499
   texture:
     m_OverrideState: 1
@@ -51,10 +51,10 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0.7
   clamp:
-    m_OverrideState: 1
-    m_Value: 65472.94
+    m_OverrideState: 0
+    m_Value: 65465.99
   tint:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: {r: 1, g: 1, b: 1, a: 1}
   highQualityFiltering:
     m_OverrideState: 0
@@ -84,10 +84,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81180773991d8724ab7f2d216912b564, type: 3}
   m_Name: ChromaticAberration
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.088
+    m_Value: 0.024
 --- !u!114 &-932961243259648241
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -146,9 +146,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb60a22f311433c4c962b888d1393f88, type: 3}
   m_Name: PaniniProjection
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   distance:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 0.215
   cropToFit:
     m_OverrideState: 1
