@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    public FirstDayManager firstDayManager;
+ 
     public FaxInteraction faxInteraction;
     
 
@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
         switch (newState)
         {
             case GameState.FirstDay:
-                HandleFirstDayManager();
+                SceneManager.LoadScene("FirstDay", LoadSceneMode.Additive);
                 break;
             case GameState.Firstnight:
                 HandleSecondDaySecim();
@@ -57,11 +57,6 @@ public class GameManager : MonoBehaviour
         
     }
 
-    private void HandleFirstDayManager()
-    {
-        firstDayManager.MoveRoomDoor();
-        faxInteraction.paperIndex = 0;
-    }
 
     public enum GameState
     {
