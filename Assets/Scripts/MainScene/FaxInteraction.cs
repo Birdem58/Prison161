@@ -59,8 +59,6 @@ public class FaxInteraction : MonoBehaviour
         Cursor.visible = true;
         animator.SetInteger("doorPos",1);
 
-        GameManager.Instance.UpdateGameState(GameManager.GameState.FirstNight); 
-        
     }
 
     public void DropPaper()
