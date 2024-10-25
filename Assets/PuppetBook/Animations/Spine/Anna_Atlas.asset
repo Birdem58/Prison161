@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
-  m_Name: skeletons_Atlas
+  m_Name: Anna_Atlas
   m_EditorClassIdentifier: 
   textureLoadingMode: 0
   onDemandTextureLoader: {fileID: 0}
-  atlasFile: {fileID: 4900000, guid: afb744cfb451e87439a3125b51ea3260, type: 3}
+  atlasFile: {fileID: 4900000, guid: 60e5ca8badb880947a83201d97a8c83e, type: 3}
   materials:
-  - {fileID: 2100000, guid: a42450cab8a17864a8e3adeb374335cf, type: 2}
+  - {fileID: 2100000, guid: a7a22c342698bb44580cc036c66c827f, type: 2}
