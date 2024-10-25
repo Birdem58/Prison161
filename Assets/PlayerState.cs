@@ -52,7 +52,7 @@ public class PlayerState : MonoBehaviour
         }
     }
 
-    public State GetState()
+    public State    GetState()
     {
         return state;
     }
