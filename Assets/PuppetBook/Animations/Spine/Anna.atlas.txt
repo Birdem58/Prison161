@@ -1,0 +1,11 @@
+Anna.png
+size:818,484
+filter:Linear,Linear
+Anna Morozova
+bounds:2,2,239,806
+offsets:116,23,595,842
+rotate:90
+Anna MorozovaSmile
+bounds:2,243,239,814
+offsets:116,22,595,842
+rotate:90

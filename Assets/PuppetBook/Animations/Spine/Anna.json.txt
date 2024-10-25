@@ -1,0 +1,48 @@
+{
+"skeleton": { "hash": "7u2SiDaJ1f4", "spine": "4.2.36", "x": -289, "y": -337, "width": 595, "height": 842 },
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "Anna Morozova", "bone": "root", "attachment": "Anna Morozova" },
+	{ "name": "Anna MorozovaSmile", "bone": "root", "attachment": "Anna MorozovaSmile" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"Anna Morozova": {
+				"Anna Morozova": { "x": 8.5, "y": 84, "width": 595, "height": 842 }
+			},
+			"Anna MorozovaSmile": {
+				"Anna MorozovaSmile": { "x": 8.5, "y": 84, "width": 595, "height": 842 }
+			}
+		}
+	}
+],
+"animations": {
+	"AnnaMorozova": {
+		"slots": {
+			"Anna Morozova": {
+				"rgba": [
+					{ "color": "ffffff00" },
+					{ "time": 4, "color": "ffffffff" }
+				]
+			},
+			"Anna MorozovaSmile": {
+				"attachment": [
+					{}
+				]
+			}
+		},
+		"bones": {
+			"root": {
+				"scale": [
+					{ "x": 0.489, "y": 0.489 },
+					{ "time": 4, "x": 0.6, "y": 0.6 }
+				]
+			}
+		}
+	}
+}
+}

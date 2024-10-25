@@ -1,8 +1,0 @@
-skeletons.png
-	size: 2482, 2482
-	filter: Linear, Linear
-	pma: true
-Anna Morozova
-	bounds: 0, 728, 1240, 1754
-Anna MorozovaSmile
-	bounds: 1242, 728, 1240, 1754
