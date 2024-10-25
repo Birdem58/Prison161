@@ -254,7 +254,7 @@ PrefabInstance:
     - target: {fileID: 4424804114511540656, guid: 9bc308e8fa4cbfc46bb0f5de53ae7492, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 23eb8158e81b996419e13a24f8b9008f, type: 3}
+      objectReference: {fileID: 21300000, guid: d805fa9e699c50147997e69987fd10d9, type: 3}
     - target: {fileID: 7310195355930995793, guid: 9bc308e8fa4cbfc46bb0f5de53ae7492, type: 3}
       propertyPath: alias
       value: Miki ?
@@ -801,6 +801,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Caleb
       objectReference: {fileID: 0}
+    - target: {fileID: 346144040456377337, guid: 9bc308e8fa4cbfc46bb0f5de53ae7492, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1067884932792020788, guid: 9bc308e8fa4cbfc46bb0f5de53ae7492, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -0.47
@@ -948,6 +952,10 @@ PrefabInstance:
     - target: {fileID: 8661916562904584383, guid: 9bc308e8fa4cbfc46bb0f5de53ae7492, type: 3}
       propertyPath: m_Name
       value: Caleb
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661916562904584383, guid: 9bc308e8fa4cbfc46bb0f5de53ae7492, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
