@@ -70,6 +70,8 @@ public class GameManager : MonoBehaviour
         FirstNight,
         SecondDay,
         ThirdDay,
+        FourthDay,
+        FifthDay,
         GriKovaliyor,
         GriKaciyor,
         GriKazandi,

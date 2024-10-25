@@ -46,8 +46,8 @@ public class PlayerState : MonoBehaviour
                 break;
             case State.NONE:
                 SetCharacterController(false);
-                Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Confined;
+                Cursor.visible = true;
                 break;
         }
     }

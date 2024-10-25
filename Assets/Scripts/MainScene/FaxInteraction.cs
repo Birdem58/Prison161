@@ -14,7 +14,7 @@ public class FaxInteraction : MonoBehaviour, IInteraction
 
     void PickUpPaper()
     {
-        PlayerState.Instance.SetState(PlayerState.State.NONE);
+        PlayerState.Instance.SetState(PlayerState.State.DIALOGUE);
         paperList[paperIndex].SetActive(true);   
         wallCollider.SetActive(false);
         animator.SetInteger("doorPos",1);
