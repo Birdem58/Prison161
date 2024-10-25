@@ -659,6 +659,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Evelyn_2
       objectReference: {fileID: 0}
+    - target: {fileID: 8661916562904584383, guid: 9bc308e8fa4cbfc46bb0f5de53ae7492, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1966,6 +1970,22 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: d4784095b92803b4bba44d8545e65156, type: 3}
     - target: {fileID: 7310195355930995793, guid: 9bc308e8fa4cbfc46bb0f5de53ae7492, type: 3}
+      propertyPath: preload
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7310195355930995793, guid: 9bc308e8fa4cbfc46bb0f5de53ae7492, type: 3}
+      propertyPath: assignedID
+      value: 9068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7310195355930995793, guid: 9bc308e8fa4cbfc46bb0f5de53ae7492, type: 3}
+      propertyPath: assignedIndex
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 7310195355930995793, guid: 9bc308e8fa4cbfc46bb0f5de53ae7492, type: 3}
+      propertyPath: assignedDialogue
+      value: EvelynDay1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7310195355930995793, guid: 9bc308e8fa4cbfc46bb0f5de53ae7492, type: 3}
       propertyPath: diags.Array.size
       value: 32
       objectReference: {fileID: 0}
@@ -2084,6 +2104,14 @@ PrefabInstance:
     - target: {fileID: 7310195355930995793, guid: 9bc308e8fa4cbfc46bb0f5de53ae7492, type: 3}
       propertyPath: diags.Array.data[31]
       value: Witch
+      objectReference: {fileID: 0}
+    - target: {fileID: 7310195355930995793, guid: 9bc308e8fa4cbfc46bb0f5de53ae7492, type: 3}
+      propertyPath: S_actionNodes.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7310195355930995793, guid: 9bc308e8fa4cbfc46bb0f5de53ae7492, type: 3}
+      propertyPath: S_playerDiags.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8661916562904584383, guid: 9bc308e8fa4cbfc46bb0f5de53ae7492, type: 3}
       propertyPath: m_Name
