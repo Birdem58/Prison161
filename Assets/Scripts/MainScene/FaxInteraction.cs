@@ -3,86 +3,41 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class FaxInteraction : MonoBehaviour
+public class FaxInteraction : MonoBehaviour, IInteraction
 {
-    public float Distance = 5f;
-    public TextMeshProUGUI interactText;
     public GameObject wallCollider;
     public List<GameObject> paperList;
     public int paperIndex = 0;
     private bool isTriggered = false;
     public Animator animator;
 
-    void Update()
-    {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-
-        if (isTriggered && paperList[paperIndex].activeSelf)
-        {
-            interactText.text = "Press E to close";
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                DropPaper();
-            }
-            return;
-        }
-
-        if (Physics.Raycast(ray, out hit, Distance))
-        {
-            if (hit.collider.CompareTag("Paper") && isTriggered)
-            {
-                interactText.enabled = true;
-
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    PickUpPaper();
-                }
-            }
-            else
-            {
-                interactText.enabled = false;
-            }
-        }
-        else
-        {
-            interactText.enabled = false;
-        }
-    }
 
     void PickUpPaper()
     {
-        paperList[paperIndex].SetActive(true);
-        interactText.text = "Press E to close";
+        PlayerState.Instance.SetState(PlayerState.State.NONE);
+        paperList[paperIndex].SetActive(true);   
         wallCollider.SetActive(false);
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
         animator.SetInteger("doorPos",1);
-
     }
 
     public void DropPaper()
     {
         paperList[paperIndex].SetActive(false);
-        interactText.enabled = false;
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        PlayerState.Instance.SetState(PlayerState.State.DEFAULT);
     }
 
-    private void OnTriggerEnter(Collider other)
+
+    public void Interact()
     {
-        if (other.CompareTag("Player")) 
-        {
+        if(!isTriggered){
             isTriggered = true;
-        }
+            PickUpPaper();
+        }else StopInteract();
     }
 
-    private void OnTriggerExit(Collider other)
+    public void StopInteract()
     {
-        if (other.CompareTag("Player")) 
-        {
-            isTriggered = false;
-            DropPaper(); 
-        }
+        isTriggered = false;
+        DropPaper();
     }
 }
