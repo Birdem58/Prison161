@@ -12,8 +12,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: P1_01_mobile.001
+    second: {fileID: 2100000, guid: 8790e3399db1063419fc4f319478f9ad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: P1_01_mobile.003
+    second: {fileID: 2100000, guid: 8790e3399db1063419fc4f319478f9ad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Sign
     second: {fileID: 2100000, guid: 3d1bf93a463c11749bdd24bf175870b2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: newwall
+    second: {fileID: 2100000, guid: 8790e3399db1063419fc4f319478f9ad, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
