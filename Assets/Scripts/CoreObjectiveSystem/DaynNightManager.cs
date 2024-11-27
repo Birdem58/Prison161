@@ -1,8 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
-
-[System.Serializable]
 public class Objective
 {
     public string id;
@@ -17,77 +15,118 @@ public class Objective
     }
 }
 
+
 public class DaynNightManager : MonoBehaviour
 {
     public static DaynNightManager Instance { get; private set; }
 
     [Header("Objectives Configuration")]
-    [SerializeField] private List<Objective> objectives = new List<Objective>();
+    [SerializeField] private List<List<Objective>> dayNightObjectives = new List<List<Objective>>();
 
     [Header("UI Reference")]
     [SerializeField] private ObjectiveUIManager uiManager;
+
+    private int dayNightCounter = 0;
 
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); 
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
             Destroy(gameObject);
-            return;
         }
+    }
+
+    private void OnEnable()
+    {
+        GameManager.OnGameStateChange += HandleGameStateChange;
+    }
+
+    private void OnDisable()
+    {
+        GameManager.OnGameStateChange -= HandleGameStateChange;
     }
 
     private void Start()
     {
-        
-        if (objectives.Count == 0)
+        if (dayNightObjectives.Count == 0)
         {
-            objectives.Add(new Objective("trigger_enter", "Enter the trigger area"));
-            objectives.Add(new Objective("trigger_exit", "Exit the trigger area"));
+            AddObjectivesForDayNight(new List<Objective>
+            {
+                new Objective("day1_obj1", "press E"),
+                new Objective("day1_obj2", "domal")
+            });
+
+            AddObjectivesForDayNight(new List<Objective>
+            {
+                new Objective("night1_obj1", "read Fax"),
+                new Objective("night1_obj2", "domal2")
+            });
         }
 
         UpdateUIManager();
     }
 
-    public void CompleteObjective(string objectiveId)
+    private void HandleGameStateChange(GameManager.GameState newState)
     {
-        Objective objective = objectives.Find(obj => obj.id == objectiveId);
-        if (objective != null && !objective.isCompleted)
-        {
-            objective.isCompleted = true;
-            UpdateUIManager();
-            CheckAllObjectivesCompletion();
-        }
+        if(newState != GameManager.GameState.FirstDay)
+            SwitchToNextDayNight();
     }
 
-    private void CheckAllObjectivesCompletion()
+    private void AddObjectivesForDayNight(List<Objective> objectives)
     {
-        if (AreAllObjectivesComplete())
+        dayNightObjectives.Add(objectives);
+    }
+
+    public void SwitchToNextDayNight()
+    {
+        if (dayNightCounter < dayNightObjectives.Count - 1)
         {
-            Debug.Log("All objectives completed!");
-            
+             
+            dayNightCounter++;
+            UpdateUIManager();
+
         }
+        else
+        {
+            Debug.Log("No more days or nights left!");
+            uiManager?.UpdateObjectives(new List<Objective>());
+        }
+
+        uiManager?.EnableUI();
     }
 
     private void UpdateUIManager()
     {
         if (uiManager != null)
         {
-            uiManager.UpdateObjectives(objectives);
+            uiManager.UpdateObjectives(dayNightObjectives[dayNightCounter]);
         }
     }
 
-    public List<Objective> GetCurrentObjectives() => objectives;
+    public List<Objective> GetCurrentObjectives() => dayNightObjectives[dayNightCounter];
 
-    public bool AreAllObjectivesComplete() => objectives.All(obj => obj.isCompleted);
-
-    public bool IsObjectiveCompleted(string objectiveId)
+    public bool AreAllObjectivesComplete() => dayNightObjectives[dayNightCounter].All(obj => obj.isCompleted);
+    public void CompleteObjective(string objectiveId)
     {
-        var objective = objectives.Find(obj => obj.id == objectiveId);
-        return objective != null && objective.isCompleted;
+        var currentObjectives = dayNightObjectives[dayNightCounter];
+        Objective objective = currentObjectives.Find(obj => obj.id == objectiveId);
+
+        if (objective != null && !objective.isCompleted)
+        {
+            objective.isCompleted = true;
+            UpdateUIManager();
+
+            if (AreAllObjectivesComplete())
+            {
+                Debug.Log($"All objectives completed for Day/Night {dayNightCounter + 1}!");
+                uiManager?.DisableUI(); // Hide UI if all objectives are completed
+            }
+        }
     }
+
 }

@@ -1,10 +1,12 @@
 ﻿using TMPro;
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class ObjectiveUIManager : MonoBehaviour
 {
     [SerializeField] private Canvas objectiveCanvas;
+    [SerializeField] private Image ObjectiveContainer;
     [SerializeField] private TextMeshProUGUI objectivesText;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip completionSound;
@@ -13,34 +15,40 @@ public class ObjectiveUIManager : MonoBehaviour
 
     public void UpdateObjectives(List<Objective> objectives)
     {
-        if (objectivesText == null || objectives == null || objectives.Count == 0) return;
+        if (objectivesText == null || objectives == null || objectives.Count == 0)
+        {
+            DisableUI();
+            return;
+        }
+
         Objective currentObjective = objectives.Find(obj => !obj.isCompleted);
 
         if (currentObjective == null)
         {
-            currentObjective = objectives[objectives.Count - 1];
-        }
-
-
-        if (currentObjective.isCompleted && currentObjective.id != currentObjectiveId)
-        {
+            objectivesText.text = "All Objectives Completed!";
+            objectivesText.color = Color.green;
             PlayCompletionSound();
-
-            currentObjectiveId = currentObjective.id;
-
-
-            objectivesText.text = currentObjective.description;
-            objectivesText.color = currentObjective.isCompleted ? Color.green : Color.white;
-
-
-            if (objectiveCanvas != null)
-            {
-                objectiveCanvas.enabled = true;
-            }
+            DisableUI();
+            return;
         }
 
-       
+        objectivesText.text = currentObjective.description;
+        objectivesText.color = Color.white;
+        EnableUI();
     }
+
+    public void EnableUI()
+    {
+        if (objectiveCanvas != null) objectiveCanvas.enabled = true;
+        if (ObjectiveContainer != null) ObjectiveContainer.enabled = true;
+    }
+
+    public void DisableUI()
+    {
+        if (objectiveCanvas != null) objectiveCanvas.enabled = false;
+        if (ObjectiveContainer != null) ObjectiveContainer.enabled = false;
+    }
+
     private void PlayCompletionSound()
     {
         if (audioSource != null && completionSound != null)

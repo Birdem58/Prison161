@@ -19,18 +19,16 @@ public struct HandleCharacterBalance : IEvent
 
 
 }
-
-public struct TurnAction : IEvent
+public struct HandleDayNightCycle : IEvent
 {
+    public int DayNightCounterIncrement;
 
-    public bool isFacingRight;
-
-    public TurnAction(bool isfacingRight)
+    public HandleDayNightCycle(int increment)
     {
-        isFacingRight = isfacingRight;
+        DayNightCounterIncrement = increment;
     }
-
 }
+
 
 
 //örnek kullaným:

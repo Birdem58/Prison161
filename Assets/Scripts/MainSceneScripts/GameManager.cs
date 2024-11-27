@@ -1,21 +1,18 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
- 
-    public FaxInteraction faxInteraction;
-    
 
+    
     public GameState State;
 
-
     public static event Action<GameState> OnGameStateChange;
+
+    private int dayNightCounter = -1; // Gün/gece sayacý
+
     private void Awake()
     {
         if (Instance == null)
@@ -27,11 +24,11 @@ public class GameManager : MonoBehaviour
             Destroy(this);
         }
     }
+
     private void Start()
     {
         UpdateGameState(GameState.FirstDay);
     }
-
 
     public void UpdateGameState(GameState newState)
     {
@@ -43,25 +40,44 @@ public class GameManager : MonoBehaviour
         CameraEffectsManager.instance.ToggleDarkScreen(true);
     }
 
-
     public void OnUpdateGameState(GameState newState)
     {
-
-        //Check if scene is looaded unload it if it is
+        
         if (SceneManager.GetSceneByName(State.ToString()).isLoaded)
         {
-            SceneManager.UnloadSceneAsync(State.ToString());
+            SceneManager.UnloadSceneAsync(State.ToString()).completed += (AsyncOperation unloadOp) =>
+            {
+                LoadNextScene(newState);
+            };
         }
-
-        State = newState;
-
-        SceneManager.LoadSceneAsync(State.ToString(), LoadSceneMode.Additive).completed += (AsyncOperation obj) =>
+        else
         {
+            
+            LoadNextScene(newState);
+        }
+    }
+
+    private void LoadNextScene(GameState newState)
+    {
+        
+        State = newState;
+        SceneManager.LoadSceneAsync(State.ToString(), LoadSceneMode.Additive).completed += (AsyncOperation loadOp) =>
+        {
+            
+            dayNightCounter++;
+            Debug.Log($"Day&Night counter updated: {dayNightCounter}");
+
+           
             CameraEffectsManager.instance.ToggleDarkScreen(false);
+
+           
+            OnGameStateChange?.Invoke(State);
         };
+    }
 
-
-        OnGameStateChange?.Invoke(State);
+    public int GetDayNightCounter()
+    {
+        return dayNightCounter;
     }
 
     public enum GameState
@@ -69,15 +85,13 @@ public class GameManager : MonoBehaviour
         FirstDay,
         FirstNight,
         SecondDay,
+        SecondNight,
         ThirdDay,
+        ThirdNight,
         FourthDay,
+        FourthNight,
         FifthDay,
-        GriKovaliyor,
-        GriKaciyor,
-        GriKazandi,
-        GriKaybetti,
-
-
+        FifthNight,
     }
-
+    //GameManager.Instance.UpdateGameState(GameManager.GameState.HangiGün&gece);
 }
