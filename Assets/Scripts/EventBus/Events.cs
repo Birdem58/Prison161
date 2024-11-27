@@ -21,12 +21,7 @@ public struct HandleCharacterBalance : IEvent
 }
 public struct HandleDayNightCycle : IEvent
 {
-    public int DayNightCounterIncrement;
-
-    public HandleDayNightCycle(int increment)
-    {
-        DayNightCounterIncrement = increment;
-    }
+    
 }
 
 

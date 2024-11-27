@@ -57,6 +57,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+
     private void LoadNextScene(GameState newState)
     {
         
@@ -72,6 +73,8 @@ public class GameManager : MonoBehaviour
 
            
             OnGameStateChange?.Invoke(State);
+
+            GameStateFunctions(State);
         };
     }
 
@@ -79,6 +82,27 @@ public class GameManager : MonoBehaviour
     {
         return dayNightCounter;
     }
+
+    private void GameStateFunctions(GameState state)
+    {
+        switch (state)
+        {
+            case GameState.FirstDay:
+                OnFirstDay();
+                break;
+
+
+            default:
+                Debug.Log($"No specific logic for state: {state}");
+                break;
+        }
+    }
+
+    void OnFirstDay()
+    {
+
+    }
+
 
     public enum GameState
     {
