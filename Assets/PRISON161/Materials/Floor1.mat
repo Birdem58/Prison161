@@ -44,8 +44,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 9519f8e66442ee04b96b3d5cd7d9a936, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Texture: {fileID: 2800000, guid: 7edace3d618ac9447ad5b6cce072d24c, type: 3}
+        m_Scale: {x: 2, y: 2}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
@@ -88,7 +88,7 @@ Material:
     - Vector1_B9994903: 2.45
     - Vector1_E8746023: 29.6
     - Vector1_F6C0D59C: 1
-    - _AffineMapIntensity: 0.081
+    - _AffineMapIntensity: 0.071
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1

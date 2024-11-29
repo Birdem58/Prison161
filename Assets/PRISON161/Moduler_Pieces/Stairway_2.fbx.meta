@@ -3,7 +3,12 @@ guid: e3fb686ee23e87745b6a93a1de8a39a3
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Prison_Door_001
+    second: {fileID: 2100000, guid: ec0bafe54b069b643b7de7cd3b1211c6, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
