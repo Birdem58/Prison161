@@ -8,6 +8,7 @@ TagManager:
   - Paper
   - Normal
   - Abnormal
+  - Door
   layers:
   - Default
   - TransparentFX

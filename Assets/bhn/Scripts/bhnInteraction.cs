@@ -19,33 +19,13 @@ public class bhnInteraction : MonoBehaviour
     {
         crossHair.enabled = true;
         interactionText.gameObject.SetActive(false);
+        interactionText.text = "Interact[F]";
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Physics.Raycast(_cam.transform.position, _cam.transform.forward, out RaycastHit hit, rayLength))
-        {
-            var interactableItem = hit.collider.GetComponent<IInteraction>();
-    
-            if (interactableItem != null)
-            {
-                //HighlightCrosshair(true);
-                InteractionTextDisplayer(true);
-                Debug.Log("etkileşim etkin");
-            }
-            else
-            {
-                //HighlightCrosshair(false);
-                InteractionTextDisplayer(false);
-                Debug.Log("etkileşim iptal");
-            }
-
-        }
-        else
-        {
-            InteractionTextDisplayer(false);
-        }
+        CrossHairInteraction();
     }
     
     void HighlightCrosshair(bool on)
@@ -57,11 +37,55 @@ public class bhnInteraction : MonoBehaviour
         else { crossHair.color = Color.white; }
     }
 
-    void InteractionTextDisplayer(bool on)
+    public void CrossHairInteraction()
+    {
+        if (Physics.Raycast(_cam.transform.position, _cam.transform.forward, out RaycastHit hit, rayLength))
+        {
+            var interactableItem = hit.collider.GetComponent<IInteraction>();
+            string tag = hit.collider.tag;
+    
+            if (interactableItem != null)
+            {
+                switch (tag)
+                {
+                    case"Abnormal":
+                        InteractionTextDisplayer(true, "Talk[F]");
+                        break;
+                    case"Normal":
+                        InteractionTextDisplayer(true, "Talk[F]");
+                        break;
+                    case"Paper":
+                        InteractionTextDisplayer(true, "Take[F]");
+                        break;
+                    case"Door":
+                        InteractionTextDisplayer(true, "Open[F]");
+                        break;
+                    default:
+                        InteractionTextDisplayer(true,"Interact[F]");
+                        break;
+                }
+                Debug.Log("etkileşim etkin");
+            }
+            else
+            {
+                //HighlightCrosshair(false);
+                InteractionTextDisplayer(false,"");
+                Debug.Log("etkileşim iptal");
+            }
+
+        }
+        else
+        {
+            InteractionTextDisplayer(false,"");
+        }
+    }
+
+    void InteractionTextDisplayer(bool on, string text)
     {
         if (on)
         {
             crossHair.enabled = false;
+            interactionText.text = text;
             interactionText.gameObject.SetActive(true);
         }
         else
