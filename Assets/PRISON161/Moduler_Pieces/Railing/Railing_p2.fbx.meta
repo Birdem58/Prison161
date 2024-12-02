@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e3fb686ee23e87745b6a93a1de8a39a3
+guid: 57109beb56ee80a41be27ee2b701912a
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -9,11 +9,6 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: P1_01_mobile
     second: {fileID: 2100000, guid: f3eaf52e2366bfb478f1dd46406f26a2, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Prison_Door_001
-    second: {fileID: 2100000, guid: ec0bafe54b069b643b7de7cd3b1211c6, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
