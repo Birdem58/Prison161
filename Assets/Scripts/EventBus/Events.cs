@@ -19,10 +19,7 @@ public struct HandleCharacterBalance : IEvent
 
 
 }
-public struct HandleDayNightCycle : IEvent
-{
-    
-}
+
 
 
 
