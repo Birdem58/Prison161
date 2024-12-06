@@ -930,7 +930,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IsGlobal: 1
-  priority: 300
+  priority: 367.94
   blendDistance: 0
   weight: 1
   sharedProfile: {fileID: 11400000, guid: 8f037779c43df5d47994c12df73a86df, type: 2}
@@ -1559,16 +1559,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 830931a6b0716084a855fe73c841f73b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomDoor: {fileID: 0}
-  anna: {fileID: 0}
-  evelyn: {fileID: 0}
-  caleb: {fileID: 0}
-  annaOpRoom: {fileID: 0}
-  evelynOpRoom: {fileID: 0}
-  calebOpRoom: {fileID: 0}
-  isAcsessOpRoom: 0
-  talkedPeople: 0
-  blockToOpRoom: {fileID: 1449896897}
 --- !u!4 &2126541579
 Transform:
   m_ObjectHideFlags: 0

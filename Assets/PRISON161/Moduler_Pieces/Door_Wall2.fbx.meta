@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0e0a34466eabbf54a8bcffa0c4c877b3
+guid: 9d194bda106b0ba45a1b38bed4206d10
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,12 +7,12 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material.001
-    second: {fileID: 2100000, guid: 973bef356d6afbe419c13cb34123db49, type: 2}
+      name: P1_01_mobile.001
+    second: {fileID: -4254053735614582629, guid: af004e228fb8c01409bb29c2b7445aa1, type: 3}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: newwall.003
+      name: newwall
     second: {fileID: 2100000, guid: 8790e3399db1063419fc4f319478f9ad, type: 2}
   materials:
     materialImportMode: 2
@@ -81,7 +81,7 @@ ModelImporter:
     strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
-    normalImportMode: 1
+    normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
