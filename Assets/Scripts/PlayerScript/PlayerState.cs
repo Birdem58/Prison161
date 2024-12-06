@@ -10,6 +10,7 @@ public class PlayerState : MonoBehaviour
         DEFAULT,
         DIALOGUE,
         NONE
+        
     }
 
     //Singleton
@@ -72,9 +73,11 @@ public class PlayerState : MonoBehaviour
         state = State.NONE;
     }
 
-    
+
+
     public void SetCharacterController(bool value)
     {
+        Debug.Log("SetCharacterController: " + value);
         GetComponent<FirstPersonController>().enabled = value;
         GetComponent<CharacterController>().enabled = value;
     }
