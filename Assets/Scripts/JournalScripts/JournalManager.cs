@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using TMPro;
 
 public class JournalManager : MonoBehaviour
 {
@@ -24,7 +25,12 @@ public class JournalManager : MonoBehaviour
     [Header("For Logic")]
     private bool isJournalOpened;
     public bool jourAlert;
-    public bool journalvisibiliytyDEmee;
+    public bool visibDeneme;
+
+    [Header("For Notes")]
+    public TMP_InputField[] noteInputFields; 
+    private Dictionary<int, string> savedNotes = new Dictionary<int, string>(); // Notlarý kaydedecek dictionary
+    public AudioSource typeSoundEffect; // Yazý yazarken çalacak ses efekti
 
 
 
@@ -32,6 +38,7 @@ public class JournalManager : MonoBehaviour
     { 
 
         iconStartPos = journalIcon.transform.position;
+        //Buttonlara journal  sayfalarýný açmamýzý saðlayacak olan dinleme kodu
         for (int i = 0; i < bracketButtons.Length;i++)
         {
             int index = i;
@@ -39,11 +46,11 @@ public class JournalManager : MonoBehaviour
 
         }
 
-        SetJournalVisibility(0,true);
-        SetJournalVisibility(1, true);
-     
-        InitializeJournalCanvas();
 
+        InitializeNotes();
+        InitializeJournalCanvas();
+        SetJournalVisibility(1, false);
+        SetJournalVisibility(0, true);
     }
 
  
@@ -57,18 +64,24 @@ public class JournalManager : MonoBehaviour
         {
             OpenJournalByTab();
             JournalAlert();
-           
-            
         }     
+        if(Input.GetKeyDown(KeyCode.G))
+        {
+            if (!visibDeneme)
+            {
+                SetJournalVisibility(1, true);
+                visibDeneme = true;
+            }
+        
+        }
     }
 
-    
+
 
     void OpenPanels(int index)
     {
-        if (!panels[index].activeSelf)
-            return;
-
+        OnNoteChanged(index);
+        //journalýn panellerini kapatýyoruz ve daha sonra asýl paneli tekrardan aktif hale getiriyoruz
         for (int i = 0; i < panels.Length; i++)
         {
             panels[i].SetActive(false);
@@ -76,15 +89,31 @@ public class JournalManager : MonoBehaviour
 
         panels[index].SetActive(true);
         Debug.Log(index);
+        if (noteInputFields.Length > index)
+        {
+            if(savedNotes.ContainsKey(index))
+            {
+                noteInputFields[index].text = savedNotes[index];
+            }
+            else
+            {
+                noteInputFields[index].text = "";
+            }
+            noteInputFields[index].text = savedNotes.ContainsKey(index) ? savedNotes[index] : "";
+        }
+
     }
 
     void OpenJournalByTab()
     {
-        if (isAnimating) return; 
+        if (isAnimating) 
+            return; 
 
         if (!isJournalOpened)
         {
-            OpenPanels(1);
+           
+            
+            OpenPanels(0);
             isJournalOpened = true;
             PlayerState.Instance.SetState(PlayerState.State.NONE);
             OpenJournalAnimation();
@@ -105,8 +134,7 @@ public class JournalManager : MonoBehaviour
         jourAlert = false;
         isJournalOpened = true;
         PlayerState.Instance.SetState(PlayerState.State.NONE);
-        // journalIcon.DOAnchorPos(Vector2.zero, 0.5f).SetEase(Ease.InOutQuad);
-        // journalIcon.DOScale(Vector3.one * 2, 0.5f).SetEase(Ease.InOutQuad).OnComplete(ShowJournalCanvas);
+
        
             isAnimating = true; 
             Sequence openingSequence = DOTween.Sequence();
@@ -127,8 +155,6 @@ public class JournalManager : MonoBehaviour
         isJournalOpened = false;
 
      
-            //journalIcon.DOAnchorPos(new Vector2(-Screen.width / 2 + 100, -Screen.height / 2 + 100), 0.5f).SetEase(Ease.InOutQuad);
-            //journalIcon.DOScale(Vector3.one, 0.5f).SetEase(Ease.InOutQuad);
         
         isAnimating = true; 
         HideJournalCanvas(() =>
@@ -207,6 +233,42 @@ public class JournalManager : MonoBehaviour
         else
         {
             Debug.Log($"page and Button{pageIndex} closed");
+        }
+    }
+
+
+    private void InitializeNotes()
+    {
+        for(int i = 0; i < noteInputFields.Length;i++)
+        {
+            if (savedNotes.ContainsKey(i))
+            {
+                noteInputFields[i].text = savedNotes[i];
+            }
+        }
+    }
+    private void PlayTypingSoundEffect()
+    {
+        if (typeSoundEffect != null)
+        {
+
+            typeSoundEffect.Play();
+        }
+    }
+    public void OnNoteChanged(int pageIndex)
+    {
+        if (pageIndex >= 0 && pageIndex < noteInputFields.Length)
+        {
+            string note = noteInputFields[pageIndex].text;
+            if (savedNotes.ContainsKey(pageIndex))
+            {
+                savedNotes[pageIndex] = note;
+            }
+            else
+            {
+                savedNotes.Add(pageIndex, note);
+            }
+            PlayTypingSoundEffect();
         }
     }
 }
