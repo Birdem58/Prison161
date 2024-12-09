@@ -5,6 +5,8 @@ using UnityEngine;
 public class bhnInteractMe : MonoBehaviour, IInteraction
 {
     // Start is called before the first frame update
+    public string objectMessage;
+    
     public void Interact()
     {
         return;
