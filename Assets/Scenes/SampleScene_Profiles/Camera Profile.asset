@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a79b01ea5641d4aa6daa2e23605641, type: 3}
   m_Name: Bloom
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   enabled:
     overrideState: 1
     value: 1
   intensity:
     overrideState: 1
-    value: 0.44
+    value: 1.87
   threshold:
     overrideState: 1
     value: 1
@@ -47,6 +47,43 @@ MonoBehaviour:
   dirtIntensity:
     overrideState: 1
     value: 0
+--- !u!114 &-6567790069898651942
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b52a6bcc02940fa428ee3d41c2f07b5e, type: 3}
+  m_Name: Dithered
+  m_EditorClassIdentifier: 
+  active: 0
+  enabled:
+    overrideState: 1
+    value: 0
+  intensity:
+    overrideState: 1
+    value: 0.324
+  pixelScale:
+    overrideState: 1
+    value: 7
+  pattern:
+    overrideState: 1
+    value: {fileID: 11700000, guid: 7a317b7e6a69c6b418f50f33e31b316b, type: 2}
+    defaultState: 1
+  primary:
+    overrideState: 1
+    value: {fileID: 0}
+    defaultState: 1
+  secondary:
+    overrideState: 1
+    value: {fileID: 11700000, guid: 376b9037737ee044597411ddcacbf3fa, type: 2}
+    defaultState: 1
+  noiseIntensity:
+    overrideState: 1
+    value: 0.623
 --- !u!114 &-6156289758139601644
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -64,15 +101,15 @@ MonoBehaviour:
     overrideState: 1
     value: 1
   gradingMode:
-    overrideState: 0
-    value: 1
+    overrideState: 1
+    value: 0
   externalLut:
     overrideState: 1
     value: {fileID: 0}
     defaultState: 1
   tonemapper:
-    overrideState: 0
-    value: 2
+    overrideState: 1
+    value: 1
   toneCurveToeStrength:
     overrideState: 1
     value: 0
@@ -1358,6 +1395,58 @@ MonoBehaviour:
       - 0.5
       - 0.5
       - 0.5
+--- !u!114 &-1085313477865523539
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1cb7e9e120078f43bce4f0b1be547a7, type: 3}
+  m_Name: AmbientOcclusion
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  mode:
+    overrideState: 1
+    value: 0
+  intensity:
+    overrideState: 1
+    value: 0.73
+  color:
+    overrideState: 1
+    value: {r: 0, g: 0, b: 0, a: 1}
+  ambientOnly:
+    overrideState: 1
+    value: 1
+  noiseFilterTolerance:
+    overrideState: 0
+    value: 0
+  blurTolerance:
+    overrideState: 0
+    value: -4.6
+  upsampleTolerance:
+    overrideState: 0
+    value: -12
+  thicknessModifier:
+    overrideState: 1
+    value: 5.7
+  zBias:
+    overrideState: 1
+    value: 0.000242
+  directLightingStrength:
+    overrideState: 0
+    value: 0
+  radius:
+    overrideState: 1
+    value: 0.36
+  quality:
+    overrideState: 0
+    value: 2
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1375,6 +1464,8 @@ MonoBehaviour:
   - {fileID: -6156289758139601644}
   - {fileID: -6659097913328789917}
   - {fileID: 7383899146522267201}
+  - {fileID: -6567790069898651942}
+  - {fileID: -1085313477865523539}
 --- !u!114 &7383899146522267201
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1387,7 +1478,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54ccac7a7b193e24b838948044c40846, type: 3}
   m_Name: RetroPostProcessEffect
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   enabled:
     overrideState: 1
     value: 1
@@ -1399,10 +1490,10 @@ MonoBehaviour:
     value: 4
   FixedVerticalResolution:
     overrideState: 1
-    value: 480
+    value: 123
   ColorDepth:
     overrideState: 1
-    value: 0.025
+    value: 0.037
   DitherPattern:
     overrideState: 1
     value: {fileID: 2800000, guid: 33e4517dca3a2274ba1532dd85e3c541, type: 3}
@@ -1412,10 +1503,10 @@ MonoBehaviour:
     value: 1
   DitherThreshold:
     overrideState: 1
-    value: 0.75
+    value: 0.156
   DitherIntensity:
     overrideState: 1
-    value: 0.092
+    value: 0.025
 --- !u!114 &8004454178796725420
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1433,7 +1524,7 @@ MonoBehaviour:
     overrideState: 1
     value: 1
   mode:
-    overrideState: 0
+    overrideState: 1
     value: 0
   color:
     overrideState: 1
@@ -1443,7 +1534,7 @@ MonoBehaviour:
     value: {x: 0.5, y: 0.5}
   intensity:
     overrideState: 1
-    value: 0.157
+    value: 0.287
   smoothness:
     overrideState: 1
     value: 0.125
