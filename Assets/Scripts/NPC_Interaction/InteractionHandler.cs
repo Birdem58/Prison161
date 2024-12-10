@@ -5,9 +5,7 @@ using UnityEngine.UI;
 
 public class InteractionHandler : MonoBehaviour
 {
-    /*[Header("Crosshair")]
-    [SerializeField] private Image crossHair;
-*/
+
     //on fixed update raycast 10 units in front of the player if there is an object of type IInteraction call the interact method if pressed F
 
     IInteraction interaction;
@@ -27,20 +25,18 @@ public class InteractionHandler : MonoBehaviour
         {
             if (hit.collider.GetComponent<IInteraction>() != null)
             {
-                //HighlightCrosshair(true);
+                
                 interaction = hit.collider.GetComponent<IInteraction>();
                 CanInteract = true;
             }
             else
             {
-                //HighlightCrosshair(false);
                 CanInteract = false;
                 interaction = null;
             }
         }
         else
         {
-            //HighlightCrosshair(false);
             CanInteract = false;
             interaction = null;
         }
@@ -56,14 +52,4 @@ public class InteractionHandler : MonoBehaviour
         
     }
     
-    /*
-    void HighlightCrosshair(bool on)
-    {
-        if (on) //it only changes color, does not display the object's name!!!
-        {
-            crossHair.color = Color.red;
-        }
-        else { crossHair.color = Color.white; }
-    }
-    */
 }
