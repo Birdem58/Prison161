@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class bhnInteractMe : MonoBehaviour, IInteraction
+public class InteractMe : MonoBehaviour, IInteraction
 {
     // Start is called before the first frame update
     public string objectMessage;

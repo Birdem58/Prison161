@@ -10,7 +10,7 @@ public class bhnInteraction : MonoBehaviour
     [Header("Crosshair")]
     [SerializeField] private Image crossHair;
     
-    [SerializeField] private float rayLength = 10f;
+    [SerializeField] private float rayLength = 5f;
     [SerializeField]private Camera _cam;
     
     [SerializeField]private TextMeshProUGUI interactionText;
@@ -58,7 +58,7 @@ public class bhnInteraction : MonoBehaviour
         else { crossHair.color = Color.white; }
     }
 
-    public void CrossHairInteraction() //yazının gideceği bir kod bloğu yazmadık unutma
+    public void CrossHairInteraction()
     {
         _isInteracting = false;
         reactionMessageText.gameObject.SetActive(false);
@@ -68,7 +68,6 @@ public class bhnInteraction : MonoBehaviour
         {
             var interactableItem = hit.collider.GetComponent<IInteraction>();
             string tag = hit.collider.tag;
-            
             
             if (interactableItem != null)
             {
@@ -87,14 +86,11 @@ public class bhnInteraction : MonoBehaviour
                         InteractionTextDisplayer(true, "Open[F]");
                         break;
                     default:
-                        InteractionTextDisplayer(true,"Interact[F]");
+                        InteractionTextDisplayer(false,"Interact[F]");
                         break;
                 }
                 Debug.Log("etkileşim etkin");
-
-
             }
-
             else
             {
                 //HighlightCrosshair(false);
@@ -128,7 +124,7 @@ public class bhnInteraction : MonoBehaviour
     {
         if (Physics.Raycast(_cam.transform.position, _cam.transform.forward, out RaycastHit hit, rayLength))
         {
-            var reactionMessageValue = hit.collider.GetComponent<bhnInteractMe>();
+            var reactionMessageValue = hit.collider.GetComponent<InteractMe>();
             string reactionMessage = reactionMessageValue.objectMessage;
 
             if (reactionMessageValue != null)
