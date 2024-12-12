@@ -14,6 +14,16 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: P1_01_mobile
     second: {fileID: 2100000, guid: f3eaf52e2366bfb478f1dd46406f26a2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: P1_01_mobile.001
+    second: {fileID: 2100000, guid: c02e0e7d220589a47a8e97821c124ee7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: newwall
+    second: {fileID: 2100000, guid: 8790e3399db1063419fc4f319478f9ad, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

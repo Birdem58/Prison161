@@ -88,7 +88,7 @@ Material:
     - Vector1_B9994903: 2.45
     - Vector1_E8746023: 29.6
     - Vector1_F6C0D59C: 1
-    - _AffineMapIntensity: 1
+    - _AffineMapIntensity: 0.009
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -110,7 +110,7 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Surface: 0
-    - _VertJitter: 0.95
+    - _VertJitter: 0.03
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:

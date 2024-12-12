@@ -89,7 +89,7 @@ Material:
     - Vector1_B9994903: 2.45
     - Vector1_E8746023: 29.6
     - Vector1_F6C0D59C: 1
-    - _AffineMapIntensity: 1
+    - _AffineMapIntensity: 0.009
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
