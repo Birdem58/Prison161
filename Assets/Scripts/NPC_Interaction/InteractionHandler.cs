@@ -17,12 +17,13 @@ public class InteractionHandler : MonoBehaviour
     [SerializeField]private TextMeshProUGUI interactionText;
     [SerializeField]private TextMeshProUGUI reactionMessageText;
     
-    private bool CanInteract = false;
-    [SerializeField] private Camera _cam;
+    private bool CanInteract=false;
+    //[SerializeField] private Camera _cam;
     
     [SerializeField] private float rayLength = 10f;
 
-
+    private RaycastHit hit;//hitInfo
+    private bool raycastHit;
     private void Start()
     {
         crossHair.enabled = true;
@@ -36,11 +37,15 @@ public class InteractionHandler : MonoBehaviour
     {
         if(PlayerState.Instance.GetState() != PlayerState.State.DEFAULT)
         {
-            return;
+            crossHair.enabled = false;
+        }
+        else if (PlayerState.Instance.GetState() != PlayerState.State.DIALOGUE)
+        {
+            crossHair.enabled = true;
         }
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
+        raycastHit = Physics.Raycast(ray, out hit);
 
         if (Physics.Raycast(ray, out hit, rayLength))
         {
@@ -61,9 +66,13 @@ public class InteractionHandler : MonoBehaviour
             CanInteract = false; //yine else durumu
             interaction = null;
         }
+
+
     }
     void Update()
     {
+        PlayerInteractionCanvas.SetActive(CanInteract && PlayerState.Instance.GetState() == PlayerState.State.DEFAULT);
+        
         if ( CanInteract && Input.GetKeyDown(KeyCode.F))
         {
             interaction.Interact();
@@ -79,9 +88,6 @@ public class InteractionHandler : MonoBehaviour
         {
             CrossHairInteraction();
         }
-        PlayerInteractionCanvas.SetActive(CanInteract && PlayerState.Instance.GetState() == PlayerState.State.DEFAULT);
-        
-        
     }
     
     
@@ -96,16 +102,15 @@ public class InteractionHandler : MonoBehaviour
     
     public void CrossHairInteraction()
     {
-        CanInteract = true;
+        //CanInteract = true;
         reactionMessageText.gameObject.SetActive(false);
         interactionText.gameObject.SetActive(true);
         
-        if (Physics.Raycast(_cam.transform.position, _cam.transform.forward, out RaycastHit hit, rayLength)&&(PlayerState.Instance.GetState() != PlayerState.State.DIALOGUE))
+        if (PlayerState.Instance.GetState() != PlayerState.State.DIALOGUE)
         {
             var interactableItem = hit.collider.GetComponent<IInteraction>();
             string tag = hit.collider.tag;
-
-
+            
             if (interactableItem != null)
             {
                 switch (tag)
@@ -127,8 +132,6 @@ public class InteractionHandler : MonoBehaviour
                         break;
                 }
                 Debug.Log("etkileşim etkin");
-
-
             }
 
             else
@@ -162,8 +165,7 @@ public class InteractionHandler : MonoBehaviour
     
     void ReactionMessageTextDisplayer()
     {
-        if (Physics.Raycast(_cam.transform.position, _cam.transform.forward, out RaycastHit hit, rayLength))
-        {
+
             var reactionMessageValue = hit.collider.GetComponent<InteractMe>();
             string reactionMessage = reactionMessageValue.objectMessage;
 
@@ -177,11 +179,7 @@ public class InteractionHandler : MonoBehaviour
 
             else return;
 
-        }
-        else
-        {
-            return;
-        }
+
     }
     
 }
