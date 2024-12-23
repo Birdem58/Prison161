@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using TMPro;
+using System;
 
 public class JournalManager : MonoBehaviour
 {
@@ -12,16 +13,17 @@ public class JournalManager : MonoBehaviour
     public GameObject[] panels;
     public GameObject jourCanvas;
   
-    public GameObject jourCanvasPassive;
-    public RectTransform journalIcon;
     
+    public GameObject journalIcon;
+    public GameObject currentJournalIcon;
     public GameObject jourAlertUI;
     [Header("For Animation")]
-    public float animDuration;
+    
     public float targetScale;
     public Transform targetPos;
-    private Vector3 iconStartPos;
-    private bool isAnimating;
+ 
+
+
     [Header("For Logic")]
     private bool isJournalOpened;
     public bool jourAlert;
@@ -32,12 +34,17 @@ public class JournalManager : MonoBehaviour
     private Dictionary<int, string> savedNotes = new Dictionary<int, string>(); // Notlarý kaydedecek dictionary
     public AudioSource typeSoundEffect; // Yazý yazarken çalacak ses efekti
 
+    [Header("For Dialog")]
+    public GameObject journalIconPassive;
+    private bool isInDialog;
+    public int currentPerson;
+    public Button passiveJournalButton;
+    public Button closeJournalButton;
 
 
     void Start()
-    { 
-
-        iconStartPos = journalIcon.transform.position;
+    {
+        
         //Buttonlara journal  sayfalarýný açmamýzý saðlayacak olan dinleme kodu
         for (int i = 0; i < bracketButtons.Length;i++)
         {
@@ -46,10 +53,10 @@ public class JournalManager : MonoBehaviour
 
         }
 
-
+        
         InitializeNotes();
         InitializeJournalCanvas();
-        SetJournalVisibility(1, false);
+        SetJournalVisibility(1, true);
         SetJournalVisibility(0, true);
     }
 
@@ -60,20 +67,28 @@ public class JournalManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Tab))
+
+
+        isInDialog = PlayerState.Instance.GetState() == PlayerState.State.DIALOGUE;
+        
+        if (isInDialog)
+        {
+            JournalInDialog();
+        }
+        else
+        {
+            JournalOutDialog();
+        }
+
+        
+
+
+        if (Input.GetKeyDown(KeyCode.Tab) && !isInDialog)
         {
             OpenJournalByTab();
-            JournalAlert();
+         
         }     
-        if(Input.GetKeyDown(KeyCode.G))
-        {
-            if (!visibDeneme)
-            {
-                SetJournalVisibility(1, true);
-                visibDeneme = true;
-            }
-        
-        }
+       
     }
 
 
@@ -104,99 +119,129 @@ public class JournalManager : MonoBehaviour
 
     }
 
-    void OpenJournalByTab()
-    {
-        if (isAnimating) 
-            return; 
+   public void OpenJournalByTab()
+        {
+        Debug.Log("openjournalbytab");
+        
+
+        JournalAlert();
 
         if (!isJournalOpened)
         {
            
+            if(isInDialog)
+            {
+                OpenPanels(currentPerson);
+            }
+            else
+            { OpenPanels(0); }
             
-            OpenPanels(0);
             isJournalOpened = true;
-            PlayerState.Instance.SetState(PlayerState.State.NONE);
+           
             OpenJournalAnimation();
+            passiveJournalButton.gameObject.SetActive(false);
+            closeJournalButton.gameObject.SetActive(true);
         }
         else
         {
             CloseJournalAnimation();
             isJournalOpened = false;
+            closeJournalButton.gameObject.SetActive(false);
+            passiveJournalButton.gameObject.SetActive(true);
         }
     }
     void InitializeJournalCanvas()
     {
         jourCanvas.SetActive(false);
+        journalIcon.SetActive(false);
+        journalIconPassive.SetActive(false);
+        currentJournalIcon = journalIcon;
+        passiveJournalButton.onClick.AddListener(() => OpenJournalByTab());
+        closeJournalButton.onClick.AddListener(() => CloseJournal());
+        closeJournalButton.gameObject.SetActive(false);
+       
     }
 
     void OpenJournalAnimation()
     {
+
+      
         jourAlert = false;
         isJournalOpened = true;
-        PlayerState.Instance.SetState(PlayerState.State.NONE);
 
-       
-            isAnimating = true; 
-            Sequence openingSequence = DOTween.Sequence();
-            openingSequence.Append(journalIcon.transform.DOScale(targetScale, animDuration))
-                      .Join(journalIcon.transform.DOMove(targetPos.transform.position, animDuration)
-                      .SetEase(Ease.InOutQuad))
-                      .OnComplete(() =>
-                      {
-                          ShowJournalCanvas();
-                          isAnimating = false; 
-                      });
-            openingSequence.Play();
         
+       
+            
+         ShowJournalCanvas();
+        
+
+
     }
 
     void CloseJournalAnimation()
     {
         isJournalOpened = false;
 
-     
-        
-        isAnimating = true; 
-        HideJournalCanvas(() =>
-        {
-            journalIcon.transform.DOScale(Vector3.one, animDuration);
-            journalIcon.transform.DOMove(iconStartPos, animDuration).OnComplete(() =>
-            {
-                isAnimating = false; 
-                PlayerState.Instance.SetState(PlayerState.State.DEFAULT);
-            });
-        });
+        HideJournalCanvas();
+       
+
     }
 
     void ShowJournalCanvas()
     {
         jourCanvas.SetActive(true);
-        journalIcon.gameObject.SetActive(false);
+
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
+        PlayerState.Instance.SetCharacterController(false);
+        currentJournalIcon.gameObject.SetActive(false);
     }
 
-    void HideJournalCanvas(TweenCallback onComplete = null)
+    void HideJournalCanvas()
     {
-        jourCanvas.SetActive(false);
-    jourCanvasPassive.SetActive(false);
-    journalIcon.gameObject.SetActive(true); // Ýkonu tekrar göster
-    PlayerState.Instance.SetState(PlayerState.State.DEFAULT);
-    onComplete?.Invoke();
+    jourCanvas.SetActive(false);
+    currentJournalIcon.gameObject.SetActive(true); // Ýkonu tekrar göster
+
+    
+       if(!isInDialog)
+        {
+            PlayerState.Instance.SetState(PlayerState.State.DEFAULT);
+
+
+        }
+        
        
     }
-   
-    void JournalInDialogPassive()
+    public void CloseJournal()
     {
-        jourCanvas.SetActive(false);
-        jourCanvasPassive.SetActive(true);
+        if (!isJournalOpened)
+            return;
+
+        CloseJournalAnimation();
+        isJournalOpened = false;
+
+        
+        closeJournalButton.gameObject.SetActive(false);
+        passiveJournalButton.gameObject.SetActive(true);
+    }
+
+    void JournalInDialog()
+    {
+        currentJournalIcon.gameObject.SetActive(false);
+        currentJournalIcon = journalIconPassive;
+        currentJournalIcon.gameObject.SetActive(true);
+        currentJournalIcon = journalIconPassive.transform.GetChild(0).gameObject;
+        currentJournalIcon.gameObject.SetActive(true);
         //burda ses oynatacak kod yazýlabilir
 
     }
 
-    void JournalInDialogActive()
+    void JournalOutDialog()
     {
 
-        jourCanvasPassive.SetActive(false);
-        jourCanvas.SetActive(true);
+        currentJournalIcon.gameObject.SetActive(false);
+        currentJournalIcon = journalIcon;
+        currentJournalIcon.gameObject.SetActive(true);
         //burda ses oynatacak kod yazýlabilir
     }
 
@@ -270,6 +315,17 @@ public class JournalManager : MonoBehaviour
             }
             PlayTypingSoundEffect();
         }
+    }
+
+    public void SetCurrentPerson(int index)
+    {
+        currentPerson = index;
+        Debug.Log(currentPerson);
+    }
+
+    public void debugwatafak()
+    {
+        Debug.Log("butona basýldý");
     }
 }
 
