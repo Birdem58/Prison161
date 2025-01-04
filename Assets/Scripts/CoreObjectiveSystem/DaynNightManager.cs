@@ -56,10 +56,23 @@ public class DaynNightManager : MonoBehaviour
         if (dayNightObjectives.Count == 0)
         {
             AddObjectivesForDayNight(new List<Objective>
-            {
-                new Objective("day1_obj1", "press E"),
-                new Objective("day1_obj2", "domal")
-            });
+            {   
+               //biraz iç ses gibi yapmayý düþündüm objective listesini
+                new Objective("day1_obj1","I should probably visit the Warden"),
+               // Wardenýn çoluk çoukla karýþ dediðini varsayarak
+               // birde dýþarýda hafif bi gürültü olsa da hani dýþarý çýkma için
+               // bi motivasyonumuz ve insanlarý incelemek için bir motivasyonumuz da olur
+               new Objective("day1_obj2","Whats Happening outside"),
+               new Objective("day1_obj3","I should get to know them"),
+               //bu faks makinesi için
+               new Objective("day1_obj4","Whats with the fax machine")
+               
+
+
+            }) ;
+            
+            
+            
 
             AddObjectivesForDayNight(new List<Objective>
             {
