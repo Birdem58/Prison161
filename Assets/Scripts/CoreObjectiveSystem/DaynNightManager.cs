@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
+
 public class Objective
 {
     public string id;
@@ -15,15 +16,11 @@ public class Objective
     }
 }
 
-
 public class DaynNightManager : MonoBehaviour
 {
     public static DaynNightManager Instance { get; private set; }
 
-    [Header("Objectives Configuration")]
     [SerializeField] private List<List<Objective>> dayNightObjectives = new List<List<Objective>>();
-
-    [Header("UI Reference")]
     [SerializeField] private ObjectiveUIManager uiManager;
 
     private int dayNightCounter = 0;
@@ -56,23 +53,12 @@ public class DaynNightManager : MonoBehaviour
         if (dayNightObjectives.Count == 0)
         {
             AddObjectivesForDayNight(new List<Objective>
-            {   
-               //biraz iç ses gibi yapmayý düþündüm objective listesini
+            {
                 new Objective("day1_obj1","I should probably visit the Warden"),
-               // Wardenýn çoluk çoukla karýþ dediðini varsayarak
-               // birde dýþarýda hafif bi gürültü olsa da hani dýþarý çýkma için
-               // bi motivasyonumuz ve insanlarý incelemek için bir motivasyonumuz da olur
-               new Objective("day1_obj2","Whats Happening outside"),
-               new Objective("day1_obj3","I should get to know them"),
-               //bu faks makinesi için
-               new Objective("day1_obj4","Whats with the fax machine")
-               
-
-
-            }) ;
-            
-            
-            
+                new Objective("day1_obj2","Whats Happening outside"),
+                new Objective("day1_obj3","I should get to know them"),
+                new Objective("day1_obj4","Whats with the fax machine")
+            });
 
             AddObjectivesForDayNight(new List<Objective>
             {
@@ -86,7 +72,7 @@ public class DaynNightManager : MonoBehaviour
 
     private void HandleGameStateChange(GameManager.GameState newState)
     {
-        if(newState != GameManager.GameState.FirstDay)
+        if (newState != GameManager.GameState.FirstDay)
             SwitchToNextDayNight();
     }
 
@@ -99,10 +85,8 @@ public class DaynNightManager : MonoBehaviour
     {
         if (dayNightCounter < dayNightObjectives.Count - 1)
         {
-             
             dayNightCounter++;
             UpdateUIManager();
-
         }
         else
         {
@@ -110,7 +94,7 @@ public class DaynNightManager : MonoBehaviour
             uiManager?.UpdateObjectives(new List<Objective>());
         }
 
-        uiManager?.EnableUI();
+     
     }
 
     private void UpdateUIManager()
@@ -124,6 +108,7 @@ public class DaynNightManager : MonoBehaviour
     public List<Objective> GetCurrentObjectives() => dayNightObjectives[dayNightCounter];
 
     public bool AreAllObjectivesComplete() => dayNightObjectives[dayNightCounter].All(obj => obj.isCompleted);
+
     public void CompleteObjective(string objectiveId)
     {
         var currentObjectives = dayNightObjectives[dayNightCounter];
@@ -137,9 +122,8 @@ public class DaynNightManager : MonoBehaviour
             if (AreAllObjectivesComplete())
             {
                 Debug.Log($"All objectives completed for Day/Night {dayNightCounter + 1}!");
-                uiManager?.DisableUI(); // Hide UI if all objectives are completed
+              
             }
         }
     }
-
 }

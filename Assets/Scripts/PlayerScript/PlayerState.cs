@@ -47,8 +47,8 @@ public class PlayerState : MonoBehaviour
                 break;
             case State.NONE:
                 SetCharacterController(false);
-                Cursor.lockState = CursorLockMode.Confined;
-                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
                 break;
         }
     }
@@ -77,7 +77,7 @@ public class PlayerState : MonoBehaviour
 
     public void SetCharacterController(bool value)
     {
-        Debug.Log("SetCharacterController: " + value);
+      //  Debug.Log("SetCharacterController: " + value);
         GetComponent<FirstPersonController>().enabled = value;
         GetComponent<CharacterController>().enabled = value;
     }

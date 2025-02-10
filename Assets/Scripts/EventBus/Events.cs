@@ -20,6 +20,16 @@ public struct HandleCharacterBalance : IEvent
 
 }
 
+public struct GetJournal : IEvent
+{
+    public bool journalEnable;
+    public GetJournal(bool enable)
+    {
+        journalEnable = enable;
+    }
+}
+
+
 
 
 

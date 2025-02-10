@@ -1,290 +1,157 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using DG.Tweening;
 using TMPro;
-using System;
+using prison161.EventBus;
+using PuppetOfShadows.EventBinding;
 
 public class JournalManager : MonoBehaviour
 {
-    [Header("For JournalUI")]
+    [Header("UI References")]
     public Button[] bracketButtons;
     public GameObject[] panels;
     public GameObject jourCanvas;
-  
-    
-    public GameObject journalIcon;
-    public GameObject currentJournalIcon;
+    public GameObject journalIcon; // Journal Ýkonu
     public GameObject jourAlertUI;
-    [Header("For Animation")]
-    
-    public float targetScale;
-    public Transform targetPos;
- 
+    public TMP_InputField[] noteInputFields;
 
+    [Header("Settings")]
+    public float animationDuration = 0.3f;
+    // Bu ses, journal alýndýðýnda (veya not yazarken) çalýnacak.
+    // Farklý bir ses istiyorsanýz, farklý bir AudioClip ve AudioSource da ekleyebilirsiniz.
+    public AudioSource typeSoundEffect;
 
-    [Header("For Logic")]
+    private Dictionary<int, string> savedNotes = new Dictionary<int, string>();
+    private int currentPanelIndex = -1;
+    private int currentPerson;
     private bool isJournalOpened;
-    public bool jourAlert;
-    public bool visibDeneme;
-
-    [Header("For Notes")]
-    public TMP_InputField[] noteInputFields; 
-    private Dictionary<int, string> savedNotes = new Dictionary<int, string>(); // Notlarý kaydedecek dictionary
-    public AudioSource typeSoundEffect; // Yazý yazarken çalacak ses efekti
-
-    [Header("For Dialog")]
-    public GameObject journalIconPassive;
     private bool isInDialog;
-    public int currentPerson;
-    public Button passiveJournalButton;
-    public Button closeJournalButton;
 
+    // Journal eriþimine izin verip vermediðimizi kontrol eden bayrak.
+    private bool canOpenJournal = false;
 
-    void Start()
+    private void OnEnable()
     {
-        
-        //Buttonlara journal  sayfalarýný açmamýzý saðlayacak olan dinleme kodu
-        for (int i = 0; i < bracketButtons.Length;i++)
-        {
-            int index = i;
-            bracketButtons[i].onClick.AddListener(() => OpenPanels(index));
-
-        }
-
-        
-        InitializeNotes();
-        InitializeJournalCanvas();
-        SetJournalVisibility(1, true);
-        SetJournalVisibility(0, true);
+        EventBus<GetJournal>.Register(new EventBinding<GetJournal>(OnInitilaizeJournal));
     }
 
- 
+    private void OnDisable()
+    {
+        EventBus<GetJournal>.Deregister(new EventBinding<GetJournal>(OnInitilaizeJournal));
+    }
 
-
-
-    // Update is called once per frame
     void Update()
     {
-
-
-        isInDialog = PlayerState.Instance.GetState() == PlayerState.State.DIALOGUE;
-        
-        if (isInDialog)
-        {
-            JournalInDialog();
-        }
-        else
-        {
-            JournalOutDialog();
-        }
-
-        
-
-
-        if (Input.GetKeyDown(KeyCode.Tab) && !isInDialog)
-        {
-            OpenJournalByTab();
-         
-        }     
-       
+        HandlePlayerState();
+        HandleJournalInput();
     }
 
-
-
-    void OpenPanels(int index)
+    // GetJournal event'ini aldýðýnýz anda çalýþýr.
+    private void OnInitilaizeJournal(GetJournal getJournal)
     {
-        OnNoteChanged(index);
-        //journalýn panellerini kapatýyoruz ve daha sonra asýl paneli tekrardan aktif hale getiriyoruz
-        for (int i = 0; i < panels.Length; i++)
+        if (getJournal.journalEnable)
         {
-            panels[i].SetActive(false);
-        }
-
-        panels[index].SetActive(true);
-        Debug.Log(index);
-        if (noteInputFields.Length > index)
-        {
-            if(savedNotes.ContainsKey(index))
+            // Journal alýndýðýnda ses çalýnsýn:
+            if (typeSoundEffect != null)
             {
-                noteInputFields[index].text = savedNotes[index];
+                typeSoundEffect.Play();
             }
-            else
-            {
-                noteInputFields[index].text = "";
-            }
-            noteInputFields[index].text = savedNotes.ContainsKey(index) ? savedNotes[index] : "";
+            // Journal'ý açmaya izin ver:
+            canOpenJournal = true;
+            // UI initialize edilir, bu sýrada journalIcon baþlangýçta gizli kalabilir.
+            InitializeUI();
+            LoadNotes();
         }
-
     }
 
-   public void OpenJournalByTab()
-        {
-        Debug.Log("openjournalbytab");
-        
-
-        JournalAlert();
-
-        if (!isJournalOpened)
-        {
-           
-            if(isInDialog)
-            {
-                OpenPanels(currentPerson);
-            }
-            else
-            { OpenPanels(0); }
-            
-            isJournalOpened = true;
-           
-            OpenJournalAnimation();
-            passiveJournalButton.gameObject.SetActive(false);
-            closeJournalButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            CloseJournalAnimation();
-            isJournalOpened = false;
-            closeJournalButton.gameObject.SetActive(false);
-            passiveJournalButton.gameObject.SetActive(true);
-        }
-    }
-    void InitializeJournalCanvas()
+    private void InitializeUI()
     {
         jourCanvas.SetActive(false);
+        // Journal ikonunu baþlangýçta gizle, event ile eriþim verildiðinde görünmesi UpdateJournalIcon()'da kontrol edilecek.
         journalIcon.SetActive(false);
-        journalIconPassive.SetActive(false);
-        currentJournalIcon = journalIcon;
-        passiveJournalButton.onClick.AddListener(() => OpenJournalByTab());
-        closeJournalButton.onClick.AddListener(() => CloseJournal());
-        closeJournalButton.gameObject.SetActive(false);
-       
-    }
 
-    void OpenJournalAnimation()
-    {
-
-      
-        jourAlert = false;
-        isJournalOpened = true;
-
-        
-       
-            
-         ShowJournalCanvas();
-        
-
-
-    }
-
-    void CloseJournalAnimation()
-    {
-        isJournalOpened = false;
-
-        HideJournalCanvas();
-       
-
-    }
-
-    void ShowJournalCanvas()
-    {
-        jourCanvas.SetActive(true);
-
-        Cursor.lockState = CursorLockMode.Confined;
-        Cursor.visible = true;
-        PlayerState.Instance.SetCharacterController(false);
-        currentJournalIcon.gameObject.SetActive(false);
-    }
-
-    void HideJournalCanvas()
-    {
-    jourCanvas.SetActive(false);
-    currentJournalIcon.gameObject.SetActive(true); // Ýkonu tekrar göster
-
-    
-       if(!isInDialog)
+        for (int i = 0; i < bracketButtons.Length; i++)
         {
-            PlayerState.Instance.SetState(PlayerState.State.DEFAULT);
-
-
+            int index = i;
+            bracketButtons[i].onClick.AddListener(() => TogglePanel(index));
         }
-        
-       
+
+        TogglePanel(0);
     }
-    public void CloseJournal()
+
+    private void HandlePlayerState()
     {
-        if (!isJournalOpened)
+        isInDialog = PlayerState.Instance.GetState() == PlayerState.State.DIALOGUE;
+        UpdateJournalIcon();
+    }
+
+    // Journal ikonunu, journal eriþimine izin varsa, journal kapalý ve oyuncu diyalogda deðilse göster.
+    private void UpdateJournalIcon()
+    {
+        journalIcon.SetActive(canOpenJournal && !isJournalOpened && !isInDialog);
+    }
+
+    private void HandleJournalInput()
+    {
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            ToggleJournal();
+        }
+    }
+
+    public void ToggleJournal()
+    {
+        // Journal açýlmasýna henüz izin verilmediyse hiçbir þey yapma.
+        if (!canOpenJournal)
             return;
 
-        CloseJournalAnimation();
-        isJournalOpened = false;
-
-        
-        closeJournalButton.gameObject.SetActive(false);
-        passiveJournalButton.gameObject.SetActive(true);
+        isJournalOpened = !isJournalOpened;
+        UpdateJournalState();
     }
 
-    void JournalInDialog()
+    private void UpdateJournalState()
     {
-        currentJournalIcon.gameObject.SetActive(false);
-        currentJournalIcon = journalIconPassive;
-        currentJournalIcon.gameObject.SetActive(true);
-        currentJournalIcon = journalIconPassive.transform.GetChild(0).gameObject;
-        currentJournalIcon.gameObject.SetActive(true);
-        //burda ses oynatacak kod yazýlabilir
+        jourCanvas.SetActive(isJournalOpened);
+        Cursor.lockState = isJournalOpened ? CursorLockMode.Confined : CursorLockMode.Locked;
+        Cursor.visible = isJournalOpened;
+        PlayerState.Instance.SetCharacterController(!isJournalOpened);
 
-    }
+        // Journal açýldýðýnda ikon gizlensin.
+        journalIcon.SetActive(!isJournalOpened);
 
-    void JournalOutDialog()
-    {
-
-        currentJournalIcon.gameObject.SetActive(false);
-        currentJournalIcon = journalIcon;
-        currentJournalIcon.gameObject.SetActive(true);
-        //burda ses oynatacak kod yazýlabilir
-    }
-
-    void JournalAlert()
-    {
-        if(jourAlert)
+        if (isJournalOpened)
         {
-            jourAlertUI.SetActive(true);
-
-        }
-        else
-        {
-            jourAlertUI.SetActive(false);
+            TogglePanel(isInDialog ? currentPerson : 0);
         }
     }
 
-    public void SetJournalVisibility(int pageIndex, bool isVisible)
+    public void TogglePanel(int index)
     {
-        
-        if (pageIndex >= 0 && pageIndex < panels.Length)
+        if (currentPanelIndex == index) return;
+
+        if (currentPanelIndex >= 0)
         {
-            panels[pageIndex].SetActive(isVisible);
-        }
-        
-        if (pageIndex >= 0 && pageIndex < bracketButtons.Length)
-        {
-            bracketButtons[pageIndex].gameObject.SetActive(isVisible);
+            panels[currentPanelIndex].SetActive(false);
         }
 
-        if (isVisible)
+        currentPanelIndex = index;
+        panels[index].SetActive(true);
+        UpdateNoteDisplay(index);
+    }
+
+    private void UpdateNoteDisplay(int index)
+    {
+        if (index < noteInputFields.Length)
         {
-            Debug.Log($" page and button opened{pageIndex}");
-        }
-        else
-        {
-            Debug.Log($"page and Button{pageIndex} closed");
+            noteInputFields[index].text = savedNotes.ContainsKey(index)
+                ? savedNotes[index]
+                : string.Empty;
         }
     }
 
-
-    private void InitializeNotes()
+    private void LoadNotes()
     {
-        for(int i = 0; i < noteInputFields.Length;i++)
+        for (int i = 0; i < noteInputFields.Length; i++)
         {
             if (savedNotes.ContainsKey(i))
             {
@@ -292,42 +159,36 @@ public class JournalManager : MonoBehaviour
             }
         }
     }
-    private void PlayTypingSoundEffect()
+
+    public void OnNoteChanged(int pageIndex)
     {
+        if (pageIndex >= noteInputFields.Length) return;
+
+        string note = noteInputFields[pageIndex].text;
+        if (string.IsNullOrEmpty(note)) return;
+
+        if (savedNotes.ContainsKey(pageIndex))
+        {
+            savedNotes[pageIndex] = note;
+        }
+        else
+        {
+            savedNotes.Add(pageIndex, note);
+        }
+
         if (typeSoundEffect != null)
         {
-
             typeSoundEffect.Play();
         }
     }
-    public void OnNoteChanged(int pageIndex)
-    {
-        if (pageIndex >= 0 && pageIndex < noteInputFields.Length)
-        {
-            string note = noteInputFields[pageIndex].text;
-            if (savedNotes.ContainsKey(pageIndex))
-            {
-                savedNotes[pageIndex] = note;
-            }
-            else
-            {
-                savedNotes.Add(pageIndex, note);
-            }
-            PlayTypingSoundEffect();
-        }
-    }
 
-    public void SetCurrentPerson(int index)
-    {
-        currentPerson = index;
-        Debug.Log(currentPerson);
-    }
+    public void SetCurrentPerson(int index) => currentPerson = index;
 
-    public void debugwatafak()
+    // Diðer UI elementlerini kontrol eden metotlar:
+    public void ToggleJournalAlert(bool state) => jourAlertUI.SetActive(state);
+    public void ToggleJournalElements(int index, bool state)
     {
-        Debug.Log("butona basýldý");
+        if (index >= 0 && index < panels.Length) panels[index].SetActive(state);
+        if (index >= 0 && index < bracketButtons.Length) bracketButtons[index].gameObject.SetActive(state);
     }
 }
-
-
-

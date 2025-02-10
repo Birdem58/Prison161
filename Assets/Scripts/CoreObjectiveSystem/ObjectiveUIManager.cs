@@ -5,49 +5,43 @@ using UnityEngine.UI;
 
 public class ObjectiveUIManager : MonoBehaviour
 {
-    [SerializeField] private Canvas objectiveCanvas;
-    [SerializeField] private Image ObjectiveContainer;
     [SerializeField] private TextMeshProUGUI objectivesText;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip completionSound;
-
-    private string currentObjectiveId;
 
     public void UpdateObjectives(List<Objective> objectives)
     {
         if (objectivesText == null || objectives == null || objectives.Count == 0)
         {
-            DisableUI();
+            
             return;
         }
 
-        Objective currentObjective = objectives.Find(obj => !obj.isCompleted);
+        string objectivesDisplay = "";
+        bool hasDisplayedCurrent = false;
 
-        if (currentObjective == null)
+        foreach (var objective in objectives)
         {
-            objectivesText.text = "All Objectives Completed!";
-            objectivesText.color = Color.green;
-            PlayCompletionSound();
-            DisableUI();
-            return;
+            if (objective.isCompleted)
+            {
+                objectivesDisplay += $"- <s>{objective.description}</s>\n";
+            }
+            else if (!hasDisplayedCurrent)
+            {
+                objectivesDisplay += $"- {objective.description}\n";
+                hasDisplayedCurrent = true;
+            }
+            else
+            {
+                break;
+            }
         }
 
-        objectivesText.text = currentObjective.description;
-        objectivesText.color = Color.white;
-        EnableUI();
+        objectivesText.text = objectivesDisplay;
+    
     }
 
-    public void EnableUI()
-    {
-        if (objectiveCanvas != null) objectiveCanvas.enabled = true;
-        if (ObjectiveContainer != null) ObjectiveContainer.enabled = true;
-    }
-
-    public void DisableUI()
-    {
-        if (objectiveCanvas != null) objectiveCanvas.enabled = false;
-        if (ObjectiveContainer != null) ObjectiveContainer.enabled = false;
-    }
+ 
 
     private void PlayCompletionSound()
     {

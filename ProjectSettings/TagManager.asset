@@ -9,6 +9,7 @@ TagManager:
   - Normal
   - Abnormal
   - Door
+  - Journal
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - Post Proccesing
   - Water
   - UI
-  - 
+  - ignorePlayer
   - 
   - 
   - 
