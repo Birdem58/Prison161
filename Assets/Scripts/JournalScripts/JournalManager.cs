@@ -11,14 +11,14 @@ public class JournalManager : MonoBehaviour
     public Button[] bracketButtons;
     public GameObject[] panels;
     public GameObject jourCanvas;
-    public GameObject journalIcon; // Journal Ýkonu
+    public GameObject journalIcon; // Journal ï¿½konu
     public GameObject jourAlertUI;
     public TMP_InputField[] noteInputFields;
 
     [Header("Settings")]
     public float animationDuration = 0.3f;
-    // Bu ses, journal alýndýðýnda (veya not yazarken) çalýnacak.
-    // Farklý bir ses istiyorsanýz, farklý bir AudioClip ve AudioSource da ekleyebilirsiniz.
+    // Bu ses, journal alï¿½ndï¿½ï¿½ï¿½nda (veya not yazarken) ï¿½alï¿½nacak.
+    // Farklï¿½ bir ses istiyorsanï¿½z, farklï¿½ bir AudioClip ve AudioSource da ekleyebilirsiniz.
     public AudioSource typeSoundEffect;
 
     private Dictionary<int, string> savedNotes = new Dictionary<int, string>();
@@ -27,17 +27,17 @@ public class JournalManager : MonoBehaviour
     private bool isJournalOpened;
     private bool isInDialog;
 
-    // Journal eriþimine izin verip vermediðimizi kontrol eden bayrak.
+    // Journal eriï¿½imine izin verip vermediï¿½imizi kontrol eden bayrak.
     private bool canOpenJournal = false;
 
     private void OnEnable()
     {
-        EventBus<GetJournal>.Register(new EventBinding<GetJournal>(OnInitilaizeJournal));
+        //EventBus<GetJournal>.Register(new EventBinding<GetJournal>(OnInitilaizeJournal)); HATA VERÄ°YOR
     }
 
     private void OnDisable()
     {
-        EventBus<GetJournal>.Deregister(new EventBinding<GetJournal>(OnInitilaizeJournal));
+        // EventBus<GetJournal>.Deregister(new EventBinding<GetJournal>(OnInitilaizeJournal)); HATA VERÄ°YOR
     }
 
     void Update()
@@ -46,19 +46,19 @@ public class JournalManager : MonoBehaviour
         HandleJournalInput();
     }
 
-    // GetJournal event'ini aldýðýnýz anda çalýþýr.
+    // GetJournal event'ini aldï¿½ï¿½ï¿½nï¿½z anda ï¿½alï¿½ï¿½ï¿½r.
     private void OnInitilaizeJournal(GetJournal getJournal)
     {
         if (getJournal.journalEnable)
         {
-            // Journal alýndýðýnda ses çalýnsýn:
+            // Journal alï¿½ndï¿½ï¿½ï¿½nda ses ï¿½alï¿½nsï¿½n:
             if (typeSoundEffect != null)
             {
                 typeSoundEffect.Play();
             }
-            // Journal'ý açmaya izin ver:
+            // Journal'ï¿½ aï¿½maya izin ver:
             canOpenJournal = true;
-            // UI initialize edilir, bu sýrada journalIcon baþlangýçta gizli kalabilir.
+            // UI initialize edilir, bu sï¿½rada journalIcon baï¿½langï¿½ï¿½ta gizli kalabilir.
             InitializeUI();
             LoadNotes();
         }
@@ -67,7 +67,7 @@ public class JournalManager : MonoBehaviour
     private void InitializeUI()
     {
         jourCanvas.SetActive(false);
-        // Journal ikonunu baþlangýçta gizle, event ile eriþim verildiðinde görünmesi UpdateJournalIcon()'da kontrol edilecek.
+        // Journal ikonunu baï¿½langï¿½ï¿½ta gizle, event ile eriï¿½im verildiï¿½inde gï¿½rï¿½nmesi UpdateJournalIcon()'da kontrol edilecek.
         journalIcon.SetActive(false);
 
         for (int i = 0; i < bracketButtons.Length; i++)
@@ -85,7 +85,7 @@ public class JournalManager : MonoBehaviour
         UpdateJournalIcon();
     }
 
-    // Journal ikonunu, journal eriþimine izin varsa, journal kapalý ve oyuncu diyalogda deðilse göster.
+    // Journal ikonunu, journal eriï¿½imine izin varsa, journal kapalï¿½ ve oyuncu diyalogda deï¿½ilse gï¿½ster.
     private void UpdateJournalIcon()
     {
         journalIcon.SetActive(canOpenJournal && !isJournalOpened && !isInDialog);
@@ -101,7 +101,7 @@ public class JournalManager : MonoBehaviour
 
     public void ToggleJournal()
     {
-        // Journal açýlmasýna henüz izin verilmediyse hiçbir þey yapma.
+        // Journal aï¿½ï¿½lmasï¿½na henï¿½z izin verilmediyse hiï¿½bir ï¿½ey yapma.
         if (!canOpenJournal)
             return;
 
@@ -116,7 +116,7 @@ public class JournalManager : MonoBehaviour
         Cursor.visible = isJournalOpened;
         PlayerState.Instance.SetCharacterController(!isJournalOpened);
 
-        // Journal açýldýðýnda ikon gizlensin.
+        // Journal aï¿½ï¿½ldï¿½ï¿½ï¿½nda ikon gizlensin.
         journalIcon.SetActive(!isJournalOpened);
 
         if (isJournalOpened)
@@ -184,7 +184,7 @@ public class JournalManager : MonoBehaviour
 
     public void SetCurrentPerson(int index) => currentPerson = index;
 
-    // Diðer UI elementlerini kontrol eden metotlar:
+    // Diï¿½er UI elementlerini kontrol eden metotlar:
     public void ToggleJournalAlert(bool state) => jourAlertUI.SetActive(state);
     public void ToggleJournalElements(int index, bool state)
     {
