@@ -8,29 +8,25 @@ using prison161.EventBus;
 
 public class InteractionHandler : MonoBehaviour
 {
-    //on fixed update raycast 10 units in front of the player if there is an object of type IInteraction call the interact method if pressed F
-
+    // Reference to the interactable component found via raycast.
     IInteraction interaction;
+    // Optional component that can provide an alternate object message.
+    InteractMe interactMe;
 
-    [SerializeField] GameObject PlayerInteractionCanvas;
+    [SerializeField] private GameObject PlayerInteractionCanvas;
     [SerializeField] private Image crossHair;
     [SerializeField] private TextMeshProUGUI interactionText;
     [SerializeField] private TextMeshProUGUI reactionMessageText;
 
     private bool CanInteract = false;
-    private bool isreactionActive = false;
-    private GameObject currentReactionTarget = null;
+    private float rayLength = 3f;
+    private RaycastHit hit;
 
-    //[SerializeField] private Camera _cam;
+    // This field stores the dialogue interaction once initiated.
+    private IInteraction currentDialogueInteraction = null;
 
-    [SerializeField] private float rayLength = 10f;
-
-    private RaycastHit hit; //hitInfo
-    private bool raycastHit;
-
-    private void Start()
+    void Start()
     {
-        // Activate UI elements that might be inactive in the Editor
         if (PlayerInteractionCanvas != null)
             PlayerInteractionCanvas.SetActive(true);
 
@@ -43,179 +39,97 @@ public class InteractionHandler : MonoBehaviour
         if (interactionText != null)
         {
             interactionText.gameObject.SetActive(false);
-            interactionText.text = "Interact[F]";
         }
 
         if (reactionMessageText != null)
         {
             reactionMessageText.gameObject.SetActive(false);
-            reactionMessageText.text = "";
         }
     }
 
     void FixedUpdate()
     {
+        // When in dialogue mode, we retain the dialogue interaction without updating the raycast.
         if (PlayerState.Instance.GetState() == PlayerState.State.DIALOGUE)
-        {
             return;
-        }
-        if (PlayerState.Instance.GetState() != PlayerState.State.DEFAULT)
-        {
-            crossHair.enabled = false;
-        }
-        else if (PlayerState.Instance.GetState() != PlayerState.State.DIALOGUE)
-        {
-            crossHair.enabled = true;
-        }
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        raycastHit = Physics.Raycast(ray, out hit);
-
         if (Physics.Raycast(ray, out hit, rayLength))
         {
-            if (hit.collider.GetComponent<IInteraction>() != null) //IInteraction'a erişebilirse interact edilebilir
-            {
-                interaction = hit.collider.GetComponent<IInteraction>();
-                CanInteract = true;
-            }
-            else
-            {
-                CanInteract = false; //else durumu zaten
-                interaction = null;
-            }
+            // Retrieve the IInteraction and optional InteractMe components.
+            interaction = hit.collider.GetComponent<IInteraction>();
+            interactMe = hit.collider.GetComponent<InteractMe>();
+            CanInteract = (interaction != null);
         }
         else
         {
-            CanInteract = false; //yine else durumu
+            CanInteract = false;
             interaction = null;
+            interactMe = null;
         }
     }
 
     void Update()
     {
-        
-            PlayerInteractionCanvas.SetActive(CanInteract && PlayerState.Instance.GetState() == PlayerState.State.DEFAULT);
-
-            if (CanInteract && Input.GetKeyDown(KeyCode.F))
-            {
-                interaction.Interact();
-                ReactionMessageTextDisplayer();
-            }
-
-            if (!CanInteract && Input.GetKeyDown(KeyCode.Escape))
-            {
-                CrossHairInteraction();
-            }
-
-            if (isreactionActive)
-            {
-                if (!raycastHit || hit.collider.gameObject != currentReactionTarget)
-                {
-                    isreactionActive = false;
-                    reactionMessageText.gameObject.SetActive(false);
-                }
-            }
-            else if (CanInteract)
-            {
-                CrossHairInteraction();
-            }
-        
-
-    }
-
-    void HighlightCrosshair(bool on)
-    {
-        if (on)
-        {
-            crossHair.color = Color.red;
-        }
-        else { crossHair.color = Color.white; }
-    }
-
-    public void CrossHairInteraction()
-    {
-        //CanInteract = true;
-        reactionMessageText.gameObject.SetActive(false);
-        interactionText.gameObject.SetActive(true);
-
+        // Clear any stored dialogue interaction if not in dialogue mode.
         if (PlayerState.Instance.GetState() != PlayerState.State.DIALOGUE)
-        {
-            var interactableItem = hit.collider.GetComponent<IInteraction>();
-            string tag = hit.collider.tag;
+            currentDialogueInteraction = null;
 
-            if (interactableItem != null)
+        // In dialogue mode, process dialogue input and hide the interaction UI.
+        if (PlayerState.Instance.GetState() == PlayerState.State.DIALOGUE)
+        {
+            HideInteractionUI();
+            if (Input.GetKeyDown(KeyCode.F) && currentDialogueInteraction != null)
             {
-                switch (tag)
-                {
-                    case "Abnormal":
-                        InteractionTextDisplayer(true, "Talk[F]");
-                        break;
-                    case "Normal":
-                        InteractionTextDisplayer(true, "Talk[F]");
-                        break;
-                    case "Paper":
-                        InteractionTextDisplayer(true, "Take[F]");
-                        break;
-                    case "Journal":
-                        InteractionTextDisplayer(true, "Take[F]");
-                        EnableJournal();
-                        break;
-                    case "Door":
-                        InteractionTextDisplayer(true, "Open[F]");
-                        break;
-                    default:
-                        InteractionTextDisplayer(true, "Interact[F]");
-                        break;
-                }
-               // Debug.Log("etkileşim etkin");
+                currentDialogueInteraction.Interact();
             }
-            else
+            return;
+        }
+
+        // Normal mode: display the appropriate prompt.
+        if (CanInteract)
+        {
+            // If an InteractMe component is present, display its object message.
+            if (interactMe != null)
             {
-                //HighlightCrosshair(false);
-                InteractionTextDisplayer(false, "");
-              //  Debug.Log("etkileşim iptal");
+                reactionMessageText.text = interactMe.objectMessage;
+                reactionMessageText.gameObject.SetActive(true);
+                interactionText.gameObject.SetActive(false);
+            }
+            // Otherwise, display the prompt provided by the interactable object.
+            else if (interaction != null)
+            {
+                interactionText.text = interaction.InteractionPrompt;
+                interactionText.gameObject.SetActive(true);
+                reactionMessageText.gameObject.SetActive(false);
             }
         }
         else
         {
-            InteractionTextDisplayer(false, "");
+            HideInteractionUI();
         }
-    }
-    public void EnableJournal()
-    {
-        
-        EventBus<GetJournal>.Raise(new GetJournal(true));
-    }
-    void InteractionTextDisplayer(bool on, string text)
-    {
-        if (on)
+
+        // When F is pressed, trigger the interaction.
+        if (CanInteract && Input.GetKeyDown(KeyCode.F))
         {
-            crossHair.enabled = false;
-            interactionText.text = text;
-            interactionText.gameObject.SetActive(true);
+            interaction.Interact();
+            currentDialogueInteraction = interaction;
+            
         }
-        else
+
+        // Allow the player to hide the UI with Escape.
+        if (!CanInteract && Input.GetKeyDown(KeyCode.Escape))
         {
-            crossHair.enabled = true;
-            interactionText.gameObject.SetActive(false);
+            HideInteractionUI();
         }
     }
 
-    void ReactionMessageTextDisplayer()
+    /// <summary>
+    /// Hides both interaction UI elements.
+    /// </summary>
+    public void HideInteractionUI()
     {
-        if (hit.collider == null) return;
-
-        var reactionMessageValue = hit.collider.GetComponent<InteractMe>();
-        if (reactionMessageValue != null)
-        {
-            string reactionMessage = reactionMessageValue.objectMessage;
-            reactionMessageText.text = reactionMessage;
-            interactionText.gameObject.SetActive(false);
-            reactionMessageText.gameObject.SetActive(true);
-
-          
-           isreactionActive = true;
-            currentReactionTarget = hit.collider.gameObject;
-        }
+        interactionText.gameObject.SetActive(false);
+        reactionMessageText.gameObject.SetActive(false);
     }
 }

@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class FaxInteraction : MonoBehaviour, IInteraction
 {
     public GameObject wallCollider;
-
+    public string InteractionPrompt => "Todays Fax Paper[F]";
     [Header("Fax Descriptions")]
     [Tooltip("FaxPaperlarý yaz")]
     public List<string> faxDescriptions;

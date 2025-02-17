@@ -19,7 +19,7 @@ public class OpeningCinematic : MonoBehaviour
         
         // Oyun baþýnda kontrolleri ve kameralarý kapat
         PlayerState.Instance.SetState(PlayerState.State.NONE);
-        playerCamera.SetActive(false);
+        //playerCamera.SetActive(false);
 
         // Timeline baþlat
         director.Play();
@@ -38,7 +38,7 @@ public class OpeningCinematic : MonoBehaviour
 
         mainCamera.transform.rotation = Quaternion.LookRotation(cinematicTarget - mainCamera.transform.position);
 
-        playerCamera.SetActive(true);
+       // playerCamera.SetActive(true);
         cinematicCam.Priority = 0;
         Debug.Log("TimelineisFÝnisgeed");
         NpcInterract npcInteract = targetCharacter.GetComponent<NpcInterract>();

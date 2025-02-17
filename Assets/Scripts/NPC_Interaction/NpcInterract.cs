@@ -7,6 +7,7 @@ public class NpcInterract : MonoBehaviour, IInteraction
 {
     [SerializeField]VIDE_Assign videAssign;
     private VIDEUIManager4 diagUI;
+    public string InteractionPrompt => "Talk[F]";
     public void Interact()
     {
        PlayerState.Instance.SetState(PlayerState.State.DIALOGUE);

@@ -4,21 +4,7 @@ using UnityEngine;
 
 public interface IEvent { }
 
-public struct HandleCharacterBalance : IEvent
-{
-    public float TargetRotationValue;
-    public float RotationForce;
-    public HandleCharacterBalance(float targetRotationValue, float rotationForce)
-    {
-        TargetRotationValue = targetRotationValue;
 
-        RotationForce = rotationForce;
-    }
-
-
-
-
-}
 
 public struct GetJournal : IEvent
 {

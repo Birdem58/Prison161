@@ -9,6 +9,7 @@ public class PlayerState : MonoBehaviour
     {
         DEFAULT,
         DIALOGUE,
+        INSPECT,
         NONE
         
     }
@@ -45,6 +46,11 @@ public class PlayerState : MonoBehaviour
                 Cursor.lockState = CursorLockMode.Confined;
                 Cursor.visible = true;
                 break;
+            case State.INSPECT:
+                SetCharacterController(false);
+                Cursor.lockState = CursorLockMode.Confined;
+                Cursor.visible = false;
+                break;
             case State.NONE:
                 SetCharacterController(false);
                 Cursor.lockState = CursorLockMode.Locked;
@@ -67,6 +73,11 @@ public class PlayerState : MonoBehaviour
     {
         state = State.DIALOGUE;
     }
+    public void SetInspectState()
+    {
+        state = State.INSPECT;
+    }
+
 
     public void SetNoneState()
     {

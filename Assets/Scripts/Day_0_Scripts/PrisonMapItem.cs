@@ -2,19 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InteractMe : MonoBehaviour, IInteraction
+public class PrisonMapItem : MonoBehaviour
 {
     // Start is called before the first frame update
-    public string objectMessage;
-    
-    public void Interact()
+    void Start()
     {
-        return;
+        
     }
 
     // Update is called once per frame
-    public void StopInteract()
+    void Update()
     {
-        return;
+        
     }
 }
