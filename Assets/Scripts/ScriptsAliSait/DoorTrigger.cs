@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using prison161.EventBus;
 
 
 public class DoorTrigger : MonoBehaviour
@@ -78,7 +79,7 @@ public class DoorTrigger : MonoBehaviour
         Debug.Log($"Oyuncu şu noktaya gidecek: {targetPoint.position}");
 
         // FADE OUT (Ekranı karart)
-        EventBus<DoorEvent>.Raise(new DoorEvent(this, targetPoint)); //DoorEvent oluştur ve EventBus aracılığıyla bu olayı dinleyenlere gönder
+        EventBus<DoorEvent>.Raise((new DoorEvent(this, targetPoint)));
         yield return new WaitForSeconds(transitionDelay / 2);
 
         // Oyuncunun CharacterController'ını kapat

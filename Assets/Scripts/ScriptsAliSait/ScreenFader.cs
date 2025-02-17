@@ -1,4 +1,6 @@
 using System.Collections;
+using prison161.EventBus;
+using PuppetOfShadows.EventBinding;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,12 +11,15 @@ public class ScreenFader : MonoBehaviour
 
     private void OnEnable()
     {
-        EventBus<DoorEvent>.Subscribe(OnDoorUsed);
+
+        EventBus<DoorEvent>.Register(new EventBinding<DoorEvent>(OnDoorUsed));
+
     }
 
     private void OnDisable()
     {
-        EventBus<DoorEvent>.Unsubscribe(OnDoorUsed);
+
+        EventBus<DoorEvent>.Deregister(new EventBinding<DoorEvent>(OnDoorUsed));
     }
 
     private void OnDoorUsed(DoorEvent doorEvent)

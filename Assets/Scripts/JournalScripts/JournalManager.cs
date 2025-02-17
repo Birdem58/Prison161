@@ -17,8 +17,6 @@ public class JournalManager : MonoBehaviour
 
     [Header("Settings")]
     public float animationDuration = 0.3f;
-    // Bu ses, journal al�nd���nda (veya not yazarken) �al�nacak.
-    // Farkl� bir ses istiyorsan�z, farkl� bir AudioClip ve AudioSource da ekleyebilirsiniz.
     public AudioSource typeSoundEffect;
 
     private Dictionary<int, string> savedNotes = new Dictionary<int, string>();
@@ -32,12 +30,12 @@ public class JournalManager : MonoBehaviour
 
     private void OnEnable()
     {
-        //EventBus<GetJournal>.Register(new EventBinding<GetJournal>(OnInitilaizeJournal)); HATA VERİYOR
+        EventBus<GetJournal>.Register(new EventBinding<GetJournal>(OnInitilaizeJournal)); 
     }
 
     private void OnDisable()
     {
-        // EventBus<GetJournal>.Deregister(new EventBinding<GetJournal>(OnInitilaizeJournal)); HATA VERİYOR
+         EventBus<GetJournal>.Deregister(new EventBinding<GetJournal>(OnInitilaizeJournal)); 
     }
 
     void Update()
@@ -46,7 +44,7 @@ public class JournalManager : MonoBehaviour
         HandleJournalInput();
     }
 
-    // GetJournal event'ini ald���n�z anda �al���r.
+    
     private void OnInitilaizeJournal(GetJournal getJournal)
     {
         if (getJournal.journalEnable)

@@ -15,6 +15,18 @@ public struct GetJournal : IEvent
     }
 }
 
+public struct DoorEvent: IEvent
+{
+    public DoorTrigger door;
+    public Transform targetPosition; // Oyuncunun gideceði nokta
+
+    public DoorEvent(DoorTrigger door, Transform targetPosition)  //Constructor metod
+    {
+        this.door = door;
+        this.targetPosition = targetPosition;
+    }
+}
+
 
 
 

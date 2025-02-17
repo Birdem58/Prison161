@@ -1,15 +1,20 @@
 using UnityEngine;
+using prison161.EventBus;
+using PuppetOfShadows.EventBinding;
 
 public class DoorTransitionManager : MonoBehaviour
 {
     private void OnEnable()
     {
-        EventBus<DoorEvent>.Subscribe(OnDoorUsed);
+
+        EventBus<DoorEvent>.Register(new EventBinding<DoorEvent>(OnDoorUsed));
+        
     }
 
     private void OnDisable()
     {
-        EventBus<DoorEvent>.Unsubscribe(OnDoorUsed);
+
+        EventBus<DoorEvent>.Deregister(new EventBinding<DoorEvent>(OnDoorUsed));
     }
 
     private void OnDoorUsed(DoorEvent doorEvent)
