@@ -1,24 +1,9 @@
 fileFormatVersion: 2
-guid: 1265948d64e5dd149b99481369ef134f
+guid: 3b842578fde869044b9dfde5733903cd
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Sign
-    second: {fileID: 2100000, guid: cca9858525264224f9926c5d224cd6c8, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: chair
-    second: {fileID: 2100000, guid: 3d1bf93a463c11749bdd24bf175870b2, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: old_table
-    second: {fileID: 2100000, guid: 3d1bf93a463c11749bdd24bf175870b2, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
