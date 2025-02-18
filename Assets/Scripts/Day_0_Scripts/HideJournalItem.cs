@@ -8,12 +8,12 @@ public class HideJournalItem : MonoBehaviour
 {
     private void OnEnable()
     {
-        //EventBus<GetJournal>.Register(new EventBinding<GetJournal>(OnDestroyJournalItem)); HATA VERİYOR
+        EventBus<GetJournal>.Register(new EventBinding<GetJournal>(OnDestroyJournalItem)); 
     }
 
     private void OnDisable()
     {
-        //EventBus<GetJournal>.Deregister(new EventBinding<GetJournal>(OnDestroyJournalItem)); HATA VERİYOR
+        EventBus<GetJournal>.Deregister(new EventBinding<GetJournal>(OnDestroyJournalItem)); 
     }
     private void OnDestroyJournalItem(GetJournal getJournal)
     {

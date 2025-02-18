@@ -19,7 +19,7 @@ public class InteractionHandler : MonoBehaviour
     [SerializeField] private TextMeshProUGUI reactionMessageText;
 
     private bool CanInteract = false;
-    private float rayLength = 3f;
+    public float rayLength = 3f;
     private RaycastHit hit;
 
     // This field stores the dialogue interaction once initiated.

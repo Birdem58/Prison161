@@ -107,6 +107,7 @@ public class JournalManager : MonoBehaviour
         UpdateJournalState();
     }
 
+    //GameManager.OnGameStateChange -= HandleGameStateChange;
     private void UpdateJournalState()
     {
         jourCanvas.SetActive(isJournalOpened);

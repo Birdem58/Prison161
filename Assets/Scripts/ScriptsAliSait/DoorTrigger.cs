@@ -3,8 +3,10 @@ using System.Collections;
 using prison161.EventBus;
 
 
-public class DoorTrigger : MonoBehaviour
+public class DoorTrigger : MonoBehaviour, IInteraction
 {
+
+    public string InteractionPrompt => "Interact[F]";
     [SerializeField] private Collider insideArea; // Kapının iç tarafındaki geniş alan (BoxCollider)
     [SerializeField] private Collider outsideArea; // Kapının dış tarafındaki geniş alan (BoxCollider)
     [SerializeField] private float transitionDelay = 1.5f;
@@ -23,7 +25,19 @@ public class DoorTrigger : MonoBehaviour
             DeterminePlayerPosition(other.transform);
         }
     }
+    public void Interact()
+    {
+        Debug.Log(canInteract);
+        if (canInteract && !isTransitioning)
+        {
+            Debug.Log("F tuşuna basıldı! Kapıdan geçiş başlıyor.");
+            StartCoroutine(HandleDoorTransition());
+        }
+    }
+    public void StopInteract()
+    {
 
+    }
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -46,11 +60,7 @@ public class DoorTrigger : MonoBehaviour
 
     private void Update()
     {
-        if (canInteract && !isTransitioning && Input.GetKeyDown(KeyCode.F))
-        {
-            Debug.Log("F tuşuna basıldı! Kapıdan geçiş başlıyor.");
-            StartCoroutine(HandleDoorTransition());
-        }
+      
     }
 
     private IEnumerator HandleDoorTransition()  //IEnumearor sayesinde daha yumuşak geçişler sağlıyoruz , yield return ile oyunu dondurmadan bekleme yapabiliyoruz.
