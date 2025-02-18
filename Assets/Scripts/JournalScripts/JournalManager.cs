@@ -107,7 +107,11 @@ public class JournalManager : MonoBehaviour
         UpdateJournalState();
     }
 
+<<<<<<< Updated upstream
     //GameManager.OnGameStateChange -= HandleGameStateChange;
+=======
+    //journal için bir day1 day2 yazısı için bir şey yapıcaksın unutma:  GameManager.OnGameStateChange -= HandleGameStateChange;
+>>>>>>> Stashed changes
     private void UpdateJournalState()
     {
         jourCanvas.SetActive(isJournalOpened);
