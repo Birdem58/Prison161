@@ -44,7 +44,14 @@ public class JournalManager : MonoBehaviour
         HandleJournalInput();
     }
 
-    
+    private void Start()
+    {
+        // Journal'� a�maya izin ver:
+        canOpenJournal = true;
+        // UI initialize edilir, bu s�rada journalIcon ba�lang��ta gizli kalabilir.
+        InitializeUI();
+        LoadNotes();
+    }
     private void OnInitilaizeJournal(GetJournal getJournal)
     {
         if (getJournal.journalEnable)
@@ -54,16 +61,13 @@ public class JournalManager : MonoBehaviour
             {
                 typeSoundEffect.Play();
             }
-            // Journal'� a�maya izin ver:
-            canOpenJournal = true;
-            // UI initialize edilir, bu s�rada journalIcon ba�lang��ta gizli kalabilir.
-            InitializeUI();
-            LoadNotes();
+
         }
     }
 
     private void InitializeUI()
     {
+        
         jourCanvas.SetActive(false);
         // Journal ikonunu ba�lang��ta gizle, event ile eri�im verildi�inde g�r�nmesi UpdateJournalIcon()'da kontrol edilecek.
         journalIcon.SetActive(false);
