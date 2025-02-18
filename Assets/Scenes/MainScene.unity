@@ -10613,6 +10613,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Office_Picture
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9e36bd378187e994990da07bc71d5112, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16844,6 +16848,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d55cfcad218e4df46834b79d42c09bf0, type: 3}
       propertyPath: m_Name
       value: Office_Chair
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d55cfcad218e4df46834b79d42c09bf0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
