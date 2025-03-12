@@ -15,6 +15,16 @@ public struct GetJournal : IEvent
     }
 }
 
+public struct AnchorChracter : IEvent
+{
+    public bool isAnchored;
+    public AnchorChracter(bool enable)
+    {
+        isAnchored = enable;
+    }
+}
+
+
 public struct DoorEvent: IEvent
 {
     public DoorTrigger door;

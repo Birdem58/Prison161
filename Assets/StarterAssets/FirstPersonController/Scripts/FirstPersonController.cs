@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using prison161.EventBus;
+using PuppetOfShadows.EventBinding;
+using UnityEngine;
 #if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;
 #endif
@@ -12,7 +14,9 @@ namespace StarterAssets
 	public class FirstPersonController : MonoBehaviour
 	{
 		[Header("Player")]
-		[Tooltip("Move speed of the character in m/s")]
+		[Tooltip("Bir yere sabitli mi değil mi ")]
+		[SerializeField] private bool isAnchored;
+        [Tooltip("Move speed of the character in m/s")]
 		public float MoveSpeed = 4.0f;
 		[Tooltip("Sprint speed of the character in m/s")]
 		public float SprintSpeed = 6.0f;
@@ -85,8 +89,21 @@ namespace StarterAssets
 				#endif
 			}
 		}
+        private void OnEnable()
+        {
+            EventBus<AnchorChracter>.Register(new EventBinding<AnchorChracter>(OnAnchorCharacter));
+        }
 
-		private void Awake()
+        private void OnDisable()
+        {
+            EventBus<AnchorChracter>.Deregister(new EventBinding<AnchorChracter>(OnAnchorCharacter));
+        }
+        private void OnAnchorCharacter(AnchorChracter anchorChracter)
+        {
+			isAnchored = anchorChracter.isAnchored;
+        }
+
+        private void Awake()
 		{
 			// get a reference to our main camera
 			if (_mainCamera == null)
@@ -94,6 +111,7 @@ namespace StarterAssets
 				_mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
 			}
 		}
+
 
 		private void Start()
 		{
@@ -160,7 +178,7 @@ namespace StarterAssets
 
 			// note: Vector2's == operator uses approximation so is not floating point error prone, and is cheaper than magnitude
 			// if there is no input, set the target speed to 0
-			if (_input.move == Vector2.zero) targetSpeed = 0.0f;
+			if (_input.move == Vector2.zero || isAnchored) targetSpeed = 0.0f;
 
 			// a reference to the players current horizontal velocity
 			float currentHorizontalSpeed = new Vector3(_controller.velocity.x, 0.0f, _controller.velocity.z).magnitude;
@@ -200,7 +218,7 @@ namespace StarterAssets
 
 		private void JumpAndGravity()
 		{
-			if (Grounded)
+			if (Grounded && !isAnchored)
 			{
 				// reset the fall timeout timer
 				_fallTimeoutDelta = FallTimeout;
@@ -265,4 +283,5 @@ namespace StarterAssets
 			Gizmos.DrawSphere(new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z), GroundedRadius);
 		}
 	}
-}
+	 
+    }
