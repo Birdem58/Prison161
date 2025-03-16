@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: WardenRoom
-    second: {fileID: 2100000, guid: 2e718c056e0dafc4987646d2b8590860, type: 2}
+    second: {fileID: 2100000, guid: f3eaf52e2366bfb478f1dd46406f26a2, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -7,6 +7,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: CellProps
+    second: {fileID: 2100000, guid: cca9858525264224f9926c5d224cd6c8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Sign
     second: {fileID: 2100000, guid: cca9858525264224f9926c5d224cd6c8, type: 2}
   - first:
