@@ -3,12 +3,7 @@ guid: e6f72004e7da4ee4fa71fa813f5f55b5
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: WardenRoom
-    second: {fileID: 2100000, guid: 2e718c056e0dafc4987646d2b8590860, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0

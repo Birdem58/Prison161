@@ -3,12 +3,7 @@ guid: 135bbb3635cf8b24eb6f4b1547fdb965
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: SalaControl_Props_Mobile
-    second: {fileID: 2100000, guid: 8d57b953bdce155429ff9f5a9f1cea5b, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0

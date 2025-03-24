@@ -24,13 +24,6 @@ public struct AnchorChracter : IEvent
     }
 }
 
-public struct OnConfirmingSelection : IEvent
-{
-    public string SelectionConfirmId;
-    public OnConfirmingSelection(string id) => SelectionConfirmId= id;
-}
-
-
 
 public struct DoorEvent: IEvent
 {

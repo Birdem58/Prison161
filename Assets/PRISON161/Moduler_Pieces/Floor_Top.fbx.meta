@@ -7,11 +7,6 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: IS4_TXT_P1_01_4
-    second: {fileID: 2100000, guid: 2fd197f7849d3514b8c4b0fbe1917ae8, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
       name: Prison_Door
     second: {fileID: 2100000, guid: ec0bafe54b069b643b7de7cd3b1211c6, type: 2}
   materials:
