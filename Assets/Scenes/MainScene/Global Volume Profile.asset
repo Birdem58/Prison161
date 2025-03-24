@@ -14,20 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   skyMode:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 2
   framebufferDitherWeight:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
   skyRotation:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: {x: 0, y: 0, z: 0}
   textureFilterMode:
     m_OverrideState: 0
     m_Value: 0
   skyboxTexture:
-    m_OverrideState: 0
-    m_Value: {fileID: 0}
+    m_OverrideState: 1
+    m_Value: {fileID: 8900000, guid: bcdd322f7e42e07469f5ab2c4c270601, type: 3}
     dimension: 1
   tiledLayersSkyHeightScale:
     m_OverrideState: 0
@@ -321,7 +321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74f7b4b43d392da4aa0edc7aa47211ca, type: 3}
   m_Name: QualityOverrideVolume
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   isPSXQualityEnabled:
     m_OverrideState: 1
     m_Value: 1
