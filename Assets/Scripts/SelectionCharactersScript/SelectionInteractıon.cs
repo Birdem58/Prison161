@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using prison161.EventBus;
 using StarterAssets;
+using PuppetOfShadows.EventBinding;
 
 public class SelectionInteraction : MonoBehaviour, IInteraction
 {
@@ -14,7 +15,27 @@ public class SelectionInteraction : MonoBehaviour, IInteraction
     private Vector3 originalPosition;
     private Quaternion originalRotation;
     private float originalHeight;
+    public bool isSelectionOk = true;
+    [SerializeField] GameObject selectionCharacters;
 
+
+    private void OnEnable()
+    { 
+        
+        EventBus<OnConfirmingSelection>.Register(new EventBinding<OnConfirmingSelection>(OnSigned));
+    }
+
+    private void OnDisable()
+    {
+        EventBus<OnConfirmingSelection>.Deregister(new EventBinding<OnConfirmingSelection>(OnSigned));
+    }
+
+    private void OnSigned()
+    {
+
+        //seledction bittikten sonra baska olaylari da yerine getirebiliriz boylece
+        GetUpFromTable();
+    }
     private void SetCharacterTransform(Vector3 newPosition, Quaternion newRotation)
     {
         characterController.enabled = false;
@@ -29,25 +50,35 @@ public class SelectionInteraction : MonoBehaviour, IInteraction
         originalPosition = characterController.transform.position;
         originalRotation = characterController.transform.rotation;
         SetCharacterTransform(sitPosition.position, sitPosition.rotation);
+        
+
     }
 
     void StandUp()
     {
         isSitting = false;
         SetCharacterTransform(originalPosition, originalRotation);
+        
     }
 
     public virtual void Interact()
     {
-        if (isSitting)
+        Debug.Log("interact basildi");
+        if (isSelectionOk)
         {
-            GetUpFromTable();
-            SelectionMechanizm.Instance.ToggleUI(false);
-            return;
-        };
-        SelectionMechanizm.Instance.ToggleUI(true);
-        EventBus<AnchorChracter>.Raise(new AnchorChracter(true));
-        Sit();
+            if (isSitting)
+            {
+                GetUpFromTable();
+                SelectionMechanizm.Instance.ToggleUI(false);
+                CanShowCharacters(isSelectionOk);
+                return;
+            };
+
+            SelectionMechanizm.Instance.ToggleUI(true);
+            EventBus<AnchorChracter>.Raise(new AnchorChracter(true));
+            Sit();
+            CanShowCharacters(isSitting);
+        }
     }
 
     public void GetUpFromTable()
@@ -58,6 +89,10 @@ public class SelectionInteraction : MonoBehaviour, IInteraction
         StandUp();
     }
 
+    public void CanShowCharacters(bool state)
+    {
+       selectionCharacters.SetActive(state);
+    }
     public virtual void StopInteract()
     {
     }
