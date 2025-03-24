@@ -22,6 +22,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Prison_Door
+    second: {fileID: 2100000, guid: c563fd206b3c2de48a146dbf03b55603, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Sign
     second: {fileID: 2100000, guid: 3d1bf93a463c11749bdd24bf175870b2, type: 2}
   - first:
