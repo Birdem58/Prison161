@@ -7,7 +7,6 @@ using UnityEngine.UI;
 
 public class SelectionMechanizm : MonoBehaviour
 {
-    
     public static SelectionMechanizm Instance { get; private set; }
 
     [Header("UI Elemanlarý")]
@@ -15,7 +14,6 @@ public class SelectionMechanizm : MonoBehaviour
     [SerializeField] private TMP_Text _counterText;
     [SerializeField] private Transform _listContent;
     [SerializeField] private GameObject _listItemPrefab;
-    [SerializeField] private Button _confirmButton;
 
     [Header("Seçim Ayarlarý")]
     [SerializeField] private int _maxSelections = 5;
@@ -30,17 +28,16 @@ public class SelectionMechanizm : MonoBehaviour
 
     private void Awake()
     {
+        DOTween.Init();
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); 
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
             Destroy(gameObject);
         }
-
-        _confirmButton.interactable = false;
         ToggleUI(false);
     }
 
@@ -57,7 +54,7 @@ public class SelectionMechanizm : MonoBehaviour
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
             SpriteRenderer spriteRenderer = hit.collider.GetComponent<SpriteRenderer>();
-        
+
             if (spriteRenderer != null && !_selectedCharacterNames.Contains(hit.collider.name))
             {
                 OnHoverStart(spriteRenderer);
@@ -79,7 +76,6 @@ public class SelectionMechanizm : MonoBehaviour
         _currentHoveredSprite = spriteRenderer;
         _originalSprite = spriteRenderer.sprite;
 
-       
         CharacterSprites charSprites = spriteRenderer.GetComponent<CharacterSprites>();
         if (charSprites != null)
         {
@@ -87,30 +83,35 @@ public class SelectionMechanizm : MonoBehaviour
         }
         else
         {
-          
-            spriteRenderer.sprite = Resources.Load<Sprite>("HoverSprite");
+            Debug.Log("karakterin hover sprite'ý yok");
         }
 
-        transform.DOShakePosition(_shakeDuration, _shakeStrength);
+        
+        spriteRenderer.transform.DOShakePosition(_shakeDuration, _shakeStrength);
     }
 
     private void OnHoverEnd()
     {
         if (_currentHoveredSprite == null) return;
-       
+
         CharacterSprites charSprites = _currentHoveredSprite.GetComponent<CharacterSprites>();
         if (charSprites != null)
         {
-            _currentHoveredSprite.sprite = charSprites.defaultSprite;
+            // Eðer karakter seçili deðilse, normal sprite'a döner
+            if (!_selectedCharacterNames.Contains(_currentHoveredSprite.gameObject.name))
+            {
+                _currentHoveredSprite.sprite = charSprites.defaultSprite;
+                _currentHoveredSprite.color = Color.white;
+            }
         }
         else
         {
             _currentHoveredSprite.sprite = _originalSprite;
         }
+
         _currentHoveredSprite = null;
     }
 
-   
     private void HandleSelectionInput()
     {
         if (Input.GetMouseButtonDown(0))
@@ -118,21 +119,25 @@ public class SelectionMechanizm : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out RaycastHit hit))
             {
-                string characterName = hit.collider.name;
-                if (_selectedCharacterNames.Contains(characterName))
+                CharacterSprites selectable = hit.collider.GetComponent<CharacterSprites>();
+
+                if (selectable != null)
                 {
-                    RemoveSelection(characterName);
+                    string characterName = hit.collider.name;
+                    if (_selectedCharacterNames.Contains(characterName))
+                    {
+                        RemoveSelection(characterName);
+                    }
+                    else if (_selectedCharacterNames.Count < _maxSelections)
+                    {
+                        AddSelection(characterName, hit.collider.gameObject);
+                    }
+                    UpdateUI();
                 }
-                else if (_selectedCharacterNames.Count < _maxSelections)
-                {
-                    AddSelection(characterName, hit.collider.gameObject);
-                }
-                UpdateUI();
             }
         }
     }
 
-   
     private void AddSelection(string characterName, GameObject characterObj)
     {
         _selectedCharacterNames.Add(characterName);
@@ -143,17 +148,16 @@ public class SelectionMechanizm : MonoBehaviour
             SpriteRenderer sr = characterObj.GetComponent<SpriteRenderer>();
             if (sr != null)
             {
-                sr.sprite = charSprites.selectedSprite;
+                sr.sprite = charSprites.defaultSprite;
+                sr.DOColor(new Color(132 / 255f, 132 / 255f, 132 / 255f, 1f), 0.3f);
             }
         }
     }
 
-    
     private void RemoveSelection(string characterName)
     {
         _selectedCharacterNames.Remove(characterName);
 
-      
         GameObject characterObj = GameObject.Find(characterName);
         if (characterObj != null)
         {
@@ -164,43 +168,38 @@ public class SelectionMechanizm : MonoBehaviour
                 if (sr != null)
                 {
                     sr.sprite = charSprites.defaultSprite;
+                    sr.DOColor(Color.white, 0.3f);
                 }
             }
         }
     }
 
-   
     private void UpdateUI()
     {
+        // Eski list item'larý temizle
         foreach (var item in _instantiatedItems)
         {
             Destroy(item);
         }
         _instantiatedItems.Clear();
 
+        // Sadece karakter isimlerini içeren list item'larý oluþtur
         foreach (var name in _selectedCharacterNames)
         {
             GameObject listItem = Instantiate(_listItemPrefab, _listContent);
-            listItem.GetComponentInChildren<TMP_Text>().text = name;
-
-           
-            Button removeBtn = listItem.GetComponentInChildren<Button>();
-            removeBtn.onClick.AddListener(() => RemoveSelection(name));
-
+            listItem.GetComponentInChildren<TMP_Text>().text = $"- {name}";
             _instantiatedItems.Add(listItem);
         }
 
         _counterText.text = $"{_selectedCharacterNames.Count}/{_maxSelections}";
-        _confirmButton.interactable = (_selectedCharacterNames.Count == _maxSelections);
     }
 
-   
     public void ToggleUI(bool state)
     {
         _selectionUI.SetActive(state);
+        
     }
 
-  
     public void ConfirmSelection()
     {
         if (_selectedCharacterNames.Count == _maxSelections)

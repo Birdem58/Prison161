@@ -8,16 +8,23 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: IS4_TXT_P1_01 1
-  m_Shader: {fileID: 4800000, guid: 5b6653a24895b9a4881107e190d9a99c, type: 3}
+  m_Shader: {fileID: 4800000, guid: 055eab4e84dc70a47ae75b3125a22de6, type: 3}
   m_Parent: {fileID: 2100000, guid: f3eaf52e2366bfb478f1dd46406f26a2, type: 2}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - _BRDF_MODE_LAMBERT
+  - _FOG_ON
+  - _LIGHTING_BAKED_ON
+  - _LIGHTING_DYNAMIC_ON
+  - _SHADING_EVALUATION_MODE_PER_VERTEX
+  - _TEXTURE_FILTER_MODE_TEXTURE_IMPORT_SETTINGS
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap: {}
+  stringTagMap:
+    RenderType: Opaque
   disabledShaderPasses: []
   m_LockedProperties: 
   m_SavedProperties:
