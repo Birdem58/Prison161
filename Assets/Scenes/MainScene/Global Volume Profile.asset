@@ -27,7 +27,7 @@ MonoBehaviour:
     m_Value: 0
   skyboxTexture:
     m_OverrideState: 1
-    m_Value: {fileID: 8900000, guid: bcdd322f7e42e07469f5ab2c4c270601, type: 3}
+    m_Value: {fileID: 8900000, guid: 14d470a497adc6e4d926848f5cbbeb86, type: 3}
     dimension: 1
   tiledLayersSkyHeightScale:
     m_OverrideState: 0
