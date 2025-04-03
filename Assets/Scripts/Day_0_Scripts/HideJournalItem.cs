@@ -6,15 +6,16 @@ using UnityEngine;
 
 public class HideJournalItem : MonoBehaviour
 {
+    private EventBinding<GetJournal> journalEventBinding;
+
+    
     private void OnEnable()
     {
-        EventBus<GetJournal>.Register(new EventBinding<GetJournal>(OnDestroyJournalItem)); 
+        journalEventBinding = new EventBinding<GetJournal>(OnDestroyJournalItem);
+        EventBus<GetJournal>.Register(journalEventBinding);
     }
 
-    private void OnDisable()
-    {
-        EventBus<GetJournal>.Deregister(new EventBinding<GetJournal>(OnDestroyJournalItem)); 
-    }
+    
     private void OnDestroyJournalItem(GetJournal getJournal)
     {
         if(getJournal.journalEnable)

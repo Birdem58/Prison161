@@ -11,7 +11,7 @@ public class JournalManager : MonoBehaviour
     public Button[] bracketButtons;
     public GameObject[] panels;
     public GameObject jourCanvas;
-    public GameObject journalIcon; // Journal �konu
+    public GameObject journalIcon; 
     public GameObject jourAlertUI;
     public TMP_InputField[] noteInputFields;
 
@@ -25,17 +25,19 @@ public class JournalManager : MonoBehaviour
     private bool isJournalOpened;
     private bool isInDialog;
 
-    // Journal eri�imine izin verip vermedi�imizi kontrol eden bayrak.
+  
     private bool canOpenJournal = false;
+    private EventBinding<GetJournal> journalEventBinding;   
 
     private void OnEnable()
     {
-        EventBus<GetJournal>.Register(new EventBinding<GetJournal>(OnInitilaizeJournal)); 
+        journalEventBinding = new EventBinding<GetJournal>(OnInitilaizeJournal);
+        EventBus<GetJournal>.Register(journalEventBinding); 
     }
 
     private void OnDisable()
     {
-         EventBus<GetJournal>.Deregister(new EventBinding<GetJournal>(OnInitilaizeJournal)); 
+         EventBus<GetJournal>.Deregister(journalEventBinding); 
     }
 
     void Update()
@@ -46,9 +48,9 @@ public class JournalManager : MonoBehaviour
 
     private void Start()
     {
-        // Journal'� a�maya izin ver:
-        canOpenJournal = true;
-        // UI initialize edilir, bu s�rada journalIcon ba�lang��ta gizli kalabilir.
+        
+        canOpenJournal = false;
+       
         InitializeUI();
         LoadNotes();
     }
@@ -56,7 +58,7 @@ public class JournalManager : MonoBehaviour
     {
         if (getJournal.journalEnable)
         {
-            // Journal al�nd���nda ses �al�ns�n:
+            canOpenJournal = getJournal.journalEnable; 
             if (typeSoundEffect != null)
             {
                 typeSoundEffect.Play();
@@ -69,7 +71,7 @@ public class JournalManager : MonoBehaviour
     {
         
         jourCanvas.SetActive(false);
-        // Journal ikonunu ba�lang��ta gizle, event ile eri�im verildi�inde g�r�nmesi UpdateJournalIcon()'da kontrol edilecek.
+        
         journalIcon.SetActive(false);
 
         for (int i = 0; i < bracketButtons.Length; i++)
@@ -87,7 +89,7 @@ public class JournalManager : MonoBehaviour
         UpdateJournalIcon();
     }
 
-    // Journal ikonunu, journal eri�imine izin varsa, journal kapal� ve oyuncu diyalogda de�ilse g�ster.
+    
     private void UpdateJournalIcon()
     {
         journalIcon.SetActive(canOpenJournal && !isJournalOpened && !isInDialog);
@@ -103,7 +105,7 @@ public class JournalManager : MonoBehaviour
 
     public void ToggleJournal()
     {
-        // Journal a��lmas�na hen�z izin verilmediyse hi�bir �ey yapma.
+     
         if (!canOpenJournal)
             return;
 
@@ -111,7 +113,7 @@ public class JournalManager : MonoBehaviour
         UpdateJournalState();
     }
 
-    //GameManager.OnGameStateChange -= HandleGameStateChange;
+    
     private void UpdateJournalState()
     {
         jourCanvas.SetActive(isJournalOpened);
@@ -119,7 +121,7 @@ public class JournalManager : MonoBehaviour
         Cursor.visible = isJournalOpened;
         PlayerState.Instance.SetCharacterController(!isJournalOpened);
 
-        // Journal a��ld���nda ikon gizlensin.
+       
         journalIcon.SetActive(!isJournalOpened);
 
         if (isJournalOpened)
@@ -187,7 +189,7 @@ public class JournalManager : MonoBehaviour
 
     public void SetCurrentPerson(int index) => currentPerson = index;
 
-    // Di�er UI elementlerini kontrol eden metotlar:
+   
     public void ToggleJournalAlert(bool state) => jourAlertUI.SetActive(state);
     public void ToggleJournalElements(int index, bool state)
     {

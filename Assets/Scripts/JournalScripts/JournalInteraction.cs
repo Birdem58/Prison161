@@ -1,5 +1,6 @@
 using UnityEngine;
 using prison161.EventBus;
+using PuppetOfShadows.EventBinding;
 
 public class JournalInteraction : CollectibleItem
 {
@@ -7,7 +8,8 @@ public class JournalInteraction : CollectibleItem
 
     public override void Interact()
     {
-        base.Interact();
+        base.Interact(); 
         EventBus<GetJournal>.Raise(new GetJournal(true));
     }
+    
 }

@@ -18,16 +18,16 @@ public class SelectionInteraction : MonoBehaviour, IInteraction
     public bool isSelectionOk = true;
     [SerializeField] GameObject selectionCharacters;
 
-
+    private EventBinding<OnConfirmingSelection> eventBingind;
     private void OnEnable()
-    { 
-        
-        EventBus<OnConfirmingSelection>.Register(new EventBinding<OnConfirmingSelection>(OnSigned));
+    {
+        eventBingind = new EventBinding<OnConfirmingSelection>(OnSigned);
+        EventBus<OnConfirmingSelection>.Register(eventBingind);
     }
 
     private void OnDisable()
     {
-        EventBus<OnConfirmingSelection>.Deregister(new EventBinding<OnConfirmingSelection>(OnSigned));
+        EventBus<OnConfirmingSelection>.Deregister(eventBingind);
     }
 
     private void OnSigned()
