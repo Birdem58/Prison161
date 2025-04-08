@@ -7,11 +7,22 @@ public class Changewardenexpression : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
     public Sprite[] sprite;
+    private Collider boxCollider;
+
+
     // Start is called before the first frame update
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        boxCollider = GetComponent<Collider>(); 
     }
+
+    public void DisableCollider()
+    {
+        boxCollider.enabled = false;
+
+    }
+
     public void WardenExpressionSmile(bool isSmile)
     {
         if (isSmile)
