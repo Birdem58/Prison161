@@ -4,7 +4,7 @@ using PuppetOfShadows.EventBinding;
 
 public class JournalInteraction : CollectibleItem
 {
-    public override string InteractionPrompt => "Take[F]";
+    public override string InteractionPrompt => "Take";
 
     public override void Interact()
     {

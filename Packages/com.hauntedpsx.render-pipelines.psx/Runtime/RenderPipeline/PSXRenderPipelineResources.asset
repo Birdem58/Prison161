@@ -14,18 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shaders:
     skyPS: {fileID: 4800000, guid: 6ec5e78dd02dbef42a1a3b87dd67fe9e, type: 3}
-    accumulationMotionBlurPS: {fileID: 4800000, guid: 47c6446ac797e654097c9582b6af334b,
-      type: 3}
-    copyColorRespectFlipYPS: {fileID: 4800000, guid: 820795b7ced284d4f9201f7ab9b17d04,
-      type: 3}
+    accumulationMotionBlurPS: {fileID: 4800000, guid: 47c6446ac797e654097c9582b6af334b, type: 3}
+    copyColorRespectFlipYPS: {fileID: 4800000, guid: 820795b7ced284d4f9201f7ab9b17d04, type: 3}
     crtPS: {fileID: 4800000, guid: 8e05d2f66aadbd84fb2998f8248241c2, type: 3}
     compressionCS: {fileID: 7200000, guid: df0df86f8582eae44b9aa77c0230a7e5, type: 3}
-    terrainDetailLitPS: {fileID: 4800000, guid: e27b34a93e5789948958f9e2e7a00b90,
-      type: 3}
-    terrainDetailGrassPS: {fileID: 4800000, guid: e2f62d116635ff549b612d9eff95e782,
-      type: 3}
-    terrainDetailGrassBillboardPS: {fileID: 4800000, guid: 9ee879eee9ade10488a2e65d4e3ca392,
-      type: 3}
+    terrainDetailLitPS: {fileID: 4800000, guid: e27b34a93e5789948958f9e2e7a00b90, type: 3}
+    terrainDetailGrassPS: {fileID: 4800000, guid: e2f62d116635ff549b612d9eff95e782, type: 3}
+    terrainDetailGrassBillboardPS: {fileID: 4800000, guid: 9ee879eee9ade10488a2e65d4e3ca392, type: 3}
   textures:
     whiteNoise1024RGBTex:
     - {fileID: 2800000, guid: 6228fe2e439c7704a8e26b3e19ab5e9f, type: 3}
@@ -99,7 +94,6 @@ MonoBehaviour:
     - {fileID: 2800000, guid: 7641a2b116fafd64d9c3d6459fdfe801, type: 3}
     - {fileID: 2800000, guid: c6a5e40e6746fef4fa486e8f620ee8d4, type: 3}
     - {fileID: 2800000, guid: fd4189357c6dfb94fa2d36afbce72086, type: 3}
-    skyboxTextureCubeDefault: {fileID: 8900000, guid: a615f6de0224d55408b4e74da3b0bac0,
-      type: 3}
+    skyboxTextureCubeDefault: {fileID: 8900000, guid: 18a0be10f0f64ac4c9f679d68e2cf857, type: 3}
   materials:
     defaultOpaqueMat: {fileID: 2100000, guid: 0ac9aba1beafeb24997cc30de6fbd9bd, type: 2}
