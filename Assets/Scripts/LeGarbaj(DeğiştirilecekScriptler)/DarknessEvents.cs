@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class DarkessEvents : MonoBehaviour
+public class DarknessEvents : MonoBehaviour
 {
     public Action ondarknessBegin = () => { }; 
     public Action ondarknessEnd = () => { }; 

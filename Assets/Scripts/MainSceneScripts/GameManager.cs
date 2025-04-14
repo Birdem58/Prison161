@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
 
     public static event Action<GameState> OnGameStateChange;
 
-    private int dayNightCounter = -1; // Gün/gece sayacý
+    private int dayNightCounter = -1; // Gï¿½n/gece sayacï¿½
 
     private void Awake()
     {
@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
 
     public void UpdateGameState(GameState newState)
     {
-        CameraEffectsManager.instance.darkessEvents.ondarknessBegin += () =>
+        CameraEffectsManager.instance.darknessEvents.ondarknessBegin += () =>
         {
             OnUpdateGameState(newState);
         };
@@ -117,5 +117,5 @@ public class GameManager : MonoBehaviour
         FifthDay,
         FifthNight,
     }
-    //GameManager.Instance.UpdateGameState(GameManager.GameState.HangiGün&gece);
+    //GameManager.Instance.UpdateGameState(GameManager.GameState.HangiGï¿½n&gece);
 }

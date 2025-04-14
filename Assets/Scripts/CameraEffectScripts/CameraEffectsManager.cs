@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class CameraEffectsManager : MonoBehaviour
 {
     //singleton
     public static CameraEffectsManager instance;
-
-    public DarkessEvents darkessEvents;
+    public DarknessEvents darknessEvents;
     [SerializeField] Animator DarkPanelAnimator;
     void Awake()
     {
@@ -24,5 +24,4 @@ public class CameraEffectsManager : MonoBehaviour
     {
         DarkPanelAnimator.SetBool("IsDark", isDark);
     }
-
 }
