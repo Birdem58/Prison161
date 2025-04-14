@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using TMPro;
 using prison161.EventBus;
 using PuppetOfShadows.EventBinding;
+using UnityEngine.Rendering.UI;
 
 public class JournalManager : MonoBehaviour
 {
@@ -89,7 +90,6 @@ public class JournalManager : MonoBehaviour
     {
         jourCanvas.SetActive(false);
         journalIcon.SetActive(false);
-        backButton.SetActive(false);
 
         // Setup category buttons
         for (int i = 0; i < journalCategories.Count; i++)
@@ -100,6 +100,7 @@ public class JournalManager : MonoBehaviour
             // Setup category button
             if (category.categoryButton != null)
             {
+                Debug.Log("Categorycalled");
                 category.categoryButton.onClick.AddListener(() => OpenCategory(categoryIndex));
             }
             
@@ -121,13 +122,13 @@ public class JournalManager : MonoBehaviour
                     bracketButton.onClick.RemoveAllListeners(); // Clear any existing listeners
                     bracketButton.onClick.AddListener(() => OpenPage(categoryIndex, pageIndex));
                 }
-                
+
                 // Make sure page objects are initially hidden
-                if (category.pages[j].pageObject != null)
+                if (category.pages[j].pageObject != null && j != 0)
                 {
                     category.pages[j].pageObject.SetActive(false);
                 }
-                
+
                 // Setup input field change listener
                 JournalPage page = category.pages[j];
                 if (page.hasNoteInput && page.noteInputField != null)
@@ -139,13 +140,8 @@ public class JournalManager : MonoBehaviour
             }
         }
 
-        // Setup back button
-        Button backButtonComponent = backButton.GetComponent<Button>();
-        if (backButtonComponent != null)
-        {
-            backButtonComponent.onClick.RemoveAllListeners();
-            backButtonComponent.onClick.AddListener(GoBack);
-        }
+
+        
         
         ShowCategoryView();
     }
@@ -168,17 +164,6 @@ public class JournalManager : MonoBehaviour
             ToggleJournal();
         }
         
-        if (isJournalOpened && Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (!isInCategoryView)
-            {
-                GoBack();
-            }
-            else
-            {
-                ToggleJournal();
-            }
-        }
     }
 
     public void ToggleJournal()
@@ -206,6 +191,8 @@ public class JournalManager : MonoBehaviour
 
     public void OpenCategory(int categoryIndex)
     {
+        Debug.Log("OpenCategory");
+
         if (categoryIndex < 0 || categoryIndex >= journalCategories.Count)
             return;
             
@@ -229,6 +216,8 @@ public class JournalManager : MonoBehaviour
 
     public void OpenPage(int categoryIndex, int pageIndex)
     {
+
+        Debug.Log("OpenPage");
         if (categoryIndex < 0 || categoryIndex >= journalCategories.Count)
             return;
             
@@ -260,7 +249,7 @@ public class JournalManager : MonoBehaviour
             }
         }
     }
-
+    
     public void GoBack()
     {
         ShowCategoryView();
@@ -270,7 +259,7 @@ public class JournalManager : MonoBehaviour
     {
         isInCategoryView = true;
         currentPageIndex = -1;
-        
+        Debug.Log("showcategory");
         // Hide all category panels
         for (int i = 0; i < journalCategories.Count; i++)
         {
