@@ -91,7 +91,7 @@ MonoBehaviour:
     m_Value: 1
   geometry:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0.884
   geometryPushbackEnabled:
     m_OverrideState: 1
     m_Value: 0
@@ -109,16 +109,16 @@ MonoBehaviour:
     m_Value: 0.713
   affineTextureWarping:
     m_OverrideState: 1
-    m_Value: 0.016
+    m_Value: 0.019
   framebufferDither:
     m_OverrideState: 1
     m_Value: 0.324
   ditherSize:
     m_OverrideState: 1
-    m_Value: 3
+    m_Value: 6
   drawDistanceFalloffMode:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   drawDistance:
     m_OverrideState: 1
     m_Value: 100
@@ -137,7 +137,7 @@ MonoBehaviour:
   active: 1
   weight:
     m_OverrideState: 1
-    m_Value: 0.151
+    m_Value: 0.21
   vignette:
     m_OverrideState: 1
     m_Value: 0.06
@@ -177,13 +177,13 @@ MonoBehaviour:
     m_Value: 30
   aspectMode:
     m_OverrideState: 1
-    m_Value: 3
+    m_Value: 1
   targetRasterizationResolutionWidth:
     m_OverrideState: 1
-    m_Value: 2853
+    m_Value: 2281
   targetRasterizationResolutionHeight:
     m_OverrideState: 1
-    m_Value: 2941
+    m_Value: 695
   isDepthBufferEnabled:
     m_OverrideState: 1
     m_Value: 1
@@ -243,10 +243,10 @@ MonoBehaviour:
     m_Value: 1
   dynamicLightsMaxCount:
     m_OverrideState: 1
-    m_Value: 70
+    m_Value: 108
   dynamicLightsMaxPerObjectCount:
     m_OverrideState: 1
-    m_Value: 5
+    m_Value: 8
 --- !u!114 &2541754861927294113
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -271,7 +271,7 @@ MonoBehaviour:
     m_Value: 0
   grateMaskTexture:
     m_OverrideState: 1
-    m_Value: {fileID: 0}
+    m_Value: {fileID: 2800000, guid: fd3fc319873bd5346875483dde02fcf7, type: 3}
     dimension: 1
   grateMaskScale:
     m_OverrideState: 1
@@ -305,10 +305,10 @@ MonoBehaviour:
     m_Value: 0.092
   barrelDistortionY:
     m_OverrideState: 1
-    m_Value: 0.038
+    m_Value: 0.073
   vignette:
     m_OverrideState: 1
-    m_Value: 0.75
+    m_Value: 0.594
 --- !u!114 &4810368018814178573
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -349,26 +349,26 @@ MonoBehaviour:
     m_Value: 1
   color:
     m_OverrideState: 1
-    m_Value: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    m_Value: {r: 0.645283, g: 0.6228178, b: 0.52961904, a: 1}
   precisionAlpha:
     m_OverrideState: 1
-    m_Value: 0.999
+    m_Value: 0.551
   precisionAlphaDitherTexture:
     m_OverrideState: 1
     m_Value: {fileID: 2800000, guid: 4a3e96c03e7d7c34a8fb8f59764f1945, type: 3}
     dimension: 1
   precisionAlphaDither:
     m_OverrideState: 1
-    m_Value: 0.999
+    m_Value: 0.798
   distanceMin:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 10.75
   distanceMax:
     m_OverrideState: 1
     m_Value: 100
   fogFalloffCurve:
     m_OverrideState: 1
-    m_Value: -0.42
+    m_Value: -0.67
   heightFalloffEnabled:
     m_OverrideState: 1
     m_Value: 0
@@ -401,7 +401,7 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 1
   fogFalloffModeLayer1:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
   colorLayer1:
     m_OverrideState: 0
@@ -451,7 +451,7 @@ MonoBehaviour:
     m_Value: 0.502
   graypointIn:
     m_OverrideState: 1
-    m_Value: 0.065
+    m_Value: 0.073
   graypointOut:
     m_OverrideState: 1
     m_Value: 0.081

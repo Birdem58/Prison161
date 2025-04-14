@@ -17,7 +17,7 @@ Material:
   - _LIGHTING_BAKED_ON
   - _LIGHTING_DYNAMIC_ON
   - _REFLECTION_ON
-  - _SHADING_EVALUATION_MODE_PER_VERTEX
+  - _SHADING_EVALUATION_MODE_PER_PIXEL
   - _TEXTURE_FILTER_MODE_TEXTURE_IMPORT_SETTINGS
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -172,7 +172,7 @@ Material:
     - _RenderQueueCategory: 2
     - _SF: 0.423
     - _SP: 1
-    - _ShadingEvaluationMode: 0
+    - _ShadingEvaluationMode: 1
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1

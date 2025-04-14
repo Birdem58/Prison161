@@ -3,7 +3,27 @@ guid: 89d1afb04a3d1ac4dad6f5dd0738e9fa
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Psx_PBR_Buddha_12
+    second: {fileID: 2100000, guid: c563fd206b3c2de48a146dbf03b55603, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Psx_PBR_Buddha_13
+    second: {fileID: 2100000, guid: c563fd206b3c2de48a146dbf03b55603, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wall_1
+    second: {fileID: 2100000, guid: 8790e3399db1063419fc4f319478f9ad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: newwall_002
+    second: {fileID: 2100000, guid: 8790e3399db1063419fc4f319478f9ad, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
