@@ -801,7 +801,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 291.49957, y: -0.0018965795}
+  m_AnchoredPosition: {x: 291.49957, y: -0.0011584586}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &96186469
@@ -1419,8 +1419,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5194445, y: 0.2088889}
   m_AnchorMax: {x: 0.5194445, y: 0.2088889}
-  m_AnchoredPosition: {x: -103, y: -1.5688019}
-  m_SizeDelta: {x: 216.1271, y: 102.8496}
+  m_AnchoredPosition: {x: -115.9, y: 0.9701}
+  m_SizeDelta: {x: 207.1753, y: 121.3095}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &170363474
 MonoBehaviour:
@@ -1887,8 +1887,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5194445, y: 0.2088889}
   m_AnchorMax: {x: 0.5194445, y: 0.2088889}
-  m_AnchoredPosition: {x: -103, y: -1.5688019}
-  m_SizeDelta: {x: 216.1271, y: 102.8496}
+  m_AnchoredPosition: {x: -114.8, y: -0.23670197}
+  m_SizeDelta: {x: 206.6158, y: 105.6369}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &290877448
 MonoBehaviour:
@@ -2651,7 +2651,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &405846965
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2670,7 +2670,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -5.3, y: 4.7}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &412488690
@@ -2920,7 +2920,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &447014683
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3308,8 +3308,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5194445, y: 0.2088889}
   m_AnchorMax: {x: 0.5194445, y: 0.2088889}
-  m_AnchoredPosition: {x: -103, y: -1.5688019}
-  m_SizeDelta: {x: 216.1271, y: 102.8496}
+  m_AnchoredPosition: {x: -114.79998, y: -0.23680115}
+  m_SizeDelta: {x: 206.6158, y: 105.6369}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &524318296
 MonoBehaviour:
@@ -3400,7 +3400,24 @@ MonoBehaviour:
   m_Text: "Bunu yazan Tosun Okuyana \u015F\xF6yle bir koysun be adam\u0131m H\u0130H\u0130H\u0130
     HAHAHA Puhaahahhaha Tuz biber KOmedyeniyim Kankaaaaa \xC7\u0131ld\u0131ranzi
     \xC7\u0131lg\u0131ns\u0131n meeen H\u0130H\u0130H\u0130 HHAHAHA HOHHOOH KAKAKAKA
-    K\u0130K\u0130K\u0130Ki KUKUKUKU"
+    K\u0130K\u0130K\u0130Ki KUKUKUKUBunu yazan Tosun Okuyana \u015F\xF6yle bir koysun
+    be adam\u0131m H\u0130H\u0130H\u0130 HAHAHA Puhaahahhaha Tuz biber KOmedyeniyim
+    Kankaaaaa \xC7\u0131ld\u0131ranzi \xC7\u0131lg\u0131ns\u0131n meeen H\u0130H\u0130H\u0130
+    HHAHAHA HOHHOOH KAKAKAKA K\u0130K\u0130K\u0130Ki KUKUKUKUBunu yazan Tosun Okuyana
+    \u015F\xF6yle bir koysun be adam\u0131m H\u0130H\u0130H\u0130 HAHAHA Puhaahahhaha
+    Tuz biber KOmedyeniyim Kankaaaaa \xC7\u0131ld\u0131ranzi \xC7\u0131lg\u0131ns\u0131n
+    meeen H\u0130H\u0130H\u0130 HHAHAHA HOHHOOH KAKAKAKA K\u0130K\u0130K\u0130Ki
+    KUKUKUKUBunu yazan Tosun Okuyana \u015F\xF6yle bir koysun be adam\u0131m H\u0130H\u0130H\u0130
+    HAHAHA Puhaahahhaha Tuz biber KOmedyeniyim Kankaaaaa \xC7\u0131ld\u0131ranzi
+    \xC7\u0131lg\u0131ns\u0131n meeen H\u0130H\u0130H\u0130 HHAHAHA HOHHOOH KAKAKAKA
+    K\u0130K\u0130K\u0130Ki KUKUKUKUBunu yazan Tosun Okuyana \u015F\xF6yle bir koysun
+    be adam\u0131m H\u0130H\u0130H\u0130 HAHAHA Puhaahahhaha Tuz biber KOmedyeniyim
+    Kankaaaaa \xC7\u0131ld\u0131ranzi \xC7\u0131lg\u0131ns\u0131n meeen H\u0130H\u0130H\u0130
+    HHAHAHA HOHHOOH KAKAKAKA K\u0130K\u0130K\u0130Ki KUKUKUKUBunu yazan Tosun Okuyana
+    \u015F\xF6yle bir koysun be adam\u0131m H\u0130H\u0130H\u0130 HAHAHA Puhaahahhaha
+    Tuz biber KOmedyeniyim Kankaaaaa \xC7\u0131ld\u0131ranzi \xC7\u0131lg\u0131ns\u0131n
+    meeen H\u0130H\u0130H\u0130 HHAHAHA HOHHOOH KAKAKAKA K\u0130K\u0130K\u0130Ki
+    KUKUKUKU"
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
@@ -3964,7 +3981,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &850066379
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8997,7 +9014,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 131571588}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.99999756
+  m_Size: 0.9999976
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -9591,7 +9608,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1699267312
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12005,8 +12022,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5194445, y: 0.2088889}
   m_AnchorMax: {x: 0.5194445, y: 0.2088889}
-  m_AnchoredPosition: {x: -103, y: -1.5688019}
-  m_SizeDelta: {x: 216.1271, y: 102.8496}
+  m_AnchoredPosition: {x: -114.79998, y: -0.23680115}
+  m_SizeDelta: {x: 206.6158, y: 105.6369}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!1 &1988393202
 GameObject:
@@ -12406,8 +12423,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5194445, y: 0.2088889}
   m_AnchorMax: {x: 0.5194445, y: 0.2088889}
-  m_AnchoredPosition: {x: -103, y: -1.5688019}
-  m_SizeDelta: {x: 216.1271, y: 102.8496}
+  m_AnchoredPosition: {x: -115.9, y: 0.9701}
+  m_SizeDelta: {x: 207.1753, y: 121.3095}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &2003407119
 MonoBehaviour:
@@ -12673,7 +12690,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9024bebcc9a781544a3a9828563eeae4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  darknessEvents: {fileID: 0}
+  darknessEvents: {fileID: 1113834624}
   DarkPanelAnimator: {fileID: 1113834621}
 --- !u!4 &2049608349
 Transform:
@@ -13813,7 +13830,24 @@ MonoBehaviour:
   m_text: "Bunu yazan Tosun Okuyana \u015F\xF6yle bir koysun be adam\u0131m H\u0130H\u0130H\u0130
     HAHAHA Puhaahahhaha Tuz biber KOmedyeniyim Kankaaaaa \xC7\u0131ld\u0131ranzi
     \xC7\u0131lg\u0131ns\u0131n meeen H\u0130H\u0130H\u0130 HHAHAHA HOHHOOH KAKAKAKA
-    K\u0130K\u0130K\u0130Ki KUKUKUKU\u200B"
+    K\u0130K\u0130K\u0130Ki KUKUKUKUBunu yazan Tosun Okuyana \u015F\xF6yle bir koysun
+    be adam\u0131m H\u0130H\u0130H\u0130 HAHAHA Puhaahahhaha Tuz biber KOmedyeniyim
+    Kankaaaaa \xC7\u0131ld\u0131ranzi \xC7\u0131lg\u0131ns\u0131n meeen H\u0130H\u0130H\u0130
+    HHAHAHA HOHHOOH KAKAKAKA K\u0130K\u0130K\u0130Ki KUKUKUKUBunu yazan Tosun Okuyana
+    \u015F\xF6yle bir koysun be adam\u0131m H\u0130H\u0130H\u0130 HAHAHA Puhaahahhaha
+    Tuz biber KOmedyeniyim Kankaaaaa \xC7\u0131ld\u0131ranzi \xC7\u0131lg\u0131ns\u0131n
+    meeen H\u0130H\u0130H\u0130 HHAHAHA HOHHOOH KAKAKAKA K\u0130K\u0130K\u0130Ki
+    KUKUKUKUBunu yazan Tosun Okuyana \u015F\xF6yle bir koysun be adam\u0131m H\u0130H\u0130H\u0130
+    HAHAHA Puhaahahhaha Tuz biber KOmedyeniyim Kankaaaaa \xC7\u0131ld\u0131ranzi
+    \xC7\u0131lg\u0131ns\u0131n meeen H\u0130H\u0130H\u0130 HHAHAHA HOHHOOH KAKAKAKA
+    K\u0130K\u0130K\u0130Ki KUKUKUKUBunu yazan Tosun Okuyana \u015F\xF6yle bir koysun
+    be adam\u0131m H\u0130H\u0130H\u0130 HAHAHA Puhaahahhaha Tuz biber KOmedyeniyim
+    Kankaaaaa \xC7\u0131ld\u0131ranzi \xC7\u0131lg\u0131ns\u0131n meeen H\u0130H\u0130H\u0130
+    HHAHAHA HOHHOOH KAKAKAKA K\u0130K\u0130K\u0130Ki KUKUKUKUBunu yazan Tosun Okuyana
+    \u015F\xF6yle bir koysun be adam\u0131m H\u0130H\u0130H\u0130 HAHAHA Puhaahahhaha
+    Tuz biber KOmedyeniyim Kankaaaaa \xC7\u0131ld\u0131ranzi \xC7\u0131lg\u0131ns\u0131n
+    meeen H\u0130H\u0130H\u0130 HHAHAHA HOHHOOH KAKAKAKA K\u0130K\u0130K\u0130Ki
+    KUKUKUKU\u200B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 56aa3f6abd4360d45b6c219ce53ba88a, type: 2}
   m_sharedMaterial: {fileID: -2873507176906394661, guid: 56aa3f6abd4360d45b6c219ce53ba88a, type: 2}

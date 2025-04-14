@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
 
     public static event Action<GameState> OnGameStateChange;
 
-    private int dayNightCounter = -1; // G�n/gece sayac�
+    private int dayNightCounter = -1; 
 
     private void Awake()
     {
