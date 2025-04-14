@@ -125,7 +125,7 @@ Material:
     - Vector1_E8746023: 29.6
     - Vector1_F6C0D59C: 1
     - _AffineMapIntensity: 0.038
-    - _AffineTextureWarpingWeight: 0.778
+    - _AffineTextureWarpingWeight: 0.264
     - _AlphaClip: 0
     - _AlphaClippingDitherIsEnabled: 0
     - _BRDFMode: 0
@@ -146,7 +146,7 @@ Material:
     - _EnvironmentReflections: 1
     - _FE: 0.678
     - _FP: 1
-    - _FogWeight: 0.672
+    - _FogWeight: 0.368
     - _GlossMapScale: 0
     - _Glossiness: 0.397
     - _GlossyReflections: 0
