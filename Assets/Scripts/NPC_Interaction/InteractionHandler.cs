@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using prison161.EventBus;
+using PuppetOfShadows.EventBinding;
 
 public class InteractionHandler : MonoBehaviour
 {
@@ -18,13 +19,33 @@ public class InteractionHandler : MonoBehaviour
     [SerializeField] private TextMeshProUGUI interactTxt;
     [SerializeField] private TextMeshProUGUI reactionMessageText;
     [SerializeField] private Image keyUi;
+    private EventBinding<SetCanInteract> setCanInteract;
 
-    private bool CanInteract = false;
-    public float rayLength = 3f;
+    private bool canInteract = false;
+    public float rayLength = 5f;
     private RaycastHit hit;
 
     private IInteraction currentDialogueInteraction = null;
 
+    private void OnEnable()
+    {
+        setCanInteract = new EventBinding<SetCanInteract>(OnCanInteractSetter);
+        EventBus<SetCanInteract>.Register(setCanInteract);
+    }
+    public void OnDisable()
+    {
+        EventBus<SetCanInteract>.Deregister(setCanInteract);
+    }
+
+
+ 
+    private void OnCanInteractSetter(SetCanInteract setCanInteract)
+    {
+        
+        canInteract = setCanInteract.canInteract;  
+    
+    
+    }
     void Start()
     {
         if (PlayerInteractionCanvas != null)
@@ -50,20 +71,22 @@ public class InteractionHandler : MonoBehaviour
     void FixedUpdate()
     {
         
+
         if (PlayerState.Instance.GetState() == PlayerState.State.DIALOGUE)
             return;
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out hit, rayLength))
         {
-            
+            Debug.Log("Raycast hit: " + hit.collider.name);
+            Debug.Log(interaction);
             interaction = hit.collider.GetComponent<IInteraction>();
             interactMe = hit.collider.GetComponent<InteractMe>();
-            CanInteract = (interaction != null);
+            canInteract = (interaction != null);
         }
         else
         {
-            CanInteract = false;
+            canInteract = false;
             interaction = null;
             interactMe = null;
         }
@@ -88,7 +111,7 @@ public class InteractionHandler : MonoBehaviour
             return;
         }
 
-        if (CanInteract)
+        if (canInteract)
         {
             if (interactMe != null)
             {
@@ -112,15 +135,15 @@ public class InteractionHandler : MonoBehaviour
             HideInteractionUI();
             DisableAllOutlines();
         }
-
-        if (CanInteract && Input.GetKeyDown(KeyCode.F))
+        Debug.Log("canInteract: " + canInteract);        
+        if (canInteract && Input.GetKeyDown(KeyCode.F))
         {
             interaction.Interact();
-
+            Debug.Log("f ye basildi lo");
             currentDialogueInteraction = interaction;
         }
 
-        if (!CanInteract && Input.GetKeyDown(KeyCode.Escape))
+        if (!canInteract && Input.GetKeyDown(KeyCode.Escape))
         {
             HideInteractionUI();
         }

@@ -5,12 +5,13 @@ using VIDE_Data;
 
 public class NpcInterract : MonoBehaviour, IInteraction
 {
-    [SerializeField]VIDE_Assign videAssign;
+    public VIDE_Assign videAssign;
     private VIDEUIManager4 diagUI;
     public string InteractionPrompt => "Talk";
     public void Interact()
     {
-       PlayerState.Instance.SetState(PlayerState.State.DIALOGUE);
+        Debug.Log("Interacting with NPC");
+        PlayerState.Instance.SetState(PlayerState.State.DIALOGUE);
        diagUI.Interact(videAssign);
     }
 
@@ -23,6 +24,7 @@ public class NpcInterract : MonoBehaviour, IInteraction
     void Start()
     {
         diagUI = FindObjectOfType<VIDEUIManager4>();
+        Debug.Log(diagUI);
     }
 
     // Update is called once per frame

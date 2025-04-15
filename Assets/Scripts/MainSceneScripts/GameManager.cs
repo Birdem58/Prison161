@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public Camera mainCamera;
     public GameObject playerCamera;
+    public VIDEUIManager4 diagUiManager;
 
     public GameState State;
 

@@ -4,8 +4,17 @@ using UnityEngine;
 
 public interface IEvent { }
 
+//Can interacti true yapacak ve sonra interacti cagiracak veya hatta dayzeroda playerstatei can interactten once playerstate diyalog yap ve sonra can interacti true yap ve sonra npc interatci tetikle suan can interact false ve ondan dolayi islemyir
 
 
+public struct SetCanInteract : IEvent
+{
+    public bool canInteract;
+    public SetCanInteract(bool canInteract)
+    {
+        this.canInteract = canInteract;
+    }
+}
 public struct GetJournal : IEvent
 {
     public bool journalEnable;
