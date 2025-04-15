@@ -5216,23 +5216,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7086b34bca58bfd439408ab2df7dd9c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bracketButtons:
-  - {fileID: 2146863660}
-  - {fileID: 1991718562}
-  panels:
-  - {fileID: 479354493}
-  - {fileID: 216529344}
+  journalCategories: []
   jourCanvas: {fileID: 1670714868}
-  jourCanvasPassive: {fileID: 156534305}
   journalIcon: {fileID: 1178601785}
   jourAlertUI: {fileID: 840315052}
-  animDuration: 1
-  targetScale: 3
-  targetPos: {fileID: 2058894779}
-  jourAlert: 1
-  visibDeneme: 0
-  noteInputFields:
-  - {fileID: 2115380864}
+  backButton: {fileID: 0}
+  animationDuration: 0.3
   typeSoundEffect: {fileID: 0}
 --- !u!4 &129779377 stripped
 Transform:
@@ -18532,8 +18521,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfdeefad5f04fbb42b77660ded28e446, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectiveCanvas: {fileID: 839075182}
-  ObjectiveContainer: {fileID: 961761997}
   objectivesText: {fileID: 61959778}
   audioSource: {fileID: 1905226970}
   completionSound: {fileID: 8300000, guid: eb10a232624fe544b81366341f2e74eb, type: 3}
@@ -25815,6 +25802,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c230ee221089e4541938fc622f016676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainCamera: {fileID: 0}
+  playerCamera: {fileID: 0}
   State: 0
 --- !u!4 &801292983
 Transform:
@@ -39777,7 +39766,7 @@ PrefabInstance:
       insertIndex: 1
       addedObject: {fileID: 826184827}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1265948d64e5dd149b99481369ef134f, type: 3}
-      insertIndex: 3
+      insertIndex: -1
       addedObject: {fileID: 1878231629}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1265948d64e5dd149b99481369ef134f, type: 3}
@@ -68020,8 +68009,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerInteractionCanvas: {fileID: 1727330783}
   crossHair: {fileID: 0}
-  interactionText: {fileID: 0}
+  interactTxt: {fileID: 0}
   reactionMessageText: {fileID: 0}
+  keyUi: {fileID: 0}
   rayLength: 10
 --- !u!114 &1905226969
 MonoBehaviour:
@@ -72206,7 +72196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9024bebcc9a781544a3a9828563eeae4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  darkessEvents: {fileID: 1113834624}
+  darknessEvents: {fileID: 0}
   DarkPanelAnimator: {fileID: 1113834621}
 --- !u!4 &2049608349
 Transform:
