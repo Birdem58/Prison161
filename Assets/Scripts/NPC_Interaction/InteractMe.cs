@@ -7,6 +7,8 @@ public class InteractMe : MonoBehaviour, IInteraction
     public string objectMessage;
     public string InteractionPrompt => objectMessage;
 
+    public bool enableOutline;
+
     public void Interact()
     {
         

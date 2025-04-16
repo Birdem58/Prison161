@@ -3024,6 +3024,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: '"LandLine Phone"'
+  enableOutline: 0
 --- !u!1 &2027606351
 GameObject:
   m_ObjectHideFlags: 0

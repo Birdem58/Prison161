@@ -26,6 +26,7 @@ public class InteractionHandler : MonoBehaviour
     private RaycastHit hit;
 
     private IInteraction currentDialogueInteraction = null;
+    private List<Outline> enabledOutlines = new List<Outline>();
 
     private void OnEnable()
     {
@@ -160,7 +161,8 @@ public class InteractionHandler : MonoBehaviour
         Outline outline = target.GetComponent<Outline>();
 
         NpcInterract npcInterract = target.GetComponent<NpcInterract>();
-        if(npcInterract != null)
+        InteractMe interact = target.GetComponent<InteractMe>();
+        if (npcInterract != null || (interact!=null &&!interact.enableOutline))
         {
             return;
         }
@@ -173,17 +175,25 @@ public class InteractionHandler : MonoBehaviour
             outline.OutlineWidth = 10.0f; 
         }
 
+       
+        
+        enabledOutlines.Add(outline);
+
         outline.enabled = true;
     }
   
-
+    //hic optimize degiol degistirilmesi gerek 
     void DisableAllOutlines()
     {
-        Outline[] outlines = FindObjectsOfType<Outline>();
-        foreach (Outline outline in outlines)
+       
+        foreach (Outline outline in enabledOutlines)
         {
-            outline.enabled = false;
+            if (outline != null)
+            {
+                outline.enabled = false;
+            }
         }
+        enabledOutlines.Clear();
     }
 
 
