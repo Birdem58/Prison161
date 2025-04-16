@@ -121,7 +121,7 @@ MonoBehaviour:
     m_Value: 1
   drawDistance:
     m_OverrideState: 1
-    m_Value: 100
+    m_Value: 1000
 --- !u!114 &-6611292964145612248
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -362,13 +362,13 @@ MonoBehaviour:
     m_Value: 0.798
   distanceMin:
     m_OverrideState: 1
-    m_Value: 10.75
+    m_Value: 20
   distanceMax:
     m_OverrideState: 1
-    m_Value: 200
+    m_Value: 52.3
   fogFalloffCurve:
     m_OverrideState: 1
-    m_Value: -0.67
+    m_Value: -0.26
   heightFalloffEnabled:
     m_OverrideState: 1
     m_Value: 0

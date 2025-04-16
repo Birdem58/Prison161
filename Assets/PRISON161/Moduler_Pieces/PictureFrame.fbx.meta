@@ -3,7 +3,17 @@ guid: 9c395c94b74df3b4d93f2a5535ef43af
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WardenRoom
+    second: {fileID: 2100000, guid: 2e718c056e0dafc4987646d2b8590860, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: photos
+    second: {fileID: 2100000, guid: efcae24aa6bca714b9f9e4ee4664f14d, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
