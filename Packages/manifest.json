@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.simonoliver.unityfigma": "https://github.com/simonoliver/UnityFigmaBridge.git",
     "com.unity.burst": "1.8.15",
     "com.unity.cinemachine": "2.10.3",
     "com.unity.collab-proxy": "2.5.1",
