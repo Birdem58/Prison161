@@ -59,11 +59,15 @@ public class PlayerState : MonoBehaviour
         }
     }
 
-    public State    GetState()
+    public State GetState()
     {
         return state;
     }
 
+    public void GetStateInfo()
+    {
+        Debug.Log(state);
+    }
     public void SetDefaultState()
     {
         state = State.DEFAULT;

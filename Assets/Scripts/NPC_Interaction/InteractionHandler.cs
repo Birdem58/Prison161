@@ -136,7 +136,6 @@ public class InteractionHandler : MonoBehaviour
             HideInteractionUI();
             DisableAllOutlines();
         }
-        Debug.Log("canInteract: " + canInteract);        
         if (canInteract && Input.GetKeyDown(KeyCode.F))
         {
             interaction.Interact();

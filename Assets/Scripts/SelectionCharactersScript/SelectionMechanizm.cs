@@ -97,7 +97,7 @@ public class SelectionMechanizm : MonoBehaviour
         CharacterSprites charSprites = _currentHoveredSprite.GetComponent<CharacterSprites>();
         if (charSprites != null)
         {
-            // Eðer karakter seçili deðilse, normal sprite'a döner
+            
             if (!_selectedCharacterNames.Contains(_currentHoveredSprite.gameObject.name))
             {
                 _currentHoveredSprite.sprite = charSprites.defaultSprite;
@@ -176,14 +176,13 @@ public class SelectionMechanizm : MonoBehaviour
 
     private void UpdateUI()
     {
-        // Eski list item'larý temizle
         foreach (var item in _instantiatedItems)
         {
             Destroy(item);
         }
         _instantiatedItems.Clear();
 
-        // Sadece karakter isimlerini içeren list item'larý oluþtur
+        
         foreach (var name in _selectedCharacterNames)
         {
             GameObject listItem = Instantiate(_listItemPrefab, _listContent);
