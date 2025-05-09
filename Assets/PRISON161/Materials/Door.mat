@@ -108,7 +108,7 @@ Material:
     - Vector1_E8746023: 29.6
     - Vector1_F6C0D59C: 1
     - _AffineMapIntensity: 0.063
-    - _AffineTextureWarpingWeight: 1
+    - _AffineTextureWarpingWeight: 0.389
     - _AlphaClip: 0
     - _AlphaClippingDitherIsEnabled: 0
     - _BRDFMode: 0

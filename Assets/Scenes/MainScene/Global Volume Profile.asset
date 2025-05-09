@@ -234,16 +234,16 @@ MonoBehaviour:
     m_Value: 1
   bakedLightingMultiplier:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 5
   vertexColorLightingMultiplier:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 5
   dynamicLightingMultiplier:
     m_OverrideState: 1
     m_Value: 1
   dynamicLightsMaxCount:
     m_OverrideState: 1
-    m_Value: 108
+    m_Value: 100
   dynamicLightsMaxPerObjectCount:
     m_OverrideState: 1
     m_Value: 8
@@ -265,7 +265,7 @@ MonoBehaviour:
     m_Value: 1
   bloom:
     m_OverrideState: 1
-    m_Value: 0.821
+    m_Value: 0.5
   grateMaskMode:
     m_OverrideState: 1
     m_Value: 0
@@ -278,31 +278,31 @@ MonoBehaviour:
     m_Value: 1
   scanlineSharpness:
     m_OverrideState: 1
-    m_Value: 0.464
+    m_Value: 0
   imageSharpness:
     m_OverrideState: 1
-    m_Value: 0.113
+    m_Value: 0
   bloomSharpnessX:
     m_OverrideState: 1
-    m_Value: 0.065
+    m_Value: 0
   bloomSharpnessY:
     m_OverrideState: 1
-    m_Value: 0.043
+    m_Value: 0
   noiseIntensity:
     m_OverrideState: 1
-    m_Value: 0.011
+    m_Value: 0
   noiseSaturation:
     m_OverrideState: 1
-    m_Value: 0.059
+    m_Value: 0.072
   grateMaskIntensityMin:
     m_OverrideState: 1
-    m_Value: 0.297
+    m_Value: 0
   grateMaskIntensityMax:
     m_OverrideState: 1
-    m_Value: 0.211
+    m_Value: 0.038
   barrelDistortionX:
     m_OverrideState: 1
-    m_Value: 0.092
+    m_Value: 0.145
   barrelDistortionY:
     m_OverrideState: 1
     m_Value: 0.073
@@ -349,7 +349,7 @@ MonoBehaviour:
     m_Value: 1
   color:
     m_OverrideState: 1
-    m_Value: {r: 0.645283, g: 0.6228178, b: 0.52961904, a: 1}
+    m_Value: {r: 0.90188676, g: 0.90188676, b: 0.90188676, a: 1}
   precisionAlpha:
     m_OverrideState: 1
     m_Value: 0.551
@@ -362,7 +362,7 @@ MonoBehaviour:
     m_Value: 0.798
   distanceMin:
     m_OverrideState: 1
-    m_Value: 20
+    m_Value: 30
   distanceMax:
     m_OverrideState: 1
     m_Value: 52.3
@@ -404,7 +404,7 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 0
   colorLayer1:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   distanceMinLayer1:
     m_OverrideState: 0
@@ -445,7 +445,7 @@ MonoBehaviour:
     m_Value: 1
   contrast:
     m_OverrideState: 1
-    m_Value: 0.559
+    m_Value: 0.466
   shoulder:
     m_OverrideState: 1
     m_Value: 0.502
@@ -479,7 +479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d61509376d05fc438d9ed9281e44e26, type: 3}
   m_Name: CompressionVolume
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   isEnabled:
     m_OverrideState: 1
     m_Value: 1
