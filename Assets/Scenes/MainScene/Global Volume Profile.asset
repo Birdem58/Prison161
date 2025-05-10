@@ -91,7 +91,7 @@ MonoBehaviour:
     m_Value: 1
   geometry:
     m_OverrideState: 1
-    m_Value: 0.884
+    m_Value: 1
   geometryPushbackEnabled:
     m_OverrideState: 1
     m_Value: 0
@@ -237,7 +237,7 @@ MonoBehaviour:
     m_Value: 5
   vertexColorLightingMultiplier:
     m_OverrideState: 1
-    m_Value: 5
+    m_Value: 10
   dynamicLightingMultiplier:
     m_OverrideState: 1
     m_Value: 1
@@ -296,10 +296,10 @@ MonoBehaviour:
     m_Value: 0.072
   grateMaskIntensityMin:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 0.338
   grateMaskIntensityMax:
     m_OverrideState: 1
-    m_Value: 0.038
+    m_Value: 0.399
   barrelDistortionX:
     m_OverrideState: 1
     m_Value: 0.145
@@ -445,7 +445,7 @@ MonoBehaviour:
     m_Value: 1
   contrast:
     m_OverrideState: 1
-    m_Value: 0.466
+    m_Value: 0.489
   shoulder:
     m_OverrideState: 1
     m_Value: 0.502

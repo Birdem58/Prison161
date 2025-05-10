@@ -134,7 +134,7 @@ Material:
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _PrecisionColorOverrideMode: 0
-    - _PrecisionGeometryOverrideMode: 3
+    - _PrecisionGeometryOverrideMode: 4
     - _PrecisionGeometryWeight: 1
     - _QueueControl: 0
     - _QueueOffset: 0

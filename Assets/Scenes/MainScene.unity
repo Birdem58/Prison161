@@ -643,7 +643,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 291.4997, y: -0.0030201492}
+  m_AnchoredPosition: {x: 291.4997, y: -0.0026618408}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &96186469
@@ -12275,6 +12275,10 @@ PrefabInstance:
     - target: {fileID: 6711625421596572538, guid: 4a85f8e256ff25c4b9c5be23455f793d, type: 3}
       propertyPath: m_Name
       value: PRISON
+      objectReference: {fileID: 0}
+    - target: {fileID: 7039443325849848682, guid: 4a85f8e256ff25c4b9c5be23455f793d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

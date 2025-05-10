@@ -108,7 +108,7 @@ Material:
     - Vector1_E8746023: 29.6
     - Vector1_F6C0D59C: 1
     - _AffineMapIntensity: 0.038
-    - _AffineTextureWarpingWeight: 0.526
+    - _AffineTextureWarpingWeight: 0.975
     - _AlphaClip: 0
     - _AlphaClippingDitherIsEnabled: 0
     - _BRDFMode: 0
@@ -134,7 +134,7 @@ Material:
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _PrecisionColorOverrideMode: 0
-    - _PrecisionGeometryOverrideMode: 3
+    - _PrecisionGeometryOverrideMode: 4
     - _PrecisionGeometryWeight: 1
     - _QueueControl: 0
     - _QueueOffset: 0
@@ -169,7 +169,7 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _MainColor: {r: 1, g: 1, b: 1, a: 1}
     - _PrecisionColorOverrideParameters: {r: 0, g: 0, b: 0, a: 0}
-    - _PrecisionGeometryOverrideParameters: {r: 1, g: 1, b: 0.8, a: 0}
+    - _PrecisionGeometryOverrideParameters: {r: 1, g: 1, b: 0.6, a: 0}
     - _ReflectionColor: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
     - _SpecularColor: {r: 0, g: 0, b: 0, a: 1}
