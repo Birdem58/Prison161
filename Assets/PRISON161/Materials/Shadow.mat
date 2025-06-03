@@ -8,30 +8,28 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Shadow
-  m_Shader: {fileID: 4800000, guid: 055eab4e84dc70a47ae75b3125a22de6, type: 3}
+  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _BRDF_MODE_LAMBERT
-  - _FOG_ON
-  - _LIGHTING_BAKED_ON
-  - _LIGHTING_DYNAMIC_ON
-  - _SHADING_EVALUATION_MODE_PER_VERTEX
-  - _TEXTURE_FILTER_MODE_TEXTURE_IMPORT_SETTINGS
+  - _RECEIVE_SHADOWS_OFF
+  - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 4601
+  m_DoubleSidedGI: 1
+  m_CustomRenderQueue: 3000
   stringTagMap:
     RenderType: Transparent
-  disabledShaderPasses: []
+  disabledShaderPasses:
+  - DepthOnly
+  - SHADOWCASTER
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_4450AB74:
-        m_Texture: {fileID: 2800000, guid: 1b54f034cc50f7f42b5c50344874a6f9, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6359ae9f95d59ba4eb2e5d5663823b64, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_9E9BBF1C:
@@ -39,10 +37,22 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 6359ae9f95d59ba4eb2e5d5663823b64, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -55,7 +65,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 3f6f3313bfded4b4dba928924dd166e1, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6359ae9f95d59ba4eb2e5d5663823b64, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -63,6 +73,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -111,17 +125,24 @@ Material:
     - _AffineTextureWarpingWeight: 1
     - _AlphaClip: 0
     - _AlphaClippingDitherIsEnabled: 0
+    - _AlphaToMask: 0
     - _BRDFMode: 0
     - _Blend: 0
+    - _BlendModePreserveSpecular: 0
     - _BlendOp: 0
     - _BumpScale: 1
+    - _ClearCoatMask: 0
+    - _ClearCoatSmoothness: 0
     - _ColorMask: 15
-    - _Cull: 2
-    - _Cutoff: 0.5
+    - _Cull: 0
+    - _Cutoff: 0
+    - _DetailAlbedoMapScale: 1
+    - _DetailNormalMapScale: 1
     - _DoubleSidedNormalMode: 0
     - _DrawDist: 0
     - _DrawDistanceOverrideMode: 0
     - _DstBlend: 10
+    - _DstBlendAlpha: 10
     - _EmissionBakedMultiplier: 1
     - _EnvironmentReflections: 1
     - _FogWeight: 0.225
@@ -131,23 +152,25 @@ Material:
     - _LightingBaked: 1
     - _LightingDynamic: 1
     - _LightingMode: 0
-    - _Metallic: 0
+    - _Metallic: 0.377
     - _OcclusionStrength: 1
+    - _Parallax: 0.005
     - _PrecisionColorOverrideMode: 0
     - _PrecisionGeometryOverrideMode: 3
     - _PrecisionGeometryWeight: 1
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _ReceiveShadows: 1
+    - _ReceiveShadows: 0
     - _Reflection: 0
     - _ReflectionBlendMode: 0
     - _ReflectionDirectionMode: 0
     - _RenderQueueCategory: 2
     - _ShadingEvaluationMode: 0
-    - _Smoothness: 0.5
+    - _Smoothness: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 5
+    - _SrcBlendAlpha: 1
     - _Surface: 1
     - _TextureFilterMode: 0
     - _UVAnimationMode: 0
@@ -162,8 +185,8 @@ Material:
     - Vector2_8044833E: {r: 1, g: 1, b: 0, a: 0}
     - Vector2_BEE4461D: {r: 1, g: 1, b: 0, a: 0}
     - _AlphaClippingScaleBiasMinMax: {r: 1, g: 0, b: 0, a: 1}
-    - _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    - _Color: {r: 0.7169812, g: 0.7169812, b: 0.7169812, a: 1}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 0.73333335}
+    - _Color: {r: 1, g: 1, b: 1, a: 0.73333335}
     - _DoubleSidedConstants: {r: 1, g: 1, b: 1, a: 0}
     - _DrawDistanceOverride: {r: 100, g: 10000, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
