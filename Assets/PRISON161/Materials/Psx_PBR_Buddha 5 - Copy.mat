@@ -8,17 +8,17 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Psx_PBR_Buddha 5 - Copy
-  m_Shader: {fileID: 4800000, guid: 055eab4e84dc70a47ae75b3125a22de6, type: 3}
+  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_Parent: {fileID: 2100000, guid: 8790e3399db1063419fc4f319478f9ad, type: 2}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
+  m_ValidKeywords: []
+  m_InvalidKeywords:
   - _BRDF_MODE_LAMBERT
   - _FOG_ON
   - _LIGHTING_BAKED_ON
   - _LIGHTING_DYNAMIC_ON
   - _SHADING_EVALUATION_MODE_PER_VERTEX
   - _TEXTURE_FILTER_MODE_TEXTURE_IMPORT_SETTINGS
-  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -35,7 +35,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: c0be5dc4644fad9409e5723339776a0b, type: 3}
+        m_Texture: {fileID: 2800000, guid: 938f5178985fff549ab976652b37a58d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
