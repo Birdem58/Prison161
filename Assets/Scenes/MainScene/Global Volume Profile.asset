@@ -85,7 +85,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66f335fb1ffd8684294ad653bf1c7564, type: 3}
   m_Name: ColorAdjustments
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   postExposure:
     m_OverrideState: 1
     m_Value: 0
@@ -94,7 +94,7 @@ MonoBehaviour:
     m_Value: 0
   colorFilter:
     m_OverrideState: 1
-    m_Value: {r: 0.7130011, g: 0.8001354, b: 0.90188676, a: 1}
+    m_Value: {r: 0.9415095, g: 0.9683176, b: 1, a: 1}
   hueShift:
     m_OverrideState: 1
     m_Value: 0
@@ -221,16 +221,16 @@ MonoBehaviour:
   active: 1
   ditherStrength:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0.56
   ditherThreshold:
     m_OverrideState: 1
-    m_Value: 350
+    m_Value: 50
   ditherScale:
     m_OverrideState: 1
-    m_Value: 21.7
+    m_Value: 20
   patternIndex:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
 --- !u!114 &-6016751773108632449
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -259,6 +259,46 @@ MonoBehaviour:
   scale:
     m_OverrideState: 0
     m_Value: 1
+--- !u!114 &-5196383028838333620
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32eb3b8fb939d9b41b04b5621e6d36dd, type: 3}
+  m_Name: Fog
+  m_EditorClassIdentifier: 
+  active: 1
+  fogDensity:
+    m_OverrideState: 1
+    m_Value: 4.4
+  fogDistance:
+    m_OverrideState: 1
+    m_Value: 10
+  fogColor:
+    m_OverrideState: 1
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
+  fogNear:
+    m_OverrideState: 1
+    m_Value: 1
+  fogFar:
+    m_OverrideState: 1
+    m_Value: 88.12
+  fogAltScale:
+    m_OverrideState: 1
+    m_Value: 10
+  fogThinning:
+    m_OverrideState: 1
+    m_Value: 100
+  noiseScale:
+    m_OverrideState: 1
+    m_Value: 100
+  noiseStrength:
+    m_OverrideState: 1
+    m_Value: 0.05
 --- !u!114 &-4080993802488822775
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -271,7 +311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 558a8e2b6826cf840aae193990ba9f2e, type: 3}
   m_Name: ShadowsMidtonesHighlights
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   shadows:
     m_OverrideState: 1
     m_Value: {x: 1, y: 1, z: 1, w: 0}
@@ -368,46 +408,6 @@ MonoBehaviour:
   isClearDepthBeforeUIEnabled:
     m_OverrideState: 1
     m_Value: 1
---- !u!114 &-1787492422828565124
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32eb3b8fb939d9b41b04b5621e6d36dd, type: 3}
-  m_Name: Fog
-  m_EditorClassIdentifier: 
-  active: 1
-  fogDensity:
-    m_OverrideState: 0
-    m_Value: 1
-  fogDistance:
-    m_OverrideState: 0
-    m_Value: 10
-  fogColor:
-    m_OverrideState: 0
-    m_Value: {r: 1, g: 1, b: 1, a: 1}
-  fogNear:
-    m_OverrideState: 0
-    m_Value: 1
-  fogFar:
-    m_OverrideState: 0
-    m_Value: 100
-  fogAltScale:
-    m_OverrideState: 0
-    m_Value: 10
-  fogThinning:
-    m_OverrideState: 0
-    m_Value: 100
-  noiseScale:
-    m_OverrideState: 0
-    m_Value: 100
-  noiseStrength:
-    m_OverrideState: 0
-    m_Value: 0.05
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -421,6 +421,7 @@ MonoBehaviour:
   m_Name: Global Volume Profile
   m_EditorClassIdentifier: 
   components:
+  - {fileID: -6553649133943397131}
   - {fileID: -7491300986902692168}
   - {fileID: -2513249045273328120}
   - {fileID: -8787077478929404397}
@@ -434,8 +435,7 @@ MonoBehaviour:
   - {fileID: 3345809489458153214}
   - {fileID: 6556240515399278556}
   - {fileID: 7528738777102553407}
-  - {fileID: -6553649133943397131}
-  - {fileID: -1787492422828565124}
+  - {fileID: -5196383028838333620}
 --- !u!114 &484342116886143826
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -892,7 +892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70afe9e12c7a7ed47911bb608a23a8ff, type: 3}
   m_Name: SplitToning
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   shadows:
     m_OverrideState: 1
     m_Value: {r: 0.57577074, g: 0.6199368, b: 0.7283019, a: 1}

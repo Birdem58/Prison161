@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Psx_PBR_Buddha 7
-  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 2b3b7d0b179748b449e12721ea4fcfa6, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -17,8 +17,7 @@ Material:
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap:
-    RenderType: Opaque
+  stringTagMap: {}
   disabledShaderPasses: []
   m_LockedProperties: 
   m_SavedProperties:
@@ -33,7 +32,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: fa6f5c40a93c67141841ab20adadedfc, type: 3}
+        m_Texture: {fileID: 2800000, guid: 31da49ec9521c914fa4354c73749093a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -61,7 +60,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: fa6f5c40a93c67141841ab20adadedfc, type: 3}
+        m_Texture: {fileID: 2800000, guid: 31da49ec9521c914fa4354c73749093a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -85,7 +84,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
-        m_Texture: {fileID: 2800000, guid: fa6f5c40a93c67141841ab20adadedfc, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -102,23 +101,23 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - Boolean_193028D2: 1
+    - Boolean_193028D2: 0
     - Boolean_3F1A8DAB: 1
     - Boolean_43476D73: 1
-    - Boolean_7165A49C: 0
+    - Boolean_7165A49C: 1
     - Boolean_85059BBE: 1
     - Boolean_8BBF99CD: 1
-    - Boolean_D258FF8E: 0
-    - Vector1_21C41D02: 400
+    - Boolean_D258FF8E: 1
+    - Vector1_21C41D02: 93.6
     - Vector1_2CDA09C2: 0.5
     - Vector1_6F288C5B: 0.5
-    - Vector1_B2CC132F: 12
+    - Vector1_B2CC132F: 22.4
     - Vector1_B74833F8: 1
-    - Vector1_B9994903: 2.45
-    - Vector1_E8746023: 29.6
+    - Vector1_B9994903: 4.56
+    - Vector1_E8746023: 42.07
     - Vector1_F6C0D59C: 1
-    - _AffineMapIntensity: 1
-    - _AffineTextureWarpingWeight: 1
+    - _AffineMapIntensity: 0.063
+    - _AffineTextureWarpingWeight: 0.867
     - _AlphaClip: 0
     - _AlphaClippingDitherIsEnabled: 0
     - _AlphaToMask: 0
@@ -141,9 +140,9 @@ Material:
     - _DstBlendAlpha: 0
     - _EmissionBakedMultiplier: 1
     - _EnvironmentReflections: 1
-    - _FogWeight: 1
+    - _FogWeight: 0.236
     - _GlossMapScale: 0
-    - _Glossiness: 0
+    - _Glossiness: 0.699
     - _GlossyReflections: 0
     - _LightingBaked: 1
     - _LightingDynamic: 1
@@ -152,7 +151,7 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _PrecisionColorOverrideMode: 0
-    - _PrecisionGeometryOverrideMode: 0
+    - _PrecisionGeometryOverrideMode: 4
     - _PrecisionGeometryWeight: 1
     - _QueueControl: 0
     - _QueueOffset: 0
@@ -161,7 +160,7 @@ Material:
     - _ReflectionBlendMode: 0
     - _ReflectionDirectionMode: 0
     - _RenderQueueCategory: 2
-    - _ShadingEvaluationMode: 0
+    - _ShadingEvaluationMode: 1
     - _Smoothness: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -170,7 +169,7 @@ Material:
     - _Surface: 0
     - _TextureFilterMode: 0
     - _UVAnimationMode: 0
-    - _VertJitter: 0.95
+    - _VertJitter: 0.117
     - _VertexColorBlendMode: 0
     - _VertexColorMode: 0
     - _WorkflowMode: 1
@@ -188,10 +187,10 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _MainColor: {r: 1, g: 1, b: 1, a: 1}
     - _PrecisionColorOverrideParameters: {r: 0, g: 0, b: 0, a: 0}
-    - _PrecisionGeometryOverrideParameters: {r: 0, g: 0, b: 0, a: 0}
+    - _PrecisionGeometryOverrideParameters: {r: 1, g: 1, b: 0.6, a: 0}
     - _ReflectionColor: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
-    - _SpecularColor: {r: 0, g: 0, b: 0, a: 1}
+    - _SpecularColor: {r: 0.16981131, g: 0.16981131, b: 0.16981131, a: 1}
     - _UVAnimationParameters: {r: 1, g: 1, b: 0, a: 0}
     - _UVAnimationParametersFrameLimit: {r: 0, g: 60, b: 0, a: 0}
   m_BuildTextureStacks: []
