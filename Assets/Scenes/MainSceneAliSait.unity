@@ -259,7 +259,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 21174598}
-  - component: {fileID: 21174597}
+  - component: {fileID: 21174599}
   m_Layer: 3
   m_Name: PPV
   m_TagString: Untagged
@@ -267,23 +267,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &21174597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 21174596}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sharedProfile: {fileID: 11400000, guid: 7eaaf2f8ff02499408561fa07f94890f, type: 2}
-  isGlobal: 1
-  blendDistance: 0
-  weight: 1
-  priority: 0
 --- !u!4 &21174598
 Transform:
   m_ObjectHideFlags: 0
@@ -299,6 +282,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1236644613}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &21174599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21174596}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 3f45aad984d5bfd42afb443e4a58ee35, type: 2}
 --- !u!1 &25706718 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0e0a34466eabbf54a8bcffa0c4c877b3, type: 3}
@@ -1124,6 +1124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: A clock
+  enableOutline: 0
 --- !u!65 &102173929
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1165,7 +1166,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1331,7 +1332,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -7221,8 +7223,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   director: {fileID: 630822159}
-  playerCamera: {fileID: 2030115405}
-  mainCamera: {fileID: 2030115430}
   cinematicCam: {fileID: 1227341215}
   targetCharacter: {fileID: 2091260475}
 --- !u!1 &635881690 stripped
@@ -8594,6 +8594,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c230ee221089e4541938fc622f016676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainCamera: {fileID: 0}
+  playerCamera: {fileID: 0}
+  diagUiManager: {fileID: 0}
   State: 0
 --- !u!4 &801292983
 Transform:
@@ -14392,13 +14395,13 @@ MonoBehaviour:
   m_RendererIndex: -1
   m_VolumeLayerMask:
     serializedVersion: 2
-    m_Bits: 1
-  m_VolumeTrigger: {fileID: 0}
+    m_Bits: 8
+  m_VolumeTrigger: {fileID: 9005220658596425275}
   m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
-  m_StopNaN: 0
+  m_StopNaN: 1
   m_Dithering: 0
   m_ClearDepth: 1
   m_AllowXRRendering: 1
@@ -15073,7 +15076,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -16920,19 +16924,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7086b34bca58bfd439408ab2df7dd9c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bracketButtons:
-  - {fileID: 1521642607}
-  - {fileID: 962364555}
-  - {fileID: 1356932358}
-  panels:
-  - {fileID: 1855278504}
-  - {fileID: 1840334514}
-  - {fileID: 364688132}
+  journalCategories: []
   jourCanvas: {fileID: 473855740}
   journalIcon: {fileID: 1407655406}
   jourAlertUI: {fileID: 1842832722}
-  noteInputFields:
-  - {fileID: 1956747908}
+  backButton: {fileID: 0}
   animationDuration: 0.3
   typeSoundEffect: {fileID: 0}
 --- !u!1001 &1505189249
@@ -19190,7 +19186,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -20302,6 +20299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: A Journal
+  enableOutline: 0
 --- !u!65 &1851708804
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20343,7 +20341,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20845,8 +20843,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerInteractionCanvas: {fileID: 1132855169}
   crossHair: {fileID: 1008686023}
-  interactionText: {fileID: 1351863172}
+  interactTxt: {fileID: 0}
   reactionMessageText: {fileID: 107509887}
+  keyUi: {fileID: 0}
   rayLength: 10
 --- !u!114 &1905226969
 MonoBehaviour:
@@ -22537,11 +22536,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3672199762080144129, guid: a712bcca6d59ed6478892ed7556da524, type: 3}
   m_PrefabInstance: {fileID: 1715020273}
   m_PrefabAsset: {fileID: 0}
---- !u!20 &2030115430 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 1543715529264612607, guid: a712bcca6d59ed6478892ed7556da524, type: 3}
-  m_PrefabInstance: {fileID: 1715020273}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2032717397
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22635,7 +22629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9024bebcc9a781544a3a9828563eeae4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  darkessEvents: {fileID: 1113834624}
+  darknessEvents: {fileID: 0}
   DarkPanelAnimator: {fileID: 1113834621}
 --- !u!4 &2049608349
 Transform:
@@ -23160,7 +23154,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -24463,7 +24457,6 @@ GameObject:
   - component: {fileID: 9005220658596425277}
   - component: {fileID: 9018249871018562083}
   - component: {fileID: 1270862299}
-  - component: {fileID: 9018249871018562084}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -24505,70 +24498,6 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &9018249871018562084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9005220658596425278}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  volumeTrigger: {fileID: 9005220658596425275}
-  volumeLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  stopNaNPropagation: 1
-  finalBlitToCameraTarget: 0
-  antialiasingMode: 0
-  temporalAntialiasing:
-    jitterSpread: 0.75
-    sharpness: 0.25
-    stationaryBlending: 0.95
-    motionBlending: 0.85
-  subpixelMorphologicalAntialiasing:
-    quality: 2
-  fastApproximateAntialiasing:
-    fastMode: 0
-    keepAlpha: 0
-  fog:
-    enabled: 1
-    excludeSkybox: 1
-  debugLayer:
-    lightMeter:
-      width: 512
-      height: 256
-      showCurves: 1
-    histogram:
-      width: 512
-      height: 256
-      channel: 3
-    waveform:
-      exposure: 0.12
-      height: 256
-    vectorscope:
-      size: 256
-      exposure: 0.12
-    overlaySettings:
-      linearDepth: 0
-      motionColorIntensity: 4
-      motionGridSize: 64
-      colorBlindnessType: 0
-      colorBlindnessStrength: 1
-  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
-  m_ShowToolkit: 1
-  m_ShowCustomSorter: 1
-  breakBeforeColorGrading: 0
-  m_BeforeTransparentBundles: []
-  m_BeforeStackBundles: []
-  m_AfterStackBundles:
-  - assemblyQualifiedName: RetroPostProcessEffect, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  - assemblyQualifiedName: QuickDither.Dithered, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

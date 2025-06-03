@@ -778,7 +778,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -1612,29 +1613,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7086b34bca58bfd439408ab2df7dd9c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bracketButtons:
-  - {fileID: 2146863660}
-  - {fileID: 1991718562}
-  panels:
-  - {fileID: 479354493}
-  - {fileID: 216529344}
+  journalCategories: []
   jourCanvas: {fileID: 1670714868}
   journalIcon: {fileID: 1178601784}
-  currentJournalIcon: {fileID: 1178601784}
   jourAlertUI: {fileID: 840315052}
-  animDuration: 1
-  targetScale: 3
-  targetPos: {fileID: 2058894779}
-  jourAlert: 0
-  visibDeneme: 0
-  noteInputFields:
-  - {fileID: 2115380864}
-  - {fileID: 1022648428}
+  backButton: {fileID: 0}
+  animationDuration: 0.3
   typeSoundEffect: {fileID: 0}
-  journalIconPassive: {fileID: 812051201}
-  currentPerson: 0
-  passiveJournalButton: {fileID: 919336668}
-  closeJournalButton: {fileID: 1876552359}
 --- !u!4 &129779377 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0e0a34466eabbf54a8bcffa0c4c877b3, type: 3}
@@ -4842,7 +4827,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5295,8 +5280,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfdeefad5f04fbb42b77660ded28e446, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectiveCanvas: {fileID: 839075182}
-  ObjectiveContainer: {fileID: 961761997}
   objectivesText: {fileID: 61959778}
   audioSource: {fileID: 0}
   completionSound: {fileID: 8300000, guid: eb10a232624fe544b81366341f2e74eb, type: 3}
@@ -7758,6 +7741,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c230ee221089e4541938fc622f016676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainCamera: {fileID: 0}
+  playerCamera: {fileID: 0}
+  diagUiManager: {fileID: 0}
   State: 0
 --- !u!4 &801292983
 Transform:
@@ -8612,7 +8598,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -12179,6 +12166,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorWall
       objectReference: {fileID: 0}
+    - target: {fileID: 7468290057692825221, guid: 7f12cbbee0ffbea46acec25587dea11a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+    - target: {fileID: 8398774872105182300, guid: 7f12cbbee0ffbea46acec25587dea11a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12548,7 +12543,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -13288,7 +13284,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13683,7 +13679,7 @@ PrefabInstance:
       insertIndex: 1
       addedObject: {fileID: 826184827}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1265948d64e5dd149b99481369ef134f, type: 3}
-      insertIndex: 3
+      insertIndex: -1
       addedObject: {fileID: 1878231629}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1265948d64e5dd149b99481369ef134f, type: 3}
@@ -16363,7 +16359,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -16447,7 +16443,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19920,6 +19916,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorWall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7468290057692825221, guid: 7f12cbbee0ffbea46acec25587dea11a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+    - target: {fileID: 8398774872105182300, guid: 7f12cbbee0ffbea46acec25587dea11a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22481,7 +22485,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -23278,8 +23282,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerInteractionCanvas: {fileID: 1835935867}
   crossHair: {fileID: 1683695149}
-  interactionText: {fileID: 1090168553}
+  interactTxt: {fileID: 0}
   reactionMessageText: {fileID: 832518944}
+  keyUi: {fileID: 0}
   rayLength: 5
 --- !u!114 &1905226969
 MonoBehaviour:
@@ -24534,7 +24539,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9024bebcc9a781544a3a9828563eeae4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  darkessEvents: {fileID: 1113834624}
+  darknessEvents: {fileID: 0}
   DarkPanelAnimator: {fileID: 1113834621}
 --- !u!4 &2049608349
 Transform:
@@ -24917,7 +24922,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -25863,7 +25868,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

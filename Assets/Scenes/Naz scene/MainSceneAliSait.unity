@@ -235,6 +235,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectMessage: 'Would she notice, if I eat just a little? Can she even finish this
     much junk food? '
+  enableOutline: 0
 --- !u!65 &9931373
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -276,7 +277,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -364,6 +365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: 'Better not go through his bag. '
+  enableOutline: 0
 --- !u!65 &19491746
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -405,7 +407,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -483,6 +485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: 'Quite a fancy... '
+  enableOutline: 0
 --- !u!65 &21437225
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -524,7 +527,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -675,6 +678,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: '- I wonder what''s inside...'
+  enableOutline: 0
 --- !u!65 &46950441
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -716,7 +720,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2075,6 +2079,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectMessage: 'Some pages have been torn from the notebook, some containing threatening
     drawings. His subconscious is truly disturbing. '
+  enableOutline: 0
 --- !u!65 &96907683
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2116,7 +2121,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2406,6 +2411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: 'A genius in disguise, or just someone who likes to look smart? '
+  enableOutline: 0
 --- !u!65 &115795346
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2447,7 +2453,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2535,6 +2541,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: '- Well... She still loves to look beautiful. '
+  enableOutline: 0
 --- !u!65 &122909069
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2576,7 +2583,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2754,6 +2761,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: 'They aren''t connected to anything, does he even listen to anything? '
+  enableOutline: 0
 --- !u!65 &141765565
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2795,7 +2803,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3185,6 +3193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: 'Must be his dream car. '
+  enableOutline: 0
 --- !u!65 &199247130
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3226,7 +3235,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3583,6 +3592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: 
+  enableOutline: 0
 --- !u!65 &226481003
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3624,7 +3634,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4295,6 +4305,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectMessage: 'Looks like they''ve been through a lot. These boots have seen better
     days. '
+  enableOutline: 0
 --- !u!65 &266574020
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4336,7 +4347,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4561,6 +4572,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectMessage: 'Wonder how she got these here. They all look fake. Wonder who she
     stole them from... '
+  enableOutline: 0
 --- !u!65 &276329482
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4602,7 +4614,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4798,6 +4810,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: 'He is quite a smoker... '
+  enableOutline: 0
 --- !u!65 &278352183
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4839,7 +4852,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4934,6 +4947,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectMessage: 'No doubt he has read such books. At least he does it according
     to the rules. '
+  enableOutline: 0
 --- !u!65 &303319031
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4975,7 +4989,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5053,6 +5067,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: "A neat pen case. Wouldn\u2019t expect less. "
+  enableOutline: 0
 --- !u!65 &312684323
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5094,7 +5109,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5470,6 +5485,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectMessage: '- I hope they''re not dark romance... - Romance novels, huh? -
     It is nice that she still believes in love... '
+  enableOutline: 0
 --- !u!65 &354135827
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5511,7 +5527,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5776,6 +5792,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: 'Must be his dream car. '
+  enableOutline: 0
 --- !u!65 &379805586
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5817,7 +5834,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6350,6 +6367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: "Guess he\u2019s been here longer than he admits. "
+  enableOutline: 0
 --- !u!65 &433484557
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6391,7 +6409,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6593,6 +6611,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: 'Looks like somebody really loves cars. '
+  enableOutline: 0
 --- !u!65 &450722091
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6634,7 +6653,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6738,6 +6757,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: 'The names here need to be investigated. '
+  enableOutline: 0
 --- !u!65 &455574062
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6779,7 +6799,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7185,6 +7205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: 'A neatly kept diary... Suspiciously neat. '
+  enableOutline: 0
 --- !u!65 &478950220
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7226,7 +7247,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8164,6 +8185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: 'Either to help her calm down or keep something buried deeper inside. '
+  enableOutline: 0
 --- !u!65 &550321392
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8205,7 +8227,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8283,6 +8305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: 'Still ticking... '
+  enableOutline: 0
 --- !u!65 &551235425
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8324,7 +8347,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8661,6 +8684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: 'Never saw him wear them on. '
+  enableOutline: 0
 --- !u!65 &580338372
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8702,7 +8726,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8786,6 +8810,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectMessage: 'He is quite a smoker... This guy probably runs on nicotine as much
     as gasoline. '
+  enableOutline: 0
 --- !u!65 &591394763
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8827,7 +8852,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8975,6 +9000,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: 'Anna Morozova: Meet the heart of the music. She was quite popular... '
+  enableOutline: 0
 --- !u!65 &608451544
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9016,7 +9042,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9206,6 +9232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: 'Sure he beats everyone in the games. '
+  enableOutline: 0
 --- !u!65 &613391610
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9247,7 +9274,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9471,6 +9498,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectMessage: 'Very beautiful handwriting... A letter from his daughter. Probably
     I shouldn''t read it. '
+  enableOutline: 0
 --- !u!65 &626484987
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9512,7 +9540,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9749,6 +9777,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: 'They probably seen better days... '
+  enableOutline: 0
 --- !u!65 &648915731
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9790,7 +9819,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10765,6 +10794,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: 'He must really like burning things. '
+  enableOutline: 0
 --- !u!65 &734047640
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10806,7 +10836,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11499,6 +11529,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c230ee221089e4541938fc622f016676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainCamera: {fileID: 0}
+  playerCamera: {fileID: 0}
+  diagUiManager: {fileID: 0}
   State: 0
 --- !u!4 &801292983
 Transform:
@@ -11696,6 +11729,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: 'Doesn''t even close.. These photos don''t even look like him... '
+  enableOutline: 0
 --- !u!65 &804035338
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11737,7 +11771,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12074,6 +12108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: 'They look like they''ve been through a lot. '
+  enableOutline: 0
 --- !u!65 &824443211
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12115,7 +12150,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12510,6 +12545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: 'There is definitely something strange about their eyes. '
+  enableOutline: 0
 --- !u!65 &846135083
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12551,7 +12587,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12783,6 +12819,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: 'Why does he have a comb? Was he always bald? '
+  enableOutline: 0
 --- !u!65 &870810865
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12824,7 +12861,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13666,6 +13703,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectMessage: 'Wish I had headphones too. It would be nice to get away from the
     world for just a few minutes. '
+  enableOutline: 0
 --- !u!65 &925120808
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13707,7 +13745,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14563,6 +14601,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectMessage: 'Why does he keep a wallet if he''s not going to put anything in
     it? '
+  enableOutline: 0
 --- !u!65 &985762090
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14604,7 +14643,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15916,6 +15955,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: 'Unsolved robberies... I think we can say that he is behind these. '
+  enableOutline: 0
 --- !u!65 &1087757241
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15957,7 +15997,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -16222,6 +16262,7 @@ MonoBehaviour:
   objectMessage: "Seeking comfort or absolution for what she\u2019s done... or for
     what she\u2019s about to do? Crosses and other religious trinkets. Still a believer
     huh? "
+  enableOutline: 0
 --- !u!65 &1099935310
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16263,7 +16304,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -16341,6 +16382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: 'Seems like he was the ''cool'' type. '
+  enableOutline: 0
 --- !u!65 &1105179242
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16382,7 +16424,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -16574,6 +16616,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: "Looks like she\u2019s prepared. "
+  enableOutline: 0
 --- !u!65 &1128833924
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16615,7 +16658,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -16932,7 +16975,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 09027dfdf572ef14eb54365e863d766c, type: 2}
   m_sharedMaterial: {fileID: -628742056578292636, guid: 09027dfdf572ef14eb54365e863d766c, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: -628742056578292636, guid: 09027dfdf572ef14eb54365e863d766c, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -17531,6 +17575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: 'A lovingly handmade blanket. Warm, comforting... '
+  enableOutline: 0
 --- !u!65 &1175083883
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17572,7 +17617,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -17744,6 +17789,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: 'Classic, can''t blame her. This is what I call the most essential. '
+  enableOutline: 0
 --- !u!65 &1178672383
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17785,7 +17831,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18775,6 +18821,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: 'Nothing to be surprised about. '
+  enableOutline: 0
 --- !u!65 &1232718857
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18816,7 +18863,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19422,6 +19469,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: 'Who am I to judge? '
+  enableOutline: 0
 --- !u!65 &1268274266
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19463,7 +19511,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19591,6 +19639,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectMessage: 'A wristwatch with a cracked face, frozen at *****. Same as the
     stopped clock in the cafeteria. '
+  enableOutline: 0
 --- !u!65 &1272846807
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19632,7 +19681,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20200,6 +20249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: "Whatever\u2019s inside remains a mystery. "
+  enableOutline: 0
 --- !u!65 &1292135170
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20241,7 +20291,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20768,6 +20818,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectMessage: 'In case of a technical problem, she is first on the go-to list.
     She is quite a nerd huh? '
+  enableOutline: 0
 --- !u!65 &1316995195
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20809,7 +20860,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20887,6 +20938,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: 'Is he really a sports fan or is it an undercover? '
+  enableOutline: 0
 --- !u!65 &1318494977
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20928,7 +20980,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -21313,6 +21365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: 'It is more than just a habit for him. '
+  enableOutline: 0
 --- !u!65 &1335162730
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21354,7 +21407,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -21496,6 +21549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: 'I better report him. It''s best not to mess with him. '
+  enableOutline: 0
 --- !u!65 &1344308438
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21537,7 +21591,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -22051,6 +22105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectMessage: 'Her handwriting is beautiful. Lyrics of her songs... Does she really
     believe she''ll still be singing when she comes out? '
+  enableOutline: 0
 --- !u!65 &1390633538
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22092,7 +22147,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -22396,6 +22451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: '- Why does she needs so many... - Just an ordinary hairbrsuh. '
+  enableOutline: 0
 --- !u!65 &1415114573
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22437,7 +22493,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -23469,6 +23525,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: "A scientist\u2019s trusty companion. "
+  enableOutline: 0
 --- !u!65 &1475417574
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23510,7 +23567,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -23738,6 +23795,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectMessage: 'Guess she likes solving puzzles. Looks like it will be solved in
     a few moves. '
+  enableOutline: 0
 --- !u!65 &1485055366
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23779,7 +23837,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -24004,6 +24062,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: 'Handwriting is messy... I have no idea what is written here. '
+  enableOutline: 0
 --- !u!65 &1497594054
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24045,7 +24104,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -24124,6 +24183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectMessage: 'It probably reminds him of the old days. Full of handwritten notes.
     It was probably his most-used recipe book. '
+  enableOutline: 0
 --- !u!65 &1502265086
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24165,7 +24225,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -24728,6 +24788,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: 'Must be his daughter. I''m sorry for him... '
+  enableOutline: 0
 --- !u!65 &1544494294
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24769,7 +24830,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -24848,6 +24909,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectMessage: 'Whether they were used on himself or someone else remains a disturbing
     question. '
+  enableOutline: 0
 --- !u!65 &1546571922
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24889,7 +24951,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -25287,6 +25349,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectMessage: 'She is quite a smoker... Wonder if she just picked the habit from
     here.. '
+  enableOutline: 0
 --- !u!65 &1572240825
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25328,7 +25391,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -25664,6 +25727,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectMessage: 'For what purpose does she have such a map? Someone''s been here
     forever. '
+  enableOutline: 0
 --- !u!65 &1603374276
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25705,7 +25769,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27065,6 +27129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: 'Looks like they''ve been through a lot. '
+  enableOutline: 0
 --- !u!65 &1700575554
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27106,7 +27171,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27252,6 +27317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: 'I''m sure even he can''t read what he writes. '
+  enableOutline: 0
 --- !u!65 &1724840924
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27293,7 +27359,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27441,6 +27507,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: 'Looks like they''ve been through a lot. '
+  enableOutline: 0
 --- !u!65 &1732615134
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27482,7 +27549,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28108,6 +28175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectMessage: 'Guess he is the reason there are so many cigarettes. Rolling papers?
     So he was the one behind all those cigarettes. '
+  enableOutline: 0
 --- !u!65 &1768850973
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28149,7 +28217,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28255,6 +28323,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectMessage: 'They are all from different religions. How can someone hold onto
     so many beliefs at once? '
+  enableOutline: 0
 --- !u!65 &1774684004
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28296,7 +28365,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -30070,6 +30139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: '- She is quite a smoker... - How is it possible she has so many? '
+  enableOutline: 0
 --- !u!65 &1845450747
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30111,7 +30181,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -30955,7 +31025,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 09027dfdf572ef14eb54365e863d766c, type: 2}
   m_sharedMaterial: {fileID: -628742056578292636, guid: 09027dfdf572ef14eb54365e863d766c, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: -628742056578292636, guid: 09027dfdf572ef14eb54365e863d766c, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -31078,6 +31149,7 @@ MonoBehaviour:
   objectMessage: "Glasses with a slight crack. Either he\u2019s clumsy, or maybe
     his \u2018adventures\u2019 got a bit rough. He probably can't see anything without
     them. "
+  enableOutline: 0
 --- !u!65 &1898878145
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31119,7 +31191,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -31625,6 +31697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: 'Isn''t it oversized for her? Looks like she wears it a lot. '
+  enableOutline: 0
 --- !u!65 &1929438196
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31666,7 +31739,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -32657,6 +32730,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectMessage: 'She is not a very hygienic person. Does she even drink anything
     from this? '
+  enableOutline: 0
 --- !u!65 &2046499674
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32698,7 +32772,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -32776,6 +32850,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: 'Wonder where is her husband now? '
+  enableOutline: 0
 --- !u!65 &2049187610
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32817,7 +32892,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -32895,6 +32970,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: 'The pack is almost empty. '
+  enableOutline: 0
 --- !u!65 &2050081840
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32936,7 +33012,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33136,6 +33212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: 'So why is he still use it? '
+  enableOutline: 0
 --- !u!65 &2055176087
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33177,7 +33254,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33346,6 +33423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMessage: 'An old but functional wristwatch. '
+  enableOutline: 0
 --- !u!65 &2057345443
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33387,7 +33465,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -34416,6 +34494,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectMessage: 'I hope he doesn''t set this place on fire. Hope they were made
     to pass the time. '
+  enableOutline: 0
 --- !u!65 &2103455729
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34457,7 +34536,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -13937,11 +13937,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerName: VIDE User
-  raycasters:
-  - {fileID: 1901505275}
-  eventSystem: {fileID: 288403490}
   diagUI: {fileID: 1213655837}
-  videAssign: {fileID: 0}
   demo_Items: []
   demo_ItemInventory: []
 --- !u!114 &1776056380 stripped
