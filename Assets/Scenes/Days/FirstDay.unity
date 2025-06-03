@@ -2223,6 +2223,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1595761067}
   - component: {fileID: 1595761066}
+  - component: {fileID: 1595761068}
+  - component: {fileID: 1595761069}
   m_Layer: 0
   m_Name: Father GregorySmile
   m_TagString: Untagged
@@ -2297,6 +2299,437 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &1595761068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595761065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b8b99d8a12e39e4b94d2d7162c7c978, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diags:
+  - AnnaDay1
+  - AnnaDay1 1
+  - AnnaDay2
+  - CalebDay1
+  - CalebDay3
+  - CalebDay5
+  - CellMateDay4
+  - CellMateDay5
+  - CellMateNight1
+  - CellMateNight2
+  - CellMateNight3
+  - CellMateNight4
+  - Charlie
+  - CommentModifier
+  - CrazyCap
+  - Day0_Shane
+  - Day0_Warden 0
+  - Day0_Warden 1
+  - DEMO_Condition
+  - demo_Narration
+  - DiegoDay2
+  - EvelynDay1
+  - Example3Dialogue
+  - Example4_dialogue
+  - FatherGregoryDay5
+  - firstTry
+  - HermanDay2
+  - HermanDay4
+  - Item_LookUp
+  - KatDay3
+  - Laura
+  - MikiDay2
+  - MikiDay3
+  - MikiDay4
+  - MikiFakeDay4
+  - MrCube
+  - NamelessDay5
+  - NPCOnly
+  - QuestChartDemo
+  - RickyDay2
+  - RickyDay3
+  - TriggeredDude
+  - WardenDay1
+  - WardenOpeningSequence
+  - Witch
+  assignedIndex: 1
+  assignedID: 51566
+  assignedDialogue: AnnaDay1 1
+  interactionCount: 0
+  alias: Father Gregory
+  overrideStartNode: -1
+  defaultNPCSprite: {fileID: 0}
+  defaultPlayerSprite: {fileID: 0}
+  targetManager: {fileID: 0}
+  preload: 1
+  notuptodate: 0
+  startp: 0
+  loadtag: 
+  langs: []
+  S_playerDiags:
+  - commentCount: 2
+    s_comment:
+    - text: Well, well, what do we have here?
+      extraData: ExtraData
+      inputSetIndex: 0
+      outputNodeIndex: -1
+      outActionIndex: 2
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: "A brave soul wandering into the lion\u2019s den? Or perhaps someone
+        who\u2019s just a little too curious for their own good."
+      extraData: ExtraData
+      inputSetIndex: 0
+      outputNodeIndex: -1
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 0
+    pTag: 
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 4
+    s_comment:
+    - text: Why did you volunteer for this program?
+      extraData: ExtraData
+      inputSetIndex: 1
+      outputNodeIndex: 2
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: Can you identify food mimicry?
+      extraData: ExtraData
+      inputSetIndex: 1
+      outputNodeIndex: 3
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: Did you have a surgery? You look different.
+      extraData: ExtraData
+      inputSetIndex: 1
+      outputNodeIndex: 4
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: Take Care Anna
+      extraData: ExtraData
+      inputSetIndex: 1
+      outputNodeIndex: -1
+      outActionIndex: 1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 1
+    pTag: 
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 5
+    s_comment:
+    - text: Oh, darling, life is full of risks. But this...
+      extraData: ExtraData
+      inputSetIndex: 2
+      outputNodeIndex: 1
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: "This is a cage. I don\u2019t belong in a cage."
+      extraData: ExtraData
+      inputSetIndex: 2
+      outputNodeIndex: -1
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: The chance at freedom is too tempting to pass up.
+      extraData: ExtraData
+      inputSetIndex: 2
+      outputNodeIndex: -1
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: Besides, what better way to prove my worth than to catch a few fakes?
+      extraData: ExtraData
+      inputSetIndex: 2
+      outputNodeIndex: -1
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: I have a knack for spotting fakes, you know.
+      extraData: ExtraData
+      inputSetIndex: 2
+      outputNodeIndex: -1
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 2
+    pTag: 
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 4
+    s_comment:
+    - text: "Ah, now you\u2019re speaking my language!"
+      extraData: ExtraData
+      inputSetIndex: 3
+      outputNodeIndex: 1
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: In my previous life as a singer, I had to be selective about my diet.
+      extraData: ExtraData
+      inputSetIndex: 3
+      outputNodeIndex: -1
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: "It wasn\u2019t just about maintaining my figure;"
+      extraData: ExtraData
+      inputSetIndex: 3
+      outputNodeIndex: -1
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: It was about knowing exactly what went into my body.
+      extraData: ExtraData
+      inputSetIndex: 3
+      outputNodeIndex: -1
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 3
+    pTag: 
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 5
+    s_comment:
+    - text: Different? Oh, darling, I prefer to think of myself as unique.
+      extraData: ExtraData
+      inputSetIndex: 4
+      outputNodeIndex: 5
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: All natural, if you will.
+      extraData: ExtraData
+      inputSetIndex: 4
+      outputNodeIndex: -1
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: People are quick to judge based on appearances.
+      extraData: ExtraData
+      inputSetIndex: 4
+      outputNodeIndex: -1
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: "But let\u2019s be honest\u2014what\u2019s beauty if not an art form?"
+      extraData: ExtraData
+      inputSetIndex: 4
+      outputNodeIndex: -1
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: "I\u2019ve simply embraced my own canvas"
+      extraData: ExtraData
+      inputSetIndex: 4
+      outputNodeIndex: -1
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 4
+    pTag: 
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: I am not convinced, there is something off
+      extraData: ExtraData
+      inputSetIndex: 5
+      outputNodeIndex: 6
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: Where did you find that make up?
+      extraData: ExtraData
+      inputSetIndex: 5
+      outputNodeIndex: 7
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 5
+    pTag: 
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 3
+    s_comment:
+    - text: "if you\u2019re so keen on digging deeper, what exactly do you think
+        I\u2019m hiding?"
+      extraData: ExtraData
+      inputSetIndex: 6
+      outputNodeIndex: 1
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: Is it the mystery that fascinates you, or are you just wary of what lies
+        beneath the surface?
+      extraData: ExtraData
+      inputSetIndex: 6
+      outputNodeIndex: -1
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: "You can\u2019t blame a girl for wanting to keep a little mystery alive."
+      extraData: ExtraData
+      inputSetIndex: 6
+      outputNodeIndex: -1
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 6
+    pTag: 
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 4
+    s_comment:
+    - text: "I\u2019ve managed to concoct my own little beauty regime using what
+        I can find."
+      extraData: ExtraData
+      inputSetIndex: 7
+      outputNodeIndex: 1
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: "Some natural pigments here and there, a bit of ingenuity with what\u2019s
+        available"
+      extraData: ExtraData
+      inputSetIndex: 7
+      outputNodeIndex: -1
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: "It\u2019s all about resourcefulness, darling."
+      extraData: ExtraData
+      inputSetIndex: 7
+      outputNodeIndex: -1
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: "So, are you impressed, or just trying to find another way to poke holes
+        in my fa\xE7ade?"
+      extraData: ExtraData
+      inputSetIndex: 7
+      outputNodeIndex: -1
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 7
+    pTag: 
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  S_actionNodes:
+  - pauseHere: 0
+    gameObjectName: FirstDayManager
+    methodName: IncrementTalkedPeople
+    paramType: 3
+    gotoNode: -1
+    param_bool: 0
+    param_string: 
+    param_int: 1
+    param_float: 0
+    ID: 8
+    outPlayerIndex: 1
+    outActionIndex: -1
+    ovrStartNode: -1
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: PlayerCapsule
+    methodName: SetDefaultState
+    paramType: 0
+    gotoNode: -1
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    ID: 9
+    outPlayerIndex: -1
+    outActionIndex: -1
+    ovrStartNode: -1
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: JournalManager
+    methodName: SetCurrentPerson
+    paramType: 3
+    gotoNode: -1
+    param_bool: 0
+    param_string: 
+    param_int: 1
+    param_float: 0
+    ID: 10
+    outPlayerIndex: -1
+    outActionIndex: 0
+    ovrStartNode: -1
+    renameDialogue: 
+--- !u!114 &1595761069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595761065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b22e51d8ff5ec5a4db325698f0f8bd8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  videAssign: {fileID: 1595761068}
 --- !u!1 &1606988934
 GameObject:
   m_ObjectHideFlags: 0
@@ -3515,6 +3948,9 @@ MonoBehaviour:
   - Charlie
   - CommentModifier
   - CrazyCap
+  - Day0_Shane
+  - Day0_Warden 0
+  - Day0_Warden 1
   - DEMO_Condition
   - demo_Narration
   - DiegoDay2
@@ -3542,7 +3978,7 @@ MonoBehaviour:
   - WardenDay1
   - WardenOpeningSequence
   - Witch
-  assignedIndex: 39
+  assignedIndex: 42
   assignedID: 4393
   assignedDialogue: WardenOpeningSequence
   interactionCount: 0
@@ -3552,7 +3988,7 @@ MonoBehaviour:
   defaultPlayerSprite: {fileID: 0}
   targetManager: {fileID: 0}
   preload: 1
-  notuptodate: 0
+  notuptodate: 1
   startp: 0
   loadtag: 
   langs: []
