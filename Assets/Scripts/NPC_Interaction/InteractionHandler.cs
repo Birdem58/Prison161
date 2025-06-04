@@ -11,7 +11,9 @@ public class InteractionHandler : MonoBehaviour
 {
     
     IInteraction interaction;
-   
+    
+
+
     InteractMe interactMe;
 
     [SerializeField] private GameObject PlayerInteractionCanvas;
@@ -112,25 +114,32 @@ public class InteractionHandler : MonoBehaviour
             return;
         }
 
-        if (canInteract)
+        if (canInteract && interactMe != null)
         {
-            if (interactMe != null)
+            if (interactMe.isInteractable && Input.GetKeyDown(KeyCode.F))
             {
+                
                 reactionMessageText.text = interactMe.objectMessage;
                 reactionMessageText.gameObject.SetActive(true);
                 interactTxt.gameObject.SetActive(false);
-                EnableOutline(interactMe);
             }
-            else if (interaction != null)
+            else if (!reactionMessageText.gameObject.activeSelf)
             {
-                interactTxt.text = interaction.InteractionPrompt;
+                interactTxt.text = interactMe.interactionMessage;
                 interactTxt.gameObject.SetActive(true);
-                reactionMessageText.gameObject.SetActive(false);
-                EnableOutline(interaction as MonoBehaviour);
+                reactionMessageText.gameObject.SetActive(false); 
             }
-
-            
+            EnableOutline(interactMe);
+           
         }
+        else if (canInteract && interaction != null)
+        {
+            interactTxt.text = interaction.InteractionPrompt;
+            interactTxt.gameObject.SetActive(true);
+            reactionMessageText.gameObject.SetActive(false);
+            EnableOutline(interaction as MonoBehaviour);
+        }
+
         else
         {
             HideInteractionUI();
