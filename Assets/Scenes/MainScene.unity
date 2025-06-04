@@ -644,7 +644,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 291.4995, y: -0.0024463225}
+  m_AnchoredPosition: {x: 291.4995, y: 0.00049056526}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &96186469
@@ -3931,6 +3931,10 @@ PrefabInstance:
     - target: {fileID: 6095787477667491458, guid: 88f948f5aff3d714fa1ce66db9710ac1, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8174956887013045867, guid: 88f948f5aff3d714fa1ce66db9710ac1, type: 3}
+      propertyPath: m_text
+      value: 'Ben Mal Degilim '
       objectReference: {fileID: 0}
     - target: {fileID: 8925254591540415280, guid: 88f948f5aff3d714fa1ce66db9710ac1, type: 3}
       propertyPath: m_PresetInfoIsWorld
@@ -12647,8 +12651,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 131571589}
   m_HandleRect: {fileID: 131571588}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.99999756
+  m_Value: 0
+  m_Size: 0.9999976
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -17236,8 +17240,77 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5821045876141296953, guid: 4a85f8e256ff25c4b9c5be23455f793d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8002788452933106926}
+    - targetCorrespondingSourceObject: {fileID: 5821045876141296953, guid: 4a85f8e256ff25c4b9c5be23455f793d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8002788452933106925}
+    - targetCorrespondingSourceObject: {fileID: 5821045876141296953, guid: 4a85f8e256ff25c4b9c5be23455f793d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8002788452933106924}
   m_SourcePrefab: {fileID: 100100000, guid: 4a85f8e256ff25c4b9c5be23455f793d, type: 3}
+--- !u!1 &8002788452933106923 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5821045876141296953, guid: 4a85f8e256ff25c4b9c5be23455f793d, type: 3}
+  m_PrefabInstance: {fileID: 8002788452933106922}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8002788452933106924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8002788452933106923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 0.7290288, g: 0.7660377, b: 0.09105727, a: 1}
+  outlineWidth: 3.82
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &8002788452933106925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8002788452933106923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9151f1a433473aa45a8ced60f2ec1f0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectMessage: 'Ben bir Vazoyum GNG '
+  interactionMessage: F ye tikla negro
+  isInteractable: 1
+  enableOutline: 1
+--- !u!65 &8002788452933106926
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8002788452933106923}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.6675792, y: 1.0297182, z: 0.8233293}
+  m_Center: {x: 0.027607366, y: 0.5148591, z: 0.03272803}
 --- !u!4 &9005220658596425275
 Transform:
   m_ObjectHideFlags: 0

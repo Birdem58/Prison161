@@ -10,7 +10,7 @@ public class InteractMe : MonoBehaviour, IInteraction
 
     public bool isInteractable;
 
-    
+   
     public bool enableOutline;
 
     public void Interact()
