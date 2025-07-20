@@ -221,10 +221,10 @@ MonoBehaviour:
   active: 1
   ditherStrength:
     m_OverrideState: 1
-    m_Value: 0.56
+    m_Value: 0.301
   ditherThreshold:
     m_OverrideState: 1
-    m_Value: 50
+    m_Value: 35.2
   ditherScale:
     m_OverrideState: 1
     m_Value: 20
