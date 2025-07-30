@@ -644,7 +644,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 291.4995, y: 0.00049056526}
+  m_AnchoredPosition: {x: 291.4995, y: -0.0023955049}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &96186469
@@ -3119,6 +3119,37 @@ Transform:
   - {fileID: 473855741}
   - {fileID: 129942518}
   m_Father: {fileID: 1033311711}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &678967407
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 678967408}
+  m_Layer: 0
+  m_Name: BlablablaBLiBLibli
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &678967408
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678967407}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.2304316, y: 13.724316, z: 7.8772006}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &728193151
 GameObject:
@@ -12651,8 +12682,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 131571589}
   m_HandleRect: {fileID: 131571588}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 0.9999976
+  m_Value: 1
+  m_Size: 0.99999756
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -17457,3 +17488,4 @@ SceneRoots:
   - {fileID: 1832232842}
   - {fileID: 590903691}
   - {fileID: 1331159779}
+  - {fileID: 678967408}
